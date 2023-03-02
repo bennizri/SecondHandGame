@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1066418953980",
+    "project_id": "secondhandgame-4bb2b",
+    "storage_bucket": "secondhandgame-4bb2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066418953980:android:d16f67624c38b75d484179",
+        "android_client_info": {
+          "package_name": "com.example.SecondHandGame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066418953980-p3mgkv1quo76mqgi622a4en3ve9o2150.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC69vkcuQVFfY5_LQnf_1SoxhZhkI0j0j0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066418953980-p3mgkv1quo76mqgi622a4en3ve9o2150.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
