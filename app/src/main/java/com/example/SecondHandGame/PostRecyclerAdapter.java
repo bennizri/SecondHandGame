@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.SecondHandGame.model.Post;
@@ -61,6 +62,8 @@ class PostViewHolder extends RecyclerView.ViewHolder{
 
 public class PostRecyclerAdapter extends RecyclerView.Adapter<PostViewHolder>{
     OnItemClickListener listener;
+
+
     public static interface OnItemClickListener{
         void onItemClick(int pos);
     }
