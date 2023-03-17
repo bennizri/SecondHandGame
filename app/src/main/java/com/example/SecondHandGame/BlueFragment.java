@@ -38,17 +38,17 @@ public class BlueFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_blue, container, false);
 
-        title = BlueFragmentArgs.fromBundle(getArguments()).getBlueTitle();
-
-        TextView titleTv = view.findViewById(R.id.bluefrag_title_tv);
-        if (title != null){
-            titleTv.setText(title);
-        }
-
-        View button = view.findViewById(R.id.bluefrag_back_btn);
-        button.setOnClickListener((view1)->{
-            Navigation.findNavController(view1).popBackStack();
-        });
+//        title = BlueFragmentArgs.fromBundle(getArguments()).getBlueTitle();
+//
+//        TextView titleTv = view.findViewById(R.id.bluefrag_title_tv);
+//        if (title != null){
+//            titleTv.setText(title);
+//        }
+//
+//        View button = view.findViewById(R.id.bluefrag_back_btn);
+//        button.setOnClickListener((view1)->{
+//            Navigation.findNavController(view1).popBackStack();
+//        });
         return view;
     }
 

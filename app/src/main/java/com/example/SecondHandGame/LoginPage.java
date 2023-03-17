@@ -48,19 +48,6 @@ public class LoginPage extends AppCompatActivity {
         TextInputEditText passEt = findViewById(R.id.passEt);
         TextView error = findViewById(R.id.wrong1);
 
-        //*****************************************************************:
-
-        //***********************************scroll down to register *************************:
-        //binding:
-        ImageView scrollBtn = findViewById(R.id.scroll);
-        ScrollView scroll = findViewById(R.id.scrollWelcome);
-
-        scrollBtn.setOnClickListener(view ->{
-            scroll.fullScroll(scroll.FOCUS_DOWN);
-        });
-
-        //*****************************************************************:
-
 
         //**************************************register details***************************:
         ActivityResultLauncher<Void> cameraLauncher;

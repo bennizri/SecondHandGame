@@ -145,10 +145,6 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="35dp" />
-
             <Button
                 android:id="@+id/login"
                 android:layout_width="195dp"
@@ -158,10 +154,6 @@
                 android:text="Log In" />
 <!--            android:backgroundTint="@color/button"-->
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="25sp" />
-
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
@@ -169,10 +161,6 @@
                 android:layout_gravity="center"
                 android:text="Or"
                 android:textSize="20sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="15sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -182,23 +170,12 @@
                 android:text="create a new account"
                 android:textSize="20sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="5sp" />
-
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/scroll"
-                    android:layout_width="50sp"
-                    android:layout_height="40sp"
-                    android:layout_gravity="center"
-                    android:baselineAlignBottom="false"
-                     />
-<!--                app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_down_24"-->
+                <!--                app:srcCompat="@drawable/ic_baseline_keyboard_double_arrow_down_24"-->
 
                 <Space
                     android:layout_width="match_parent"

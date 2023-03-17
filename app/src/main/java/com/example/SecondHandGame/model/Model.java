@@ -79,7 +79,7 @@ public class Model {
         });
     }
     public void getAllRecipes(Listener<List<Post>> callback) {
-        firebaseModel.getAllRecipes(callback);
+        firebaseModel.getAllPosts(callback);
 
     }
     public static boolean isOnline(Context context) {
@@ -109,7 +109,7 @@ public class Model {
         firebaseModel.isSignedIn(listener);
     }
     public void addPost(Post st, Listener<Void> listener){
-        firebaseModel.addPost(st,(Void)->{
+        firebaseModel.addRecipe(st,(Void)->{
             refreshAllPosts();
             listener.onComplete(null);
         });
