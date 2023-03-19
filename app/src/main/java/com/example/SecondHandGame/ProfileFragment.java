@@ -33,7 +33,7 @@ public class ProfileFragment extends RecipesListFragment {
             binding.firstName.setText(currentUser.firstName);
             binding.lastName.setText(currentUser.lastName);
             if(currentUser.avatarUrl !="")
-                Picasso.get().load(currentUser.avatarUrl).error(R.drawable.errorpizza).into(binding.avatarImg3);
+                Picasso.get().load(currentUser.avatarUrl).error(R.drawable.game_avatar).into(binding.avatarImg3);
         });
 
         //*******************************list ********************:

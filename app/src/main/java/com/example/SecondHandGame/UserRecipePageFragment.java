@@ -44,7 +44,7 @@ public class UserRecipePageFragment extends RecipeFragment {
         if ( avatarImg.isEmpty() ||avatarImg == ""){
             binding.avatarImg.setImageResource(R.drawable.photorecipe);
         }else{
-            Picasso.get().load(avatarImg).error(R.drawable.errorpizza).into(binding.avatarImg);
+            Picasso.get().load(avatarImg).error(R.drawable.game_avatar).into(binding.avatarImg);
         }
 
         binding.recipeEditBtn.setOnClickListener((view2)->{

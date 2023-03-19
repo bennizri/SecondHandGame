@@ -56,7 +56,7 @@ public class RecipeFragment extends Fragment {
             binding.avatarImg.setImageResource(R.drawable.photorecipe);
 
         }else{
-            Picasso.get().load(avatarImg).error(R.drawable.errorpizza).into(binding.avatarImg);
+            Picasso.get().load(avatarImg).error(R.drawable.game_avatar).into(binding.avatarImg);
         }
 
         //******* get the status of like recipe and set him to ui *********

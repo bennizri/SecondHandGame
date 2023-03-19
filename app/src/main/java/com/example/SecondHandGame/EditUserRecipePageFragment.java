@@ -79,7 +79,7 @@ public class EditUserRecipePageFragment extends AddRecipeFragment {
             binding.avatarImg.setImageResource(R.drawable.photorecipe);
 
         }else{
-            Picasso.get().load(imageString).error(R.drawable.errorpizza).into(binding.avatarImg);
+          //  Picasso.get().load(imageString).error(R.drawable.game_avatar).into(binding.avatarImg);
         }
 
         //set Enabled name of recipe
