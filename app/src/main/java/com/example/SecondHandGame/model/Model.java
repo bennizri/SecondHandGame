@@ -19,9 +19,9 @@ import java.util.concurrent.Executors;
 public class Model {
     private static final Model _instance = new Model();
 
-    private Executor executor = Executors.newSingleThreadExecutor();
-    private Handler mainHandler = HandlerCompat.createAsync(Looper.getMainLooper());
-    private FirebaseModel firebaseModel = new FirebaseModel();
+    private final Executor executor = Executors.newSingleThreadExecutor();
+    private final Handler mainHandler = HandlerCompat.createAsync(Looper.getMainLooper());
+    private final FirebaseModel firebaseModel = new FirebaseModel();
     AppLocalDbRepository localDb = AppLocalDb.getAppDb();
 
     public static Model instance(){

@@ -79,12 +79,6 @@
                   <entry key="SettingsFragment">
                     <value>
                       <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="1080" />
-                          </Point>
-                        </option>
                         <option name="myPositions">
                           <map>
                             <entry key="action_settingsFragment_to_editUserFragment">
@@ -246,27 +240,6 @@
                   <entry key="settingsFragment2">
                     <value>
                       <LayoutPositions />
-                    </value>
-                  </entry>
-                  <entry key="welcomeFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="368" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_welcomeFragment_to_RecipesListFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
                     </value>
                   </entry>
                 </map>

@@ -4,8 +4,7 @@ package com.example.SecondHandGame.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,18 +18,12 @@ import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
-public final class FragmentRecipeListBinding implements ViewBinding {
+public final class FragmentPosts1ListBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView imageView3;
-
-  @NonNull
-  public final ImageView imageView5;
-
-  @NonNull
-  public final LinearLayout linearLayout2;
+  public final ImageButton btnAdd;
 
   @NonNull
   public final ProgressBar progressBar;
@@ -41,14 +34,11 @@ public final class FragmentRecipeListBinding implements ViewBinding {
   @NonNull
   public final SwipeRefreshLayout swipeRefresh;
 
-  private FragmentRecipeListBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imageView3, @NonNull ImageView imageView5,
-      @NonNull LinearLayout linearLayout2, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView recyclerView, @NonNull SwipeRefreshLayout swipeRefresh) {
+  private FragmentPosts1ListBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnAdd,
+      @NonNull ProgressBar progressBar, @NonNull RecyclerView recyclerView,
+      @NonNull SwipeRefreshLayout swipeRefresh) {
     this.rootView = rootView;
-    this.imageView3 = imageView3;
-    this.imageView5 = imageView5;
-    this.linearLayout2 = linearLayout2;
+    this.btnAdd = btnAdd;
     this.progressBar = progressBar;
     this.recyclerView = recyclerView;
     this.swipeRefresh = swipeRefresh;
@@ -61,14 +51,14 @@ public final class FragmentRecipeListBinding implements ViewBinding {
   }
 
   @NonNull
-  public static FragmentRecipeListBinding inflate(@NonNull LayoutInflater inflater) {
+  public static FragmentPosts1ListBinding inflate(@NonNull LayoutInflater inflater) {
     return inflate(inflater, null, false);
   }
 
   @NonNull
-  public static FragmentRecipeListBinding inflate(@NonNull LayoutInflater inflater,
+  public static FragmentPosts1ListBinding inflate(@NonNull LayoutInflater inflater,
       @Nullable ViewGroup parent, boolean attachToParent) {
-    View root = inflater.inflate(R.layout.fragment_recipe_list, parent, false);
+    View root = inflater.inflate(R.layout.fragment_posts1_list, parent, false);
     if (attachToParent) {
       parent.addView(root);
     }
@@ -76,26 +66,14 @@ public final class FragmentRecipeListBinding implements ViewBinding {
   }
 
   @NonNull
-  public static FragmentRecipeListBinding bind(@NonNull View rootView) {
+  public static FragmentPosts1ListBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView3;
-      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView3 == null) {
-        break missingId;
-      }
-
-      id = R.id.imageView5;
-      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
-      if (imageView5 == null) {
-        break missingId;
-      }
-
-      id = R.id.linearLayout2;
-      LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
-      if (linearLayout2 == null) {
+      id = R.id.btnAdd;
+      ImageButton btnAdd = ViewBindings.findChildViewById(rootView, id);
+      if (btnAdd == null) {
         break missingId;
       }
 
@@ -117,8 +95,8 @@ public final class FragmentRecipeListBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentRecipeListBinding((ConstraintLayout) rootView, imageView3, imageView5,
-          linearLayout2, progressBar, recyclerView, swipeRefresh);
+      return new FragmentPosts1ListBinding((ConstraintLayout) rootView, btnAdd, progressBar,
+          recyclerView, swipeRefresh);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

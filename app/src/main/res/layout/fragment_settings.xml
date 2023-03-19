@@ -36,6 +36,7 @@
 
                     android:text="Edit Profile"
                     android:textAllCaps="false"
+                    android:textColor="#009688"
                     android:textSize="20sp"
                     app:iconTint="#B8B0B0" />
 <!--                android:backgroundTint="@color/button"-->
@@ -49,6 +50,7 @@
 
                     android:text="Log Out"
                     android:textAllCaps="false"
+                    android:textColor="#009688"
                     android:textSize="20sp"
                     app:iconTint="#C3C1C1" />
 <!--                android:backgroundTint="@color/button"-->
