@@ -9,7 +9,7 @@
         android:id="@+id/postsListFragment"
         android:name="com.example.SecondHandGame.PostsListFragment"
         android:label="posts List"
-        tools:layout="@layout/fragment_posts1_list">
+        tools:layout="@layout/fragment_posts_list">
         <action
             android:id="@+id/action_postsListFragment_to_blueFragment"
             app:destination="@id/blueFragment" />

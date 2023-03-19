@@ -3485,8 +3485,8 @@ int layout fragment_blue 0x7f0b0032
 int layout fragment_edit_user 0x7f0b0033
 int layout fragment_edit_user_recipe_page 0x7f0b0034
 int layout fragment_my_profile 0x7f0b0035
-int layout fragment_posts1_list 0x7f0b0078
 int layout fragment_posts_list 0x7f0b0036
+int layout fragment_recipe_list 0x7f0b0037
 int layout fragment_recipe_page 0x7f0b0038
 int layout fragment_save_recipe 0x7f0b0039
 int layout fragment_settings 0x7f0b003a

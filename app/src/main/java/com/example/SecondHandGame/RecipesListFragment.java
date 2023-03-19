@@ -13,7 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.SecondHandGame.databinding.FragmentAddRecipeBinding;
+
+import com.example.SecondHandGame.databinding.FragmentRecipeListBinding;
 import com.example.SecondHandGame.model.Model;
 import com.example.SecondHandGame.model.Post;
 
@@ -21,10 +22,10 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class RecipesListFragment extends Fragment {
-    FragmentAddRecipeBinding binding;
+    FragmentRecipeListBinding binding;
     //RecipeRecyclerAdapter adapter;
     PostRecyclerAdapter adapter;
-//    RecipeListFragmentViewModel viewModel;
+    //    RecipeListFragmentViewModel viewModel;
     PostsListFragmentViewModel viewModel;
     CurrentUserViewModel currentUser;
 
@@ -33,16 +34,16 @@ public class RecipesListFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-    //FragmentRecipeListBinding
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentAddRecipeBinding.inflate(inflater, container, false);
+        binding = FragmentRecipeListBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
         getActivity().findViewById(R.id.main_bottomNavigationView).setVisibility(View.VISIBLE);
 
-        //*******************************list ********************:
+        //**********list *******:
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -64,7 +65,7 @@ public class RecipesListFragment extends Fragment {
             }
         });
 
-//********************************************************************************:
+//****************************:
 
         //done loading
         binding.progressBar.setVisibility(View.GONE);

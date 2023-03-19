@@ -128,8 +128,8 @@ layout fragment_blue
 layout fragment_edit_user
 layout fragment_edit_user_recipe_page
 layout fragment_my_profile
-layout fragment_posts1_list
 layout fragment_posts_list
+layout fragment_recipe_list
 layout fragment_recipe_page
 layout fragment_save_recipe
 layout fragment_settings
