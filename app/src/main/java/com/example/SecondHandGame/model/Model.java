@@ -1,6 +1,9 @@
 package com.example.SecondHandGame.model;
 
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -75,9 +78,38 @@ public class Model {
             });
         });
     }
+    public void getAllRecipes(Listener<List<Post>> callback) {
+        firebaseModel.getAllPosts(callback);
 
+    }
+    public static boolean isOnline(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
+
+    public void addUser(User us, Listener<Void> listener) {
+        firebaseModel.addUser(us, listener);
+
+    }
+    public void getCurrentUser(Listener<User> listener){
+        firebaseModel.getCurrentUser(listener);
+    }
+    public void createUserWithEmailAndPassword(String email, String password, Listener<Boolean> listener) {
+        firebaseModel.createAccount(email,password,listener);
+    }
+
+    public void login(String email, String password,Listener<Boolean> listener){
+        firebaseModel.login(email,password,listener);
+    }
+    public void logout(){
+        firebaseModel.logOut();
+    }
+    public void isSignedIn(Model.Listener<Boolean> listener) {
+        firebaseModel.isSignedIn(listener);
+    }
     public void addPost(Post st, Listener<Void> listener){
-        firebaseModel.addPost(st,(Void)->{
+        firebaseModel.addRecipe(st,(Void)->{
             refreshAllPosts();
             listener.onComplete(null);
         });

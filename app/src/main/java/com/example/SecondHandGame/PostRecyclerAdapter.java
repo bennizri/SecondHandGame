@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.SecondHandGame.model.Post;
@@ -52,15 +53,17 @@ class PostViewHolder extends RecyclerView.ViewHolder{
         cb.setChecked(st.cb);
         cb.setTag(pos);
         if (st.getAvatarUrl()  != null && st.getAvatarUrl().length() > 5) {
-            Picasso.get().load(st.getAvatarUrl()).placeholder(R.drawable.avatar).into(avatarImage);
+            Picasso.get().load(st.getAvatarUrl()).placeholder(R.drawable.gamer_avatar).into(avatarImage);
         }else{
-            avatarImage.setImageResource(R.drawable.avatar);
+            avatarImage.setImageResource(R.drawable.gamer_avatar);
         }
     }
 }
 
 public class PostRecyclerAdapter extends RecyclerView.Adapter<PostViewHolder>{
     OnItemClickListener listener;
+
+
     public static interface OnItemClickListener{
         void onItemClick(int pos);
     }

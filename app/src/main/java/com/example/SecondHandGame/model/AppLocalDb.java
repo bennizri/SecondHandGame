@@ -13,7 +13,7 @@ abstract class AppLocalDbRepository extends RoomDatabase {
 
 public class AppLocalDb{
     static public AppLocalDbRepository getAppDb() {
-        return Room.databaseBuilder(MyApplication.getMyContext(),
+        return Room.databaseBuilder(MyApplication.getAppContext(),
                         AppLocalDbRepository.class,
                         "dbFileName.db")
                 .fallbackToDestructiveMigration()
