@@ -37,36 +37,6 @@
         />
 
     <fragment
-        android:id="@+id/RecipesListFragment"
-        android:name="com.example.SecondHandGame.RecipesListFragment"
-        android:label="Home"
-        >
-        <!--        tools:layout="@layout/fragment_recipe_list"-->
-        <action
-            android:id="@+id/action_RecipesListFragment_to_recipeFragment"
-            app:destination="@id/recipeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/recipeFragment"
-        android:name="com.example.SecondHandGame.RecipeFragment"
-        android:label="Recipe Page"
-        >
-        <!--        tools:layout="@layout/fragment_recipe_page"-->
-        <argument
-            android:name="NameRecipe"
-            app:argType="string" />
-        <argument
-            android:name="Ingredients"
-            app:argType="string" />
-        <argument
-            android:name="Instructions"
-            app:argType="string" />
-        <argument
-            android:name="avatarUrl"
-            app:argType="string"
-            app:nullable="true" />
-    </fragment>
-    <fragment
         android:id="@+id/addRecipe"
         android:name="com.example.SecondHandGame.AddRecipeFragment"
         android:label="New Recipe"
@@ -79,12 +49,7 @@
         android:id="@+id/LikesFragment"
         android:name="com.example.SecondHandGame.SaveFragment"
         android:label="Save Recipe"
-        >
-        <!--        tools:layout="@layout/fragment_save_recipe"-->
-        <action
-            android:id="@+id/action_LikesFragment_to_recipeFragment"
-            app:destination="@id/recipeFragment" />
-    </fragment>
+        />
     <action
         android:id="@+id/action_global_LikesFragment"
         app:destination="@id/LikesFragment" />
@@ -151,16 +116,7 @@
         android:id="@+id/SettingsFragment"
         android:name="com.example.SecondHandGame.WelcomeFragment"
         android:label="Second Hand Game"
-        tools:layout="@layout/fragment_welcome_page">
-
-        <action
-            android:id="@+id/action_welcomeFragment_to_RecipesListFragment"
-            app:destination="@id/RecipesListFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-    </fragment>
+        tools:layout="@layout/fragment_welcome_page"/>
     <fragment
         android:id="@+id/editUserFragment"
         android:name="com.example.SecondHandGame.EditUserFragment"
