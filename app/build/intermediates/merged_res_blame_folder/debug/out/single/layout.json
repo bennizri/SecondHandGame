@@ -16,6 +16,10 @@
         "source": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_edit_user.xml"
     },
     {
+        "merged": "com.example.SecondHandGame.app-mergeDebugResources-49:/layout/fragment_welcome_page.xml",
+        "source": "com.example.SecondHandGame.app-main-52:/layout/fragment_welcome_page.xml"
+    },
+    {
         "merged": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-mergeDebugResources-49:\\layout\\fragment_blue.xml",
         "source": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_blue.xml"
     },
@@ -40,10 +44,6 @@
         "source": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_add_post.xml"
     },
     {
-        "merged": "com.example.SecondHandGame.app-mergeDebugResources-49:/layout/post_list_row.xml",
-        "source": "com.example.SecondHandGame.app-main-52:/layout/post_list_row.xml"
-    },
-    {
         "merged": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-mergeDebugResources-49:\\layout\\fragment_user_recipe_page.xml",
         "source": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_user_recipe_page.xml"
     },
@@ -54,6 +54,10 @@
     {
         "merged": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-mergeDebugResources-49:\\layout\\fragment_welcome_page.xml",
         "source": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_welcome_page.xml"
+    },
+    {
+        "merged": "com.example.SecondHandGame.app-mergeDebugResources-49:/layout/fragment_edit_user.xml",
+        "source": "com.example.SecondHandGame.app-main-52:/layout/fragment_edit_user.xml"
     },
     {
         "merged": "C:\\Users\\galle\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-mergeDebugResources-49:\\layout\\fragment_save_recipe.xml",

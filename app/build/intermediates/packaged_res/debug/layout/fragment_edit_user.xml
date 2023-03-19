@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="254dp"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/avatar" />
+                    app:srcCompat="@drawable/gamer_avatar" />
 
                 <ImageButton
                     android:id="@+id/camerabutton"

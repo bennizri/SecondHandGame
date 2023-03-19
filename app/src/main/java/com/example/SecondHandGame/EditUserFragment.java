@@ -92,7 +92,7 @@ public class EditUserFragment extends Fragment {
             binding.email.setText(email);
         }
         if (avatarUrl != ""){
-            Picasso.get().load(avatarUrl).error(R.drawable.errorpizza).into(binding.avatarImg2);
+            //Picasso.get().load(avatarUrl).error(R.drawable.).into(binding.avatarImg2);
         }else{
             binding.avatarImg2.setImageResource(R.drawable.user);
         }
