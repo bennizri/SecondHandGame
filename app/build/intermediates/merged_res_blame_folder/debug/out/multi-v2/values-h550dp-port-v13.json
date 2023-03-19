@@ -4,7 +4,7 @@
             "outputFile": "com.example.SecondHandGame.app-mergeDebugResources-48:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\97252\\.gradle\\caches\\transforms-3\\579520208fdb5da5791e490fc64b9414\\transformed\\material-1.7.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\galle\\.gradle\\caches\\transforms-3\\579520208fdb5da5791e490fc64b9414\\transformed\\material-1.7.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

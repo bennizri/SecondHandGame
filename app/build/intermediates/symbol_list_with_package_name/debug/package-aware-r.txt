@@ -2653,7 +2653,9 @@ drawable googleg_standard_color_18
 drawable ic_baseline_edit_calendar_24
 drawable ic_baseline_image_search_24
 drawable ic_baseline_info_24
+drawable ic_baseline_logout_24
 drawable ic_baseline_photo_camera_24
+drawable ic_baseline_settings_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -3322,7 +3324,6 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id welcome
-id welcomeFragment
 id west
 id wide
 id withText

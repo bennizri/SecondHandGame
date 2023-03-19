@@ -74,9 +74,6 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
   public final Button saveBtnUser;
 
   @NonNull
-  public final ImageView scroll;
-
-  @NonNull
   public final ScrollView scrollWelcome;
 
   @NonNull
@@ -98,9 +95,9 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
       @NonNull ImageButton gallerybutton, @NonNull ImageView imageView2,
       @NonNull TextInputEditText lastName, @NonNull Button login, @NonNull TextView pass,
       @NonNull TextInputEditText passEt, @NonNull TextInputEditText password1,
-      @NonNull TextView registerTv2, @NonNull Button saveBtnUser, @NonNull ImageView scroll,
-      @NonNull ScrollView scrollWelcome, @NonNull TextView textView, @NonNull TextView textView4,
-      @NonNull TextView welcome, @NonNull TextView wrong1) {
+      @NonNull TextView registerTv2, @NonNull Button saveBtnUser, @NonNull ScrollView scrollWelcome,
+      @NonNull TextView textView, @NonNull TextView textView4, @NonNull TextView welcome,
+      @NonNull TextView wrong1) {
     this.rootView = rootView;
     this.avatarImg2 = avatarImg2;
     this.blabla = blabla;
@@ -118,7 +115,6 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
     this.password1 = password1;
     this.registerTv2 = registerTv2;
     this.saveBtnUser = saveBtnUser;
-    this.scroll = scroll;
     this.scrollWelcome = scrollWelcome;
     this.textView = textView;
     this.textView4 = textView4;
@@ -249,12 +245,6 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.scroll;
-      ImageView scroll = ViewBindings.findChildViewById(rootView, id);
-      if (scroll == null) {
-        break missingId;
-      }
-
       id = R.id.scrollWelcome;
       ScrollView scrollWelcome = ViewBindings.findChildViewById(rootView, id);
       if (scrollWelcome == null) {
@@ -287,7 +277,7 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
 
       return new FragmentWelcomePageBinding((ConstraintLayout) rootView, avatarImg2, blabla,
           camerabutton, email, email1, emailEt, firstName, gallerybutton, imageView2, lastName,
-          login, pass, passEt, password1, registerTv2, saveBtnUser, scroll, scrollWelcome, textView,
+          login, pass, passEt, password1, registerTv2, saveBtnUser, scrollWelcome, textView,
           textView4, welcome, wrong1);
     }
     String missingId = rootView.getResources().getResourceName(id);

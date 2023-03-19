@@ -52,4 +52,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/postlistrow_avatar_img"
         app:layout_constraintTop_toBottomOf="@+id/postlistrow_name_tv" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

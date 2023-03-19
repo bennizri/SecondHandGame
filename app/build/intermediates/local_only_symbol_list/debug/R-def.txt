@@ -12,7 +12,9 @@ drawable errorpizza
 drawable ic_baseline_edit_calendar_24
 drawable ic_baseline_image_search_24
 drawable ic_baseline_info_24
+drawable ic_baseline_logout_24
 drawable ic_baseline_photo_camera_24
+drawable ic_baseline_settings_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable photorecipe
@@ -102,7 +104,6 @@ id recyclerView
 id register_tv2
 id saveBtn
 id saveBtnUser
-id scroll
 id scrollView2
 id scrollWelcome
 id settingsFragment2
@@ -117,7 +118,6 @@ id titelSaveRecipe
 id translateBtn
 id translateBtn2
 id welcome
-id welcomeFragment
 id wrong1
 layout activity_main
 layout fragment_about

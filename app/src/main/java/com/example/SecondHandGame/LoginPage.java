@@ -29,7 +29,7 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setTitle("Foodies");
+        setTitle("Second Hand Game");
 
         //check if the user connect
         Model.instance().isSignedIn(status ->{
