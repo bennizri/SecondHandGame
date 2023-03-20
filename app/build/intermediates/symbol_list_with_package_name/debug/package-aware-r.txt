@@ -2665,6 +2665,7 @@ drawable ic_baseline_info_24
 drawable ic_baseline_logout_24
 drawable ic_baseline_photo_camera_24
 drawable ic_baseline_settings_24
+drawable ic_baseline_wb_sunny_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2749,6 +2750,7 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable user
+drawable wether
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2827,6 +2829,7 @@ id action_divider
 id action_fragment_user_post_page_to_editUserPostPageFragment2
 id action_global_Profile
 id action_global_addPostFragment
+id action_global_weatherFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -2882,6 +2885,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btn
 id btnAdd
 id buttonPanel
 id cache_measures
@@ -2976,6 +2980,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id et
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2997,6 +3002,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id fragment_user_post_page
+id fragment_weather_tmp_img
 id frost
 id fullscreen_header
 id galleryButton
@@ -3313,6 +3319,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id translateBtn2
 id triangle
+id tv
 id unchecked
 id uniform
 id unlabeled
@@ -3327,6 +3334,8 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id weatherFragment
+id weather_fragment_container
 id welcome
 id west
 id wide
@@ -3493,6 +3502,7 @@ layout fragment_posts_list
 layout fragment_save_post
 layout fragment_settings
 layout fragment_user_post_page
+layout fragment_weather
 layout fragment_welcome_page
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

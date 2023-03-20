@@ -37,6 +37,11 @@ public class SettingsFragmentDirections {
     return NavGraphDirections.settingsFragment2();
   }
 
+  @NonNull
+  public static NavDirections actionGlobalWeatherFragment() {
+    return NavGraphDirections.actionGlobalWeatherFragment();
+  }
+
   public static class ActionSettingsFragmentToEditUserFragment implements NavDirections {
     private final HashMap arguments = new HashMap();
 

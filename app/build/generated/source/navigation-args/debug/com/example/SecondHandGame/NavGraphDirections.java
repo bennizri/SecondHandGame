@@ -22,4 +22,9 @@ public class NavGraphDirections {
   public static NavDirections settingsFragment2() {
     return new ActionOnlyNavDirections(R.id.settingsFragment2);
   }
+
+  @NonNull
+  public static NavDirections actionGlobalWeatherFragment() {
+    return new ActionOnlyNavDirections(R.id.action_global_weatherFragment);
+  }
 }

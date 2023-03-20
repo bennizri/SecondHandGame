@@ -39,6 +39,11 @@ public class UserPostPageFragmentDirections {
     return NavGraphDirections.settingsFragment2();
   }
 
+  @NonNull
+  public static NavDirections actionGlobalWeatherFragment() {
+    return NavGraphDirections.actionGlobalWeatherFragment();
+  }
+
   public static class ActionFragmentUserPostPageToEditUserPostPageFragment2 implements NavDirections {
     private final HashMap arguments = new HashMap();
 

@@ -27,4 +27,9 @@ public class WelcomeFragmentDirections {
   public static NavDirections settingsFragment2() {
     return NavGraphDirections.settingsFragment2();
   }
+
+  @NonNull
+  public static NavDirections actionGlobalWeatherFragment() {
+    return NavGraphDirections.actionGlobalWeatherFragment();
+  }
 }

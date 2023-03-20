@@ -24,10 +24,12 @@ drawable ic_baseline_info_24
 drawable ic_baseline_logout_24
 drawable ic_baseline_photo_camera_24
 drawable ic_baseline_settings_24
+drawable ic_baseline_wb_sunny_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable photorecipe
 drawable user
+drawable wether
 id DescriptionEt
 id Ingredients_tv
 id NameEt
@@ -45,6 +47,7 @@ id action_SettingsFragment_to_postsListFragment
 id action_fragment_user_post_page_to_editUserPostPageFragment2
 id action_global_Profile
 id action_global_addPostFragment
+id action_global_weatherFragment
 id action_postsListFragment_to_postFragment
 id action_settingsFragment_to_editUserFragment
 id addPostFragment
@@ -55,6 +58,7 @@ id backBtn
 id blabla
 id bluefrag_back_btn
 id bluefrag_title_tv
+id btn
 id btnAdd
 id cameraButton
 id camerabutton
@@ -69,9 +73,11 @@ id editUserPostPageFragment
 id email
 id email1
 id emailEt
+id et
 id firstName
 id first_name
 id fragment_user_post_page
+id fragment_weather_tmp_img
 id galleryButton
 id gallerybutton
 id imageView
@@ -121,6 +127,9 @@ id textView8
 id textView9
 id titelSavePost
 id translateBtn2
+id tv
+id weatherFragment
+id weather_fragment_container
 id welcome
 id wrong1
 layout activity_main
@@ -135,6 +144,7 @@ layout fragment_posts_list
 layout fragment_save_post
 layout fragment_settings
 layout fragment_user_post_page
+layout fragment_weather
 layout fragment_welcome_page
 layout post_list_row
 menu bar_menu
