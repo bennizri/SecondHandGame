@@ -128,8 +128,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:isScrollContainer="false"
-                        android:scaleType="fitCenter"
-                        />
+                        android:scaleType="fitCenter" />
                     <!--                    android:src="@drawable/profile"-->
 
                 </FrameLayout>

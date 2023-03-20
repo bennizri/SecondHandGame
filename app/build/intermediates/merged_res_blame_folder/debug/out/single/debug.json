@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable-v24_photorecipe.png.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable-v24\\photorecipe.png"
-    },
-    {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_recipe_list.xml.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_recipe_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable-v24_photorecipe.png.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable-v24\\photorecipe.png"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_welcome_page.xml.flat",
@@ -32,24 +32,24 @@
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-debug-51:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_my_profile.xml.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_my_profile.xml"
-    },
-    {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_recipe_page.xml.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_recipe_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_my_profile.xml.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_my_profile.xml"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable-v24_gamer_avatar.jpg.flat",

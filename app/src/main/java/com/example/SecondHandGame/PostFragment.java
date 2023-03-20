@@ -54,10 +54,7 @@ public class PostFragment extends Fragment {
         if (price != null){
             binding.priceTv.setText(price);
         }
-        if (avatarImg.isEmpty()){
-            binding.avatarImg.setImageResource(R.drawable.game_avatar);
 
-        }
         if (sellerName != null){
             binding.SellerNameTv.setText(sellerName);
         }
@@ -65,7 +62,10 @@ public class PostFragment extends Fragment {
         if (sellerNumber != null){
             binding.SellerNumberTv.setText(sellerNumber);
         }
+        if (avatarImg.isEmpty()){
+            binding.avatarImg.setImageResource(R.drawable.game_avatar);
 
+        }
         else{
             Picasso.get().load(avatarImg).error(R.drawable.game_avatar).into(binding.avatarImg);
 
