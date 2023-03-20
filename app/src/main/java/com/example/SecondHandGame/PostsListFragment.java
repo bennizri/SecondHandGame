@@ -38,15 +38,15 @@ public class PostsListFragment extends Fragment {
 
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new PostRecyclerAdapter(getLayoutInflater(),viewModel.getData().getValue());
+        adapter = new PostRecyclerAdapter(getLayoutInflater(),viewModel.getLiveData().getValue());
         binding.recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new PostRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int pos) {
                 Log.d("TAG", "Row was clicked " + pos);
-                Post st = viewModel.getData().getValue().get(pos);
-                PostsListFragmentDirections.ActionPostsListFragmentToPostFragment action = PostsListFragmentDirections.actionPostsListFragmentToPostFragment(st.name,st.description,st.price,st.avatarUrl);
+                Post st = viewModel.getLiveData().getValue().get(pos);
+                PostsListFragmentDirections.ActionPostsListFragmentToPostFragment action = PostsListFragmentDirections.actionPostsListFragmentToPostFragment(st.name,st.description,st.price,st.avatarUrl,st.sellerName,st.sellerNumber);
                 Navigation.findNavController(view).navigate(action);
             }
         });
@@ -57,7 +57,7 @@ public class PostsListFragment extends Fragment {
 
         binding.progressBar.setVisibility(View.GONE);
 
-        viewModel.getData().observe(getViewLifecycleOwner(),list->{
+        viewModel.getLiveData().observe(getViewLifecycleOwner(),list->{
             adapter.setData(list);
         });
 
@@ -65,9 +65,7 @@ public class PostsListFragment extends Fragment {
             binding.swipeRefresh.setRefreshing(status == Model.LoadingState.LOADING);
         });
 
-        binding.swipeRefresh.setOnRefreshListener(()->{
-            reloadData();
-        });
+        binding.swipeRefresh.setOnRefreshListener(this::reloadData);
 
         LiveData<List<Movie>> data = MovieModel.instance.searchMoviesByTitle("avatar");
         data.observe(getViewLifecycleOwner(),list->{
@@ -83,6 +81,13 @@ public class PostsListFragment extends Fragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         viewModel = new ViewModelProvider(this).get(PostsListFragmentViewModel.class);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        reloadData();
+        //list of posts
     }
 
     void reloadData(){

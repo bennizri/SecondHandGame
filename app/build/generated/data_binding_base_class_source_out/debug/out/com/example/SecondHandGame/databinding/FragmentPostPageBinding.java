@@ -27,7 +27,10 @@ public final class FragmentPostPageBinding implements ViewBinding {
   public final TextView IngredientsTv;
 
   @NonNull
-  public final TextView InstructionsTv;
+  public final TextView SellerNameTv;
+
+  @NonNull
+  public final TextView SellerNumberTv;
 
   @NonNull
   public final ImageView avatarImg;
@@ -45,6 +48,9 @@ public final class FragmentPostPageBinding implements ViewBinding {
   public final TextView postPostNameTv;
 
   @NonNull
+  public final TextView priceTv;
+
+  @NonNull
   public final ScrollView scrollView2;
 
   @NonNull
@@ -54,25 +60,32 @@ public final class FragmentPostPageBinding implements ViewBinding {
   public final TextView textView7;
 
   @NonNull
-  public final Button translateBtn;
+  public final TextView textView8;
+
+  @NonNull
+  public final TextView textView9;
 
   private FragmentPostPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView IngredientsTv, @NonNull TextView InstructionsTv,
-      @NonNull ImageView avatarImg, @NonNull Button backBtn, @NonNull CheckBox like,
-      @NonNull TextView nameTv, @NonNull TextView postPostNameTv, @NonNull ScrollView scrollView2,
-      @NonNull TextView textView2, @NonNull TextView textView7, @NonNull Button translateBtn) {
+      @NonNull TextView IngredientsTv, @NonNull TextView SellerNameTv,
+      @NonNull TextView SellerNumberTv, @NonNull ImageView avatarImg, @NonNull Button backBtn,
+      @NonNull CheckBox like, @NonNull TextView nameTv, @NonNull TextView postPostNameTv,
+      @NonNull TextView priceTv, @NonNull ScrollView scrollView2, @NonNull TextView textView2,
+      @NonNull TextView textView7, @NonNull TextView textView8, @NonNull TextView textView9) {
     this.rootView = rootView;
     this.IngredientsTv = IngredientsTv;
-    this.InstructionsTv = InstructionsTv;
+    this.SellerNameTv = SellerNameTv;
+    this.SellerNumberTv = SellerNumberTv;
     this.avatarImg = avatarImg;
     this.backBtn = backBtn;
     this.like = like;
     this.nameTv = nameTv;
     this.postPostNameTv = postPostNameTv;
+    this.priceTv = priceTv;
     this.scrollView2 = scrollView2;
     this.textView2 = textView2;
     this.textView7 = textView7;
-    this.translateBtn = translateBtn;
+    this.textView8 = textView8;
+    this.textView9 = textView9;
   }
 
   @Override
@@ -108,9 +121,15 @@ public final class FragmentPostPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.Instructions_tv;
-      TextView InstructionsTv = ViewBindings.findChildViewById(rootView, id);
-      if (InstructionsTv == null) {
+      id = R.id.SellerNameTv;
+      TextView SellerNameTv = ViewBindings.findChildViewById(rootView, id);
+      if (SellerNameTv == null) {
+        break missingId;
+      }
+
+      id = R.id.SellerNumberTv;
+      TextView SellerNumberTv = ViewBindings.findChildViewById(rootView, id);
+      if (SellerNumberTv == null) {
         break missingId;
       }
 
@@ -144,6 +163,12 @@ public final class FragmentPostPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.price_tv;
+      TextView priceTv = ViewBindings.findChildViewById(rootView, id);
+      if (priceTv == null) {
+        break missingId;
+      }
+
       id = R.id.scrollView2;
       ScrollView scrollView2 = ViewBindings.findChildViewById(rootView, id);
       if (scrollView2 == null) {
@@ -162,15 +187,21 @@ public final class FragmentPostPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.translateBtn;
-      Button translateBtn = ViewBindings.findChildViewById(rootView, id);
-      if (translateBtn == null) {
+      id = R.id.textView8;
+      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
+      if (textView8 == null) {
         break missingId;
       }
 
-      return new FragmentPostPageBinding((ConstraintLayout) rootView, IngredientsTv, InstructionsTv,
-          avatarImg, backBtn, like, nameTv, postPostNameTv, scrollView2, textView2, textView7,
-          translateBtn);
+      id = R.id.textView9;
+      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
+      if (textView9 == null) {
+        break missingId;
+      }
+
+      return new FragmentPostPageBinding((ConstraintLayout) rootView, IngredientsTv, SellerNameTv,
+          SellerNumberTv, avatarImg, backBtn, like, nameTv, postPostNameTv, priceTv, scrollView2,
+          textView2, textView7, textView8, textView9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

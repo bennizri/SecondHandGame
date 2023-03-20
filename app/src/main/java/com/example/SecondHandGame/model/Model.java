@@ -43,13 +43,15 @@ public class Model {
 
 
     private LiveData<List<Post>> postList;
-    public LiveData<List<Post>> getAllPosts() {
+    public LiveData<List<Post>> getAllPostsNew() {
         if(postList == null){
             postList = localDb.postDao().getAll();
             refreshAllPosts();
         }
         return postList;
     }
+
+
 
     public void refreshAllPosts(){
         EventPostsListLoadingState.setValue(LoadingState.LOADING);
@@ -82,6 +84,9 @@ public class Model {
         firebaseModel.getAllPosts(callback);
 
     }
+
+
+
     public static boolean isOnline(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();

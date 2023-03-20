@@ -22,7 +22,7 @@ public class Post {
     public String price="";
     public String sellerName="";
     public String sellerNumber="";
-
+    public String email="";
     public String description="";
     public String avatarUrl="";
     public Boolean cb=false;
@@ -38,6 +38,7 @@ public class Post {
         this.price = price;
         this.avatarUrl = avatarUrl;
         this.cb = cb;
+        this.email = email;
     }
 
     static final String NAME = "name";
@@ -45,6 +46,7 @@ public class Post {
     static final String SELLERNAME = "sellerName";
     static final String SELLERNUMBER = "sellerNumber";
     static final String PRICE = "price";
+    static final String EMAIL = "email";
     static final String AVATAR = "avatar";
     static final String CB = "cb";
     static final String COLLECTION = "posts";
@@ -59,6 +61,7 @@ public class Post {
         String sellerNumber = (String)json.get(SELLERNUMBER);
         String avatar = (String)json.get(AVATAR);
         Boolean cb = (Boolean) json.get(CB);
+        String email = (String)json.get(EMAIL);
         Post st = new Post(price,name,description,sellerName,sellerNumber,avatar,cb);
         try{
             Timestamp time = (Timestamp) json.get(LAST_UPDATED);
@@ -81,17 +84,29 @@ public class Post {
         editor.commit();
     }
 
+
+
     public Map<String,Object> toJson(){
         Map<String, Object> json = new HashMap<>();
         json.put(PRICE, getPrice());
         json.put(DESCRIPTION, getDescription());
         json.put(NAME, getName());
+        json.put(SELLERNAME, getSellerName());
+        json.put(SELLERNUMBER, getSellerNumber());
         json.put(AVATAR, getAvatarUrl());
         json.put(CB, getCb());
+        json.put(EMAIL, getEmail());
         json.put(LAST_UPDATED, FieldValue.serverTimestamp());
         return json;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
     public void setPrice( String price) {
         this.price = price;
     }

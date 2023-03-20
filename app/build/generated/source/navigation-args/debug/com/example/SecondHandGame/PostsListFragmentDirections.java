@@ -16,16 +16,10 @@ public class PostsListFragmentDirections {
   }
 
   @NonNull
-  public static ActionPostsListFragmentToBlueFragment actionPostsListFragmentToBlueFragment(
-      @NonNull String blueTitle) {
-    return new ActionPostsListFragmentToBlueFragment(blueTitle);
-  }
-
-  @NonNull
   public static ActionPostsListFragmentToPostFragment actionPostsListFragmentToPostFragment(
       @NonNull String Name, @NonNull String Description, @NonNull String Price,
-      @Nullable String avatarUrl) {
-    return new ActionPostsListFragmentToPostFragment(Name, Description, Price, avatarUrl);
+      @Nullable String avatarUrl, @NonNull String SellerName, @NonNull String SellerNumber) {
+    return new ActionPostsListFragmentToPostFragment(Name, Description, Price, avatarUrl, SellerName, SellerNumber);
   }
 
   @NonNull
@@ -43,93 +37,13 @@ public class PostsListFragmentDirections {
     return NavGraphDirections.settingsFragment2();
   }
 
-  public static class ActionPostsListFragmentToBlueFragment implements NavDirections {
-    private final HashMap arguments = new HashMap();
-
-    @SuppressWarnings("unchecked")
-    private ActionPostsListFragmentToBlueFragment(@NonNull String blueTitle) {
-      if (blueTitle == null) {
-        throw new IllegalArgumentException("Argument \"blueTitle\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("blueTitle", blueTitle);
-    }
-
-    @NonNull
-    @SuppressWarnings("unchecked")
-    public ActionPostsListFragmentToBlueFragment setBlueTitle(@NonNull String blueTitle) {
-      if (blueTitle == null) {
-        throw new IllegalArgumentException("Argument \"blueTitle\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("blueTitle", blueTitle);
-      return this;
-    }
-
-    @Override
-    @SuppressWarnings("unchecked")
-    @NonNull
-    public Bundle getArguments() {
-      Bundle __result = new Bundle();
-      if (arguments.containsKey("blueTitle")) {
-        String blueTitle = (String) arguments.get("blueTitle");
-        __result.putString("blueTitle", blueTitle);
-      }
-      return __result;
-    }
-
-    @Override
-    public int getActionId() {
-      return R.id.action_postsListFragment_to_blueFragment;
-    }
-
-    @SuppressWarnings("unchecked")
-    @NonNull
-    public String getBlueTitle() {
-      return (String) arguments.get("blueTitle");
-    }
-
-    @Override
-    public boolean equals(Object object) {
-      if (this == object) {
-          return true;
-      }
-      if (object == null || getClass() != object.getClass()) {
-          return false;
-      }
-      ActionPostsListFragmentToBlueFragment that = (ActionPostsListFragmentToBlueFragment) object;
-      if (arguments.containsKey("blueTitle") != that.arguments.containsKey("blueTitle")) {
-        return false;
-      }
-      if (getBlueTitle() != null ? !getBlueTitle().equals(that.getBlueTitle()) : that.getBlueTitle() != null) {
-        return false;
-      }
-      if (getActionId() != that.getActionId()) {
-        return false;
-      }
-      return true;
-    }
-
-    @Override
-    public int hashCode() {
-      int result = 1;
-      result = 31 * result + (getBlueTitle() != null ? getBlueTitle().hashCode() : 0);
-      result = 31 * result + getActionId();
-      return result;
-    }
-
-    @Override
-    public String toString() {
-      return "ActionPostsListFragmentToBlueFragment(actionId=" + getActionId() + "){"
-          + "blueTitle=" + getBlueTitle()
-          + "}";
-    }
-  }
-
   public static class ActionPostsListFragmentToPostFragment implements NavDirections {
     private final HashMap arguments = new HashMap();
 
     @SuppressWarnings("unchecked")
     private ActionPostsListFragmentToPostFragment(@NonNull String Name, @NonNull String Description,
-        @NonNull String Price, @Nullable String avatarUrl) {
+        @NonNull String Price, @Nullable String avatarUrl, @NonNull String SellerName,
+        @NonNull String SellerNumber) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
@@ -143,6 +57,14 @@ public class PostsListFragmentDirections {
       }
       this.arguments.put("Price", Price);
       this.arguments.put("avatarUrl", avatarUrl);
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
     }
 
     @NonNull
@@ -182,6 +104,26 @@ public class PostsListFragmentDirections {
       return this;
     }
 
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionPostsListFragmentToPostFragment setSellerName(@NonNull String SellerName) {
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionPostsListFragmentToPostFragment setSellerNumber(@NonNull String SellerNumber) {
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     @NonNull
@@ -202,6 +144,14 @@ public class PostsListFragmentDirections {
       if (arguments.containsKey("avatarUrl")) {
         String avatarUrl = (String) arguments.get("avatarUrl");
         __result.putString("avatarUrl", avatarUrl);
+      }
+      if (arguments.containsKey("SellerName")) {
+        String SellerName = (String) arguments.get("SellerName");
+        __result.putString("SellerName", SellerName);
+      }
+      if (arguments.containsKey("SellerNumber")) {
+        String SellerNumber = (String) arguments.get("SellerNumber");
+        __result.putString("SellerNumber", SellerNumber);
       }
       return __result;
     }
@@ -233,6 +183,18 @@ public class PostsListFragmentDirections {
     @Nullable
     public String getAvatarUrl() {
       return (String) arguments.get("avatarUrl");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getSellerName() {
+      return (String) arguments.get("SellerName");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getSellerNumber() {
+      return (String) arguments.get("SellerNumber");
     }
 
     @Override
@@ -268,6 +230,18 @@ public class PostsListFragmentDirections {
       if (getAvatarUrl() != null ? !getAvatarUrl().equals(that.getAvatarUrl()) : that.getAvatarUrl() != null) {
         return false;
       }
+      if (arguments.containsKey("SellerName") != that.arguments.containsKey("SellerName")) {
+        return false;
+      }
+      if (getSellerName() != null ? !getSellerName().equals(that.getSellerName()) : that.getSellerName() != null) {
+        return false;
+      }
+      if (arguments.containsKey("SellerNumber") != that.arguments.containsKey("SellerNumber")) {
+        return false;
+      }
+      if (getSellerNumber() != null ? !getSellerNumber().equals(that.getSellerNumber()) : that.getSellerNumber() != null) {
+        return false;
+      }
       if (getActionId() != that.getActionId()) {
         return false;
       }
@@ -281,6 +255,8 @@ public class PostsListFragmentDirections {
       result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
       result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
       result = 31 * result + (getAvatarUrl() != null ? getAvatarUrl().hashCode() : 0);
+      result = 31 * result + (getSellerName() != null ? getSellerName().hashCode() : 0);
+      result = 31 * result + (getSellerNumber() != null ? getSellerNumber().hashCode() : 0);
       result = 31 * result + getActionId();
       return result;
     }
@@ -292,6 +268,8 @@ public class PostsListFragmentDirections {
           + ", Description=" + getDescription()
           + ", Price=" + getPrice()
           + ", avatarUrl=" + getAvatarUrl()
+          + ", SellerName=" + getSellerName()
+          + ", SellerNumber=" + getSellerNumber()
           + "}";
     }
   }

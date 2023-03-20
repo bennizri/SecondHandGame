@@ -1,5 +1,13 @@
 R_DEF: Internal format may change without notice
 local
+color Blue
+color Brown
+color Green
+color Grey
+color Orange
+color Pink
+color Red
+color Yellow
 color black
 color purple_200
 color purple_500
@@ -22,13 +30,13 @@ drawable photorecipe
 drawable user
 id DescriptionEt
 id Ingredients_tv
-id Instructions_tv
 id NameEt
 id PriceEt
-id Profile
 id ProfileFragment
 id SellerNameEt
+id SellerNameTv
 id SellerNumberEt
+id SellerNumberTv
 id SettingsFragment
 id aboutFragment
 id action_Profile_to_fragment_user_post_page
@@ -37,7 +45,6 @@ id action_SettingsFragment_to_postsListFragment
 id action_fragment_user_post_page_to_editUserPostPageFragment2
 id action_global_Profile
 id action_global_addPostFragment
-id action_postsListFragment_to_blueFragment
 id action_postsListFragment_to_postFragment
 id action_settingsFragment_to_editUserFragment
 id addPostFragment
@@ -46,7 +53,6 @@ id avatarImg2
 id avatarImg3
 id backBtn
 id blabla
-id blueFragment
 id bluefrag_back_btn
 id bluefrag_title_tv
 id btnAdd
@@ -94,11 +100,11 @@ id postlistrow_cb
 id postlistrow_id_tv
 id postlistrow_name_tv
 id postsListFragment
+id price_tv
 id progressBar
 id progressBar2
 id progressBar3
 id recyclerView
-id recyclerView1
 id register_tv2
 id saveBtn
 id saveBtnUser
@@ -111,8 +117,9 @@ id textView
 id textView2
 id textView4
 id textView7
+id textView8
+id textView9
 id titelSavePost
-id translateBtn
 id translateBtn2
 id welcome
 id wrong1

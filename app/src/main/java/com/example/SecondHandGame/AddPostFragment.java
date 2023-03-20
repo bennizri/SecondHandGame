@@ -27,6 +27,8 @@ import com.example.SecondHandGame.databinding.FragmentAddPostBinding;
 import com.example.SecondHandGame.model.Model;
 import com.example.SecondHandGame.model.Post;
 
+import java.util.concurrent.atomic.AtomicReference;
+
 public class AddPostFragment extends Fragment {
     FragmentAddPostBinding binding;
     ActivityResultLauncher<Void> cameraLauncher;
@@ -82,8 +84,13 @@ public class AddPostFragment extends Fragment {
             String name = binding.NameEt.getText().toString();
             String sellerName = binding.SellerNameEt.getText().toString();
             String sellerNumber = binding.SellerNumberEt.getText().toString();
-            Post st = new Post(price,description,name,sellerName,sellerNumber, "",false);
-
+            //AtomicReference<String> email = new AtomicReference<>("");
+//            Model.instance().getCurrentUser(currentUser-> {
+//                         email.set(currentUser.getEmail());
+//                    });
+//------------------------------------------------------------------------------------------------------------------
+            Post st = new Post(price,name,description,sellerName,sellerNumber, "",false);
+//------------------------------------------------------------------------------------------------------------
             if (isAvatarSelected){
                 binding.avatarImg.setDrawingCacheEnabled(true);
                 binding.avatarImg.buildDrawingCache();

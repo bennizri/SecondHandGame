@@ -26,9 +26,6 @@ public final class FragmentUserPostPageBinding implements ViewBinding {
   public final TextView IngredientsTv;
 
   @NonNull
-  public final TextView InstructionsTv;
-
-  @NonNull
   public final ImageView avatarImg;
 
   @NonNull
@@ -44,6 +41,9 @@ public final class FragmentUserPostPageBinding implements ViewBinding {
   public final TextView postPostNameTv;
 
   @NonNull
+  public final TextView priceTv;
+
+  @NonNull
   public final ScrollView scrollView2;
 
   @NonNull
@@ -56,19 +56,18 @@ public final class FragmentUserPostPageBinding implements ViewBinding {
   public final Button translateBtn2;
 
   private FragmentUserPostPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView IngredientsTv, @NonNull TextView InstructionsTv,
-      @NonNull ImageView avatarImg, @NonNull Button backBtn, @NonNull TextView nameTv,
-      @NonNull Button postEditBtn, @NonNull TextView postPostNameTv,
-      @NonNull ScrollView scrollView2, @NonNull TextView textView2, @NonNull TextView textView7,
-      @NonNull Button translateBtn2) {
+      @NonNull TextView IngredientsTv, @NonNull ImageView avatarImg, @NonNull Button backBtn,
+      @NonNull TextView nameTv, @NonNull Button postEditBtn, @NonNull TextView postPostNameTv,
+      @NonNull TextView priceTv, @NonNull ScrollView scrollView2, @NonNull TextView textView2,
+      @NonNull TextView textView7, @NonNull Button translateBtn2) {
     this.rootView = rootView;
     this.IngredientsTv = IngredientsTv;
-    this.InstructionsTv = InstructionsTv;
     this.avatarImg = avatarImg;
     this.backBtn = backBtn;
     this.nameTv = nameTv;
     this.postEditBtn = postEditBtn;
     this.postPostNameTv = postPostNameTv;
+    this.priceTv = priceTv;
     this.scrollView2 = scrollView2;
     this.textView2 = textView2;
     this.textView7 = textView7;
@@ -108,12 +107,6 @@ public final class FragmentUserPostPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.Instructions_tv;
-      TextView InstructionsTv = ViewBindings.findChildViewById(rootView, id);
-      if (InstructionsTv == null) {
-        break missingId;
-      }
-
       id = R.id.avatarImg;
       ImageView avatarImg = ViewBindings.findChildViewById(rootView, id);
       if (avatarImg == null) {
@@ -144,6 +137,12 @@ public final class FragmentUserPostPageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.price_tv;
+      TextView priceTv = ViewBindings.findChildViewById(rootView, id);
+      if (priceTv == null) {
+        break missingId;
+      }
+
       id = R.id.scrollView2;
       ScrollView scrollView2 = ViewBindings.findChildViewById(rootView, id);
       if (scrollView2 == null) {
@@ -168,9 +167,9 @@ public final class FragmentUserPostPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentUserPostPageBinding((ConstraintLayout) rootView, IngredientsTv,
-          InstructionsTv, avatarImg, backBtn, nameTv, postEditBtn, postPostNameTv, scrollView2,
-          textView2, textView7, translateBtn2);
+      return new FragmentUserPostPageBinding((ConstraintLayout) rootView, IngredientsTv, avatarImg,
+          backBtn, nameTv, postEditBtn, postPostNameTv, priceTv, scrollView2, textView2, textView7,
+          translateBtn2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

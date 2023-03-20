@@ -65,6 +65,26 @@ public class PostFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"avatarUrl\" is missing and does not have an android:defaultValue");
     }
+    if (bundle.containsKey("SellerName")) {
+      String SellerName;
+      SellerName = bundle.getString("SellerName");
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerName", SellerName);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerName\" is missing and does not have an android:defaultValue");
+    }
+    if (bundle.containsKey("SellerNumber")) {
+      String SellerNumber;
+      SellerNumber = bundle.getString("SellerNumber");
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerNumber", SellerNumber);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerNumber\" is missing and does not have an android:defaultValue");
+    }
     return __result;
   }
 
@@ -109,6 +129,26 @@ public class PostFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"avatarUrl\" is missing and does not have an android:defaultValue");
     }
+    if (savedStateHandle.contains("SellerName")) {
+      String SellerName;
+      SellerName = savedStateHandle.get("SellerName");
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerName", SellerName);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerName\" is missing and does not have an android:defaultValue");
+    }
+    if (savedStateHandle.contains("SellerNumber")) {
+      String SellerNumber;
+      SellerNumber = savedStateHandle.get("SellerNumber");
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerNumber", SellerNumber);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerNumber\" is missing and does not have an android:defaultValue");
+    }
     return __result;
   }
 
@@ -138,6 +178,18 @@ public class PostFragmentArgs implements NavArgs {
 
   @SuppressWarnings("unchecked")
   @NonNull
+  public String getSellerName() {
+    return (String) arguments.get("SellerName");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
+  public String getSellerNumber() {
+    return (String) arguments.get("SellerNumber");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
   public Bundle toBundle() {
     Bundle __result = new Bundle();
     if (arguments.containsKey("Name")) {
@@ -155,6 +207,14 @@ public class PostFragmentArgs implements NavArgs {
     if (arguments.containsKey("avatarUrl")) {
       String avatarUrl = (String) arguments.get("avatarUrl");
       __result.putString("avatarUrl", avatarUrl);
+    }
+    if (arguments.containsKey("SellerName")) {
+      String SellerName = (String) arguments.get("SellerName");
+      __result.putString("SellerName", SellerName);
+    }
+    if (arguments.containsKey("SellerNumber")) {
+      String SellerNumber = (String) arguments.get("SellerNumber");
+      __result.putString("SellerNumber", SellerNumber);
     }
     return __result;
   }
@@ -178,6 +238,14 @@ public class PostFragmentArgs implements NavArgs {
     if (arguments.containsKey("avatarUrl")) {
       String avatarUrl = (String) arguments.get("avatarUrl");
       __result.set("avatarUrl", avatarUrl);
+    }
+    if (arguments.containsKey("SellerName")) {
+      String SellerName = (String) arguments.get("SellerName");
+      __result.set("SellerName", SellerName);
+    }
+    if (arguments.containsKey("SellerNumber")) {
+      String SellerNumber = (String) arguments.get("SellerNumber");
+      __result.set("SellerNumber", SellerNumber);
     }
     return __result;
   }
@@ -215,6 +283,18 @@ public class PostFragmentArgs implements NavArgs {
     if (getAvatarUrl() != null ? !getAvatarUrl().equals(that.getAvatarUrl()) : that.getAvatarUrl() != null) {
       return false;
     }
+    if (arguments.containsKey("SellerName") != that.arguments.containsKey("SellerName")) {
+      return false;
+    }
+    if (getSellerName() != null ? !getSellerName().equals(that.getSellerName()) : that.getSellerName() != null) {
+      return false;
+    }
+    if (arguments.containsKey("SellerNumber") != that.arguments.containsKey("SellerNumber")) {
+      return false;
+    }
+    if (getSellerNumber() != null ? !getSellerNumber().equals(that.getSellerNumber()) : that.getSellerNumber() != null) {
+      return false;
+    }
     return true;
   }
 
@@ -225,6 +305,8 @@ public class PostFragmentArgs implements NavArgs {
     result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
     result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
     result = 31 * result + (getAvatarUrl() != null ? getAvatarUrl().hashCode() : 0);
+    result = 31 * result + (getSellerName() != null ? getSellerName().hashCode() : 0);
+    result = 31 * result + (getSellerNumber() != null ? getSellerNumber().hashCode() : 0);
     return result;
   }
 
@@ -235,6 +317,8 @@ public class PostFragmentArgs implements NavArgs {
         + ", Description=" + getDescription()
         + ", Price=" + getPrice()
         + ", avatarUrl=" + getAvatarUrl()
+        + ", SellerName=" + getSellerName()
+        + ", SellerNumber=" + getSellerNumber()
         + "}";
   }
 
@@ -248,7 +332,7 @@ public class PostFragmentArgs implements NavArgs {
 
     @SuppressWarnings("unchecked")
     public Builder(@NonNull String Name, @NonNull String Description, @NonNull String Price,
-        @Nullable String avatarUrl) {
+        @Nullable String avatarUrl, @NonNull String SellerName, @NonNull String SellerNumber) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
@@ -262,6 +346,14 @@ public class PostFragmentArgs implements NavArgs {
       }
       this.arguments.put("Price", Price);
       this.arguments.put("avatarUrl", avatarUrl);
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
     }
 
     @NonNull
@@ -307,6 +399,26 @@ public class PostFragmentArgs implements NavArgs {
       return this;
     }
 
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setSellerName(@NonNull String SellerName) {
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setSellerNumber(@NonNull String SellerNumber) {
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
+      return this;
+    }
+
     @SuppressWarnings({"unchecked","GetterOnBuilder"})
     @NonNull
     public String getName() {
@@ -329,6 +441,18 @@ public class PostFragmentArgs implements NavArgs {
     @Nullable
     public String getAvatarUrl() {
       return (String) arguments.get("avatarUrl");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getSellerName() {
+      return (String) arguments.get("SellerName");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getSellerNumber() {
+      return (String) arguments.get("SellerNumber");
     }
   }
 }

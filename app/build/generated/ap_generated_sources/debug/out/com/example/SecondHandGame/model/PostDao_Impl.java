@@ -33,7 +33,7 @@ public final class PostDao_Impl implements PostDao {
     this.__insertionAdapterOfPost = new EntityInsertionAdapter<Post>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Post` (`name`,`price`,`sellerName`,`sellerNumber`,`description`,`avatarUrl`,`cb`,`lastUpdated`) VALUES (?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Post` (`name`,`price`,`sellerName`,`sellerNumber`,`email`,`description`,`avatarUrl`,`cb`,`lastUpdated`) VALUES (?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -58,26 +58,31 @@ public final class PostDao_Impl implements PostDao {
         } else {
           stmt.bindString(4, value.sellerNumber);
         }
-        if (value.description == null) {
+        if (value.email == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.description);
+          stmt.bindString(5, value.email);
         }
-        if (value.avatarUrl == null) {
+        if (value.description == null) {
           stmt.bindNull(6);
         } else {
-          stmt.bindString(6, value.avatarUrl);
+          stmt.bindString(6, value.description);
+        }
+        if (value.avatarUrl == null) {
+          stmt.bindNull(7);
+        } else {
+          stmt.bindString(7, value.avatarUrl);
         }
         final Integer _tmp = value.cb == null ? null : (value.cb ? 1 : 0);
         if (_tmp == null) {
-          stmt.bindNull(7);
-        } else {
-          stmt.bindLong(7, _tmp);
-        }
-        if (value.lastUpdated == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindLong(8, value.lastUpdated);
+          stmt.bindLong(8, _tmp);
+        }
+        if (value.lastUpdated == null) {
+          stmt.bindNull(9);
+        } else {
+          stmt.bindLong(9, value.lastUpdated);
         }
       }
     };
@@ -135,6 +140,7 @@ public final class PostDao_Impl implements PostDao {
           final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
           final int _cursorIndexOfSellerName = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerName");
           final int _cursorIndexOfSellerNumber = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerNumber");
+          final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
           final int _cursorIndexOfAvatarUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "avatarUrl");
           final int _cursorIndexOfCb = CursorUtil.getColumnIndexOrThrow(_cursor, "cb");
@@ -162,6 +168,11 @@ public final class PostDao_Impl implements PostDao {
               _item.sellerNumber = null;
             } else {
               _item.sellerNumber = _cursor.getString(_cursorIndexOfSellerNumber);
+            }
+            if (_cursor.isNull(_cursorIndexOfEmail)) {
+              _item.email = null;
+            } else {
+              _item.email = _cursor.getString(_cursorIndexOfEmail);
             }
             if (_cursor.isNull(_cursorIndexOfDescription)) {
               _item.description = null;
@@ -217,6 +228,7 @@ public final class PostDao_Impl implements PostDao {
       final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
       final int _cursorIndexOfSellerName = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerName");
       final int _cursorIndexOfSellerNumber = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerNumber");
+      final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
       final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
       final int _cursorIndexOfAvatarUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "avatarUrl");
       final int _cursorIndexOfCb = CursorUtil.getColumnIndexOrThrow(_cursor, "cb");
@@ -243,6 +255,11 @@ public final class PostDao_Impl implements PostDao {
           _result.sellerNumber = null;
         } else {
           _result.sellerNumber = _cursor.getString(_cursorIndexOfSellerNumber);
+        }
+        if (_cursor.isNull(_cursorIndexOfEmail)) {
+          _result.email = null;
+        } else {
+          _result.email = _cursor.getString(_cursorIndexOfEmail);
         }
         if (_cursor.isNull(_cursorIndexOfDescription)) {
           _result.description = null;

@@ -61,7 +61,7 @@ public class FirebaseModel {
 
 
     public void getAllPosts(Model.Listener<List<Post>> callback ) {
-        db.collection("Posts").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        db.collection("posts").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 List<Post> Posts = new LinkedList<>();

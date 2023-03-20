@@ -1286,6 +1286,14 @@ attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+color Blue
+color Brown
+color Green
+color Grey
+color Orange
+color Pink
+color Red
+color Yellow
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -2748,12 +2756,10 @@ id CTRL
 id DescriptionEt
 id FUNCTION
 id Ingredients_tv
-id Instructions_tv
 id META
 id NO_DEBUG
 id NameEt
 id PriceEt
-id Profile
 id ProfileFragment
 id SHIFT
 id SHOW_ALL
@@ -2761,7 +2767,9 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id SellerNameEt
+id SellerNameTv
 id SellerNumberEt
+id SellerNumberTv
 id SettingsFragment
 id TOP_END
 id TOP_START
@@ -2825,7 +2833,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_postsListFragment_to_blueFragment
 id action_postsListFragment_to_postFragment
 id action_settingsFragment_to_editUserFragment
 id action_text
@@ -2863,7 +2870,6 @@ id beginning
 id bestChoice
 id blabla
 id blocking
-id blueFragment
 id bluefrag_back_btn
 id bluefrag_title_tv
 id bottom
@@ -3164,6 +3170,7 @@ id postlistrow_id_tv
 id postlistrow_name_tv
 id postsListFragment
 id pressed
+id price_tv
 id progressBar
 id progressBar2
 id progressBar3
@@ -3173,7 +3180,6 @@ id radio
 id ratio
 id rectangles
 id recyclerView
-id recyclerView1
 id register_tv2
 id reverseSawtooth
 id right
@@ -3278,6 +3284,8 @@ id textView
 id textView2
 id textView4
 id textView7
+id textView8
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3303,7 +3311,6 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id translateBtn
 id translateBtn2
 id triangle
 id unchecked

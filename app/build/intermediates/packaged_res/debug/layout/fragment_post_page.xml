@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                     android:shadowDy="10"
                     android:textAllCaps="false"
                     app:useMaterialThemeColors="false" />
-<!--                android:button="@drawable/selector_wishlist_item"-->
+                <!--                android:button="@drawable/selector_wishlist_item"-->
 
             </LinearLayout>
 
@@ -85,7 +85,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8sp"
-                        android:text="Ingredients:"
+                        android:text="Description:"
                         android:textSize="21sp" />
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -130,7 +130,7 @@
                         android:isScrollContainer="false"
                         android:scaleType="fitCenter"
                         />
-<!--                    android:src="@drawable/profile"-->
+                    <!--                    android:src="@drawable/profile"-->
 
                 </FrameLayout>
 
@@ -151,7 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8sp"
-                    android:text="Instructions:"
+                    android:text="Price:"
                     android:textSize="21sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -164,7 +164,7 @@
                     app:boxBackgroundColor="#B8B1B1">
 
                     <TextView
-                        android:id="@+id/Instructions_tv"
+                        android:id="@+id/price_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -178,16 +178,87 @@
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <Button
-                    android:id="@+id/translateBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16sp"
-                    android:layout_weight="1"
+                <!--                android:backgroundTint="@color/button"-->
+            </LinearLayout>
 
-                    android:text="Translate Post Name"
-                    android:textAllCaps="false" />
-<!--                android:backgroundTint="@color/button"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8sp"
+                    android:text="Seller Name:"
+                    android:textSize="21sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:boxBackgroundColor="#B8B1B1">
+
+                    <TextView
+                        android:id="@+id/SellerNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:capitalize="none"
+                        android:clickable="false"
+                        android:lineSpacingExtra="8sp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--                android:backgroundTint="@color/button"-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8sp"
+                    android:text="Seller Number:"
+                    android:textSize="21sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:boxBackgroundColor="#B8B1B1">
+
+                    <TextView
+                        android:id="@+id/SellerNumberTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:capitalize="none"
+                        android:clickable="false"
+                        android:lineSpacingExtra="8sp"
+                        android:text="TextView"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--                android:backgroundTint="@color/button"-->
             </LinearLayout>
 
             <LinearLayout
@@ -209,7 +280,7 @@
                 android:layout_weight="1"
 
                 android:text="Back" />
-<!--            android:backgroundTint="@color/button"-->
+            <!--            android:backgroundTint="@color/button"-->
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

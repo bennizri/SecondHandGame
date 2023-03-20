@@ -15,6 +15,7 @@ import com.example.SecondHandGame.model.Post;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Objects;
 
 // user page
 public class UserPostPageFragment extends PostsListFragment {
@@ -34,7 +35,7 @@ public class UserPostPageFragment extends PostsListFragment {
             binding.email.setText(currentUser.email);
             binding.firstName.setText(currentUser.firstName);
             binding.lastName.setText(currentUser.lastName);
-            if(currentUser.avatarUrl !="")
+            if(!Objects.equals(currentUser.avatarUrl, ""))
                 Picasso.get().load(currentUser.avatarUrl).error(R.drawable.game_avatar).into(binding.avatarImg3);
         });
 
