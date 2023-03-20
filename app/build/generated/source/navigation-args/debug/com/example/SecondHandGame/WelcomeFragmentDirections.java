@@ -9,23 +9,13 @@ public class WelcomeFragmentDirections {
   }
 
   @NonNull
-  public static NavDirections actionWelcomeFragmentToRecipesListFragment() {
-    return new ActionOnlyNavDirections(R.id.action_welcomeFragment_to_RecipesListFragment);
+  public static NavDirections actionSettingsFragmentToPostsListFragment() {
+    return new ActionOnlyNavDirections(R.id.action_SettingsFragment_to_postsListFragment);
   }
 
   @NonNull
   public static NavDirections actionGlobalAddPostFragment() {
     return NavGraphDirections.actionGlobalAddPostFragment();
-  }
-
-  @NonNull
-  public static NavDirections actionGlobalAddStudentFragment() {
-    return NavGraphDirections.actionGlobalAddStudentFragment();
-  }
-
-  @NonNull
-  public static NavDirections actionGlobalLikesFragment() {
-    return NavGraphDirections.actionGlobalLikesFragment();
   }
 
   @NonNull

@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.SecondHandGame.R;
@@ -44,10 +45,17 @@ public final class FragmentMyProfileBinding implements ViewBinding {
   @NonNull
   public final RecyclerView recyclerView;
 
+  @NonNull
+  public final RecyclerView recyclerView1;
+
+  @NonNull
+  public final SwipeRefreshLayout swipeRefresh;
+
   private FragmentMyProfileBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageView avatarImg3, @NonNull TextView email, @NonNull TextView firstName,
       @NonNull TextView lastName, @NonNull LinearLayout linearLayout,
-      @NonNull ProgressBar progressBar3, @NonNull RecyclerView recyclerView) {
+      @NonNull ProgressBar progressBar3, @NonNull RecyclerView recyclerView,
+      @NonNull RecyclerView recyclerView1, @NonNull SwipeRefreshLayout swipeRefresh) {
     this.rootView = rootView;
     this.avatarImg3 = avatarImg3;
     this.email = email;
@@ -56,6 +64,8 @@ public final class FragmentMyProfileBinding implements ViewBinding {
     this.linearLayout = linearLayout;
     this.progressBar3 = progressBar3;
     this.recyclerView = recyclerView;
+    this.recyclerView1 = recyclerView1;
+    this.swipeRefresh = swipeRefresh;
   }
 
   @Override
@@ -127,8 +137,20 @@ public final class FragmentMyProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recyclerView1;
+      RecyclerView recyclerView1 = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView1 == null) {
+        break missingId;
+      }
+
+      id = R.id.swipeRefresh;
+      SwipeRefreshLayout swipeRefresh = ViewBindings.findChildViewById(rootView, id);
+      if (swipeRefresh == null) {
+        break missingId;
+      }
+
       return new FragmentMyProfileBinding((ConstraintLayout) rootView, avatarImg3, email, firstName,
-          lastName, linearLayout, progressBar3, recyclerView);
+          lastName, linearLayout, progressBar3, recyclerView, recyclerView1, swipeRefresh);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_postsListFragment_to_blueFragment"
             app:destination="@id/blueFragment" />
+        <action
+            android:id="@+id/action_postsListFragment_to_postFragment"
+            app:destination="@id/postFragment" />
     </fragment>
     <fragment
         android:id="@+id/blueFragment"
@@ -37,57 +40,26 @@
         />
 
     <fragment
-        android:id="@+id/RecipesListFragment"
-        android:name="com.example.SecondHandGame.RecipesListFragment"
-        android:label="Home"
+        android:id="@+id/postFragment"
+        android:name="com.example.SecondHandGame.PostFragment"
+        android:label="Post Page"
         >
-        <!--        tools:layout="@layout/fragment_recipe_list"-->
-        <action
-            android:id="@+id/action_RecipesListFragment_to_recipeFragment"
-            app:destination="@id/recipeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/recipeFragment"
-        android:name="com.example.SecondHandGame.RecipeFragment"
-        android:label="Recipe Page"
-        >
-        <!--        tools:layout="@layout/fragment_recipe_page"-->
+        <!--        tools:layout="@layout/fragment_post_page"-->
         <argument
-            android:name="NameRecipe"
+            android:name="Name"
             app:argType="string" />
         <argument
-            android:name="Ingredients"
+            android:name="Description"
             app:argType="string" />
         <argument
-            android:name="Instructions"
+            android:name="Price"
             app:argType="string" />
         <argument
             android:name="avatarUrl"
             app:argType="string"
             app:nullable="true" />
     </fragment>
-    <fragment
-        android:id="@+id/addRecipe"
-        android:name="com.example.SecondHandGame.AddRecipeFragment"
-        android:label="New Recipe"
-        />
-    <!--    tools:layout="@layout/fragment_add_recipe"-->
-    <action
-        android:id="@+id/action_global_addStudentFragment"
-        app:destination="@id/addRecipe" />
-    <fragment
-        android:id="@+id/LikesFragment"
-        android:name="com.example.SecondHandGame.SaveFragment"
-        android:label="Save Recipe"
-        >
-        <!--        tools:layout="@layout/fragment_save_recipe"-->
-        <action
-            android:id="@+id/action_LikesFragment_to_recipeFragment"
-            app:destination="@id/recipeFragment" />
-    </fragment>
-    <action
-        android:id="@+id/action_global_LikesFragment"
-        app:destination="@id/LikesFragment" />
+    <!--    tools:layout="@layout/fragment_add_post"-->
     <fragment
         android:id="@+id/Profile"
         android:name="com.example.SecondHandGame.ProfileFragment"
@@ -95,8 +67,8 @@
         >
         <!--        tools:layout="@layout/fragment_my_profile"-->
         <action
-            android:id="@+id/action_Profile_to_fragment_user_recipe_page"
-            app:destination="@id/fragment_user_recipe_page" />
+            android:id="@+id/action_Profile_to_fragment_user_post_page"
+            app:destination="@id/fragment_user_post_page" />
         <action
             android:id="@+id/action_Profile_to_settingsFragment"
             app:destination="@id/SettingsFragment" />
@@ -105,36 +77,36 @@
         android:id="@+id/action_global_Profile"
         app:destination="@id/Profile" />
     <fragment
-        android:id="@+id/fragment_user_recipe_page"
-        android:name="com.example.SecondHandGame.UserRecipePageFragment"
-        android:label="Recipe Page "
+        android:id="@+id/fragment_user_post_page"
+        android:name="com.example.SecondHandGame.model.UserPostPageFragment"
+        android:label="Post Page "
         >
-        <!--        tools:layout="@layout/fragment_user_recipe_page"-->
+        <!--        tools:layout="@layout/fragment_user_post_page"-->
         <argument
-            android:name="NameRecipe"
+            android:name="Name"
             app:argType="string" />
         <argument
-            android:name="Ingredients"
+            android:name="price"
             app:argType="string" />
         <argument
-            android:name="Instructions"
+            android:name="description"
             app:argType="string" />
         <argument
             android:name="avatarUrl"
             app:argType="string"
             app:nullable="true" />
         <action
-            android:id="@+id/action_fragment_user_recipe_page_to_editUserRecipePageFragment2"
-            app:destination="@id/editUserRecipePageFragment" />
+            android:id="@+id/action_fragment_user_post_page_to_editUserPostPageFragment2"
+            app:destination="@id/editUserPostPageFragment" />
     </fragment>
     <fragment
-        android:id="@+id/editUserRecipePageFragment"
-        android:name="com.example.SecondHandGame.EditUserRecipePageFragment"
-        android:label="Edit Recipe Page"
+        android:id="@+id/editUserPostPageFragment"
+        android:name="com.example.SecondHandGame.EditUserPostPageFragment"
+        android:label="Edit Post Page"
         >
-        <!--        tools:layout="@layout/fragment_edit_user_recipe_page"-->
+        <!--        tools:layout="@layout/fragment_edit_user_post_page"-->
         <argument
-            android:name="NameRecipe"
+            android:name="Name"
             app:argType="string" />
         <argument
             android:name="Ingredients"
@@ -154,12 +126,8 @@
         tools:layout="@layout/fragment_welcome_page">
 
         <action
-            android:id="@+id/action_welcomeFragment_to_RecipesListFragment"
-            app:destination="@id/RecipesListFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_SettingsFragment_to_postsListFragment"
+            app:destination="@id/postsListFragment" />
     </fragment>
     <fragment
         android:id="@+id/editUserFragment"

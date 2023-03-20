@@ -17,10 +17,10 @@ public class ProfileFragmentDirections {
   }
 
   @NonNull
-  public static ActionProfileToFragmentUserRecipePage actionProfileToFragmentUserRecipePage(
-      @NonNull String NameRecipe, @NonNull String Ingredients, @NonNull String Instructions,
+  public static ActionProfileToFragmentUserPostPage actionProfileToFragmentUserPostPage(
+      @NonNull String Name, @NonNull String price, @NonNull String description,
       @Nullable String avatarUrl) {
-    return new ActionProfileToFragmentUserRecipePage(NameRecipe, Ingredients, Instructions, avatarUrl);
+    return new ActionProfileToFragmentUserPostPage(Name, price, description, avatarUrl);
   }
 
   @NonNull
@@ -34,16 +34,6 @@ public class ProfileFragmentDirections {
   }
 
   @NonNull
-  public static NavDirections actionGlobalAddStudentFragment() {
-    return NavGraphDirections.actionGlobalAddStudentFragment();
-  }
-
-  @NonNull
-  public static NavDirections actionGlobalLikesFragment() {
-    return NavGraphDirections.actionGlobalLikesFragment();
-  }
-
-  @NonNull
   public static NavDirections actionGlobalProfile() {
     return NavGraphDirections.actionGlobalProfile();
   }
@@ -53,60 +43,60 @@ public class ProfileFragmentDirections {
     return NavGraphDirections.settingsFragment2();
   }
 
-  public static class ActionProfileToFragmentUserRecipePage implements NavDirections {
+  public static class ActionProfileToFragmentUserPostPage implements NavDirections {
     private final HashMap arguments = new HashMap();
 
     @SuppressWarnings("unchecked")
-    private ActionProfileToFragmentUserRecipePage(@NonNull String NameRecipe,
-        @NonNull String Ingredients, @NonNull String Instructions, @Nullable String avatarUrl) {
-      if (NameRecipe == null) {
-        throw new IllegalArgumentException("Argument \"NameRecipe\" is marked as non-null but was passed a null value.");
+    private ActionProfileToFragmentUserPostPage(@NonNull String Name, @NonNull String price,
+        @NonNull String description, @Nullable String avatarUrl) {
+      if (Name == null) {
+        throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("NameRecipe", NameRecipe);
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
+      this.arguments.put("Name", Name);
+      if (price == null) {
+        throw new IllegalArgumentException("Argument \"price\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("Ingredients", Ingredients);
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
+      this.arguments.put("price", price);
+      if (description == null) {
+        throw new IllegalArgumentException("Argument \"description\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("Instructions", Instructions);
+      this.arguments.put("description", description);
       this.arguments.put("avatarUrl", avatarUrl);
     }
 
     @NonNull
     @SuppressWarnings("unchecked")
-    public ActionProfileToFragmentUserRecipePage setNameRecipe(@NonNull String NameRecipe) {
-      if (NameRecipe == null) {
-        throw new IllegalArgumentException("Argument \"NameRecipe\" is marked as non-null but was passed a null value.");
+    public ActionProfileToFragmentUserPostPage setName(@NonNull String Name) {
+      if (Name == null) {
+        throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("NameRecipe", NameRecipe);
+      this.arguments.put("Name", Name);
       return this;
     }
 
     @NonNull
     @SuppressWarnings("unchecked")
-    public ActionProfileToFragmentUserRecipePage setIngredients(@NonNull String Ingredients) {
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
+    public ActionProfileToFragmentUserPostPage setPrice(@NonNull String price) {
+      if (price == null) {
+        throw new IllegalArgumentException("Argument \"price\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("Ingredients", Ingredients);
+      this.arguments.put("price", price);
       return this;
     }
 
     @NonNull
     @SuppressWarnings("unchecked")
-    public ActionProfileToFragmentUserRecipePage setInstructions(@NonNull String Instructions) {
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
+    public ActionProfileToFragmentUserPostPage setDescription(@NonNull String description) {
+      if (description == null) {
+        throw new IllegalArgumentException("Argument \"description\" is marked as non-null but was passed a null value.");
       }
-      this.arguments.put("Instructions", Instructions);
+      this.arguments.put("description", description);
       return this;
     }
 
     @NonNull
     @SuppressWarnings("unchecked")
-    public ActionProfileToFragmentUserRecipePage setAvatarUrl(@Nullable String avatarUrl) {
+    public ActionProfileToFragmentUserPostPage setAvatarUrl(@Nullable String avatarUrl) {
       this.arguments.put("avatarUrl", avatarUrl);
       return this;
     }
@@ -116,17 +106,17 @@ public class ProfileFragmentDirections {
     @NonNull
     public Bundle getArguments() {
       Bundle __result = new Bundle();
-      if (arguments.containsKey("NameRecipe")) {
-        String NameRecipe = (String) arguments.get("NameRecipe");
-        __result.putString("NameRecipe", NameRecipe);
+      if (arguments.containsKey("Name")) {
+        String Name = (String) arguments.get("Name");
+        __result.putString("Name", Name);
       }
-      if (arguments.containsKey("Ingredients")) {
-        String Ingredients = (String) arguments.get("Ingredients");
-        __result.putString("Ingredients", Ingredients);
+      if (arguments.containsKey("price")) {
+        String price = (String) arguments.get("price");
+        __result.putString("price", price);
       }
-      if (arguments.containsKey("Instructions")) {
-        String Instructions = (String) arguments.get("Instructions");
-        __result.putString("Instructions", Instructions);
+      if (arguments.containsKey("description")) {
+        String description = (String) arguments.get("description");
+        __result.putString("description", description);
       }
       if (arguments.containsKey("avatarUrl")) {
         String avatarUrl = (String) arguments.get("avatarUrl");
@@ -137,25 +127,25 @@ public class ProfileFragmentDirections {
 
     @Override
     public int getActionId() {
-      return R.id.action_Profile_to_fragment_user_recipe_page;
+      return R.id.action_Profile_to_fragment_user_post_page;
     }
 
     @SuppressWarnings("unchecked")
     @NonNull
-    public String getNameRecipe() {
-      return (String) arguments.get("NameRecipe");
+    public String getName() {
+      return (String) arguments.get("Name");
     }
 
     @SuppressWarnings("unchecked")
     @NonNull
-    public String getIngredients() {
-      return (String) arguments.get("Ingredients");
+    public String getPrice() {
+      return (String) arguments.get("price");
     }
 
     @SuppressWarnings("unchecked")
     @NonNull
-    public String getInstructions() {
-      return (String) arguments.get("Instructions");
+    public String getDescription() {
+      return (String) arguments.get("description");
     }
 
     @SuppressWarnings("unchecked")
@@ -172,23 +162,23 @@ public class ProfileFragmentDirections {
       if (object == null || getClass() != object.getClass()) {
           return false;
       }
-      ActionProfileToFragmentUserRecipePage that = (ActionProfileToFragmentUserRecipePage) object;
-      if (arguments.containsKey("NameRecipe") != that.arguments.containsKey("NameRecipe")) {
+      ActionProfileToFragmentUserPostPage that = (ActionProfileToFragmentUserPostPage) object;
+      if (arguments.containsKey("Name") != that.arguments.containsKey("Name")) {
         return false;
       }
-      if (getNameRecipe() != null ? !getNameRecipe().equals(that.getNameRecipe()) : that.getNameRecipe() != null) {
+      if (getName() != null ? !getName().equals(that.getName()) : that.getName() != null) {
         return false;
       }
-      if (arguments.containsKey("Ingredients") != that.arguments.containsKey("Ingredients")) {
+      if (arguments.containsKey("price") != that.arguments.containsKey("price")) {
         return false;
       }
-      if (getIngredients() != null ? !getIngredients().equals(that.getIngredients()) : that.getIngredients() != null) {
+      if (getPrice() != null ? !getPrice().equals(that.getPrice()) : that.getPrice() != null) {
         return false;
       }
-      if (arguments.containsKey("Instructions") != that.arguments.containsKey("Instructions")) {
+      if (arguments.containsKey("description") != that.arguments.containsKey("description")) {
         return false;
       }
-      if (getInstructions() != null ? !getInstructions().equals(that.getInstructions()) : that.getInstructions() != null) {
+      if (getDescription() != null ? !getDescription().equals(that.getDescription()) : that.getDescription() != null) {
         return false;
       }
       if (arguments.containsKey("avatarUrl") != that.arguments.containsKey("avatarUrl")) {
@@ -206,9 +196,9 @@ public class ProfileFragmentDirections {
     @Override
     public int hashCode() {
       int result = 1;
-      result = 31 * result + (getNameRecipe() != null ? getNameRecipe().hashCode() : 0);
-      result = 31 * result + (getIngredients() != null ? getIngredients().hashCode() : 0);
-      result = 31 * result + (getInstructions() != null ? getInstructions().hashCode() : 0);
+      result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+      result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
+      result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
       result = 31 * result + (getAvatarUrl() != null ? getAvatarUrl().hashCode() : 0);
       result = 31 * result + getActionId();
       return result;
@@ -216,10 +206,10 @@ public class ProfileFragmentDirections {
 
     @Override
     public String toString() {
-      return "ActionProfileToFragmentUserRecipePage(actionId=" + getActionId() + "){"
-          + "NameRecipe=" + getNameRecipe()
-          + ", Ingredients=" + getIngredients()
-          + ", Instructions=" + getInstructions()
+      return "ActionProfileToFragmentUserPostPage(actionId=" + getActionId() + "){"
+          + "Name=" + getName()
+          + ", price=" + getPrice()
+          + ", description=" + getDescription()
           + ", avatarUrl=" + getAvatarUrl()
           + "}";
     }

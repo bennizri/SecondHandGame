@@ -18,7 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.SecondHandGame.databinding.FragmentSaveRecipeBinding;
+import com.example.SecondHandGame.databinding.FragmentSavePostBinding;
 import com.example.SecondHandGame.model.Model;
 import com.example.SecondHandGame.model.Post;
 
@@ -28,13 +28,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class SaveFragment extends RecipesListFragment {
-    FragmentSaveRecipeBinding binding;
+public class SaveFragment extends PostsListFragment {
+    FragmentSavePostBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentSaveRecipeBinding.inflate(inflater, container, false);
+        binding = FragmentSavePostBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
         //*******************************list ********************:
@@ -45,15 +45,15 @@ public class SaveFragment extends RecipesListFragment {
         //adapter = new PostRecyclerAdapter(getLayoutInflater(),viewModel.getData());
         binding.recyclerView.setAdapter(adapter);
 
-        //click on recipe (get pos)
+        //click on post (get pos)
 //        adapter.setOnItemClickListener(new PostRecyclerAdapter().OnItemClickListener() {
 //            @Override
 //            public void onItemClick(int pos) {
-//                // set the recipe
+//                // set the post
 //                Post re = viewModel.getData().get(pos);
 //
-//                //send data of recipes to next fragment (RecipeFragment)
-//                SaveFragmentDirections.ActionLikesFragmentToRecipeFragment action = SaveFragmentDirections.actionLikesFragmentToRecipeFragment(re.name,re.ingredients,re.instructions,re.avatarUrl);
+//                //send data of posts to next fragment (PostFragment)
+//                SaveFragmentDirections.ActionLikesFragmentToPostFragment action = SaveFragmentDirections.actionLikesFragmentToPostFragment(re.name,re.ingredients,re.instructions,re.avatarUrl);
 //                Navigation.findNavController(view).navigate(action);
 //            }
 //        });
@@ -64,9 +64,9 @@ public class SaveFragment extends RecipesListFragment {
     void reloadData(){
         binding.progressBar2.setVisibility(View.VISIBLE);
 
-        //get all recipes (not live data)
-        Model.instance().getAllRecipes((reList)->{
-            //relist = all the recipes in app
+        //get all posts (not live data)
+        Model.instance().getAllPosts((reList)->{
+            //relist = all the posts in app
             //clear the data list
            // viewModel.getData().removeAll(viewModel.getData());
         });

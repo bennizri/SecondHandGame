@@ -78,7 +78,7 @@ public class Model {
             });
         });
     }
-    public void getAllRecipes(Listener<List<Post>> callback) {
+    public void getAllPosts(Listener<List<Post>> callback) {
         firebaseModel.getAllPosts(callback);
 
     }
@@ -109,7 +109,7 @@ public class Model {
         firebaseModel.isSignedIn(listener);
     }
     public void addPost(Post st, Listener<Void> listener){
-        firebaseModel.addRecipe(st,(Void)->{
+        firebaseModel.addPost(st,(Void)->{
             refreshAllPosts();
             listener.onComplete(null);
         });

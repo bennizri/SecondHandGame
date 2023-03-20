@@ -4,7 +4,7 @@
             "outputFile": "com.example.SecondHandGame.app-mergeDebugResources-48:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\galle\\.gradle\\caches\\transforms-3\\6b841bd02a102203090d1059746236fe\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\97252\\.gradle\\caches\\transforms-3\\6b841bd02a102203090d1059746236fe\\transformed\\appcompat-1.5.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

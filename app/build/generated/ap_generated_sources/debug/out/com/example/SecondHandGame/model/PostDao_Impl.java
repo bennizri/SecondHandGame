@@ -33,51 +33,66 @@ public final class PostDao_Impl implements PostDao {
     this.__insertionAdapterOfPost = new EntityInsertionAdapter<Post>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Post` (`id`,`name`,`avatarUrl`,`cb`,`lastUpdated`) VALUES (?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Post` (`name`,`price`,`sellerName`,`sellerNumber`,`description`,`avatarUrl`,`cb`,`lastUpdated`) VALUES (?,?,?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Post value) {
-        if (value.id == null) {
+        if (value.name == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.id);
+          stmt.bindString(1, value.name);
         }
-        if (value.name == null) {
+        if (value.price == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.name);
+          stmt.bindString(2, value.price);
         }
-        if (value.avatarUrl == null) {
+        if (value.sellerName == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.avatarUrl);
+          stmt.bindString(3, value.sellerName);
+        }
+        if (value.sellerNumber == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.sellerNumber);
+        }
+        if (value.description == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.description);
+        }
+        if (value.avatarUrl == null) {
+          stmt.bindNull(6);
+        } else {
+          stmt.bindString(6, value.avatarUrl);
         }
         final Integer _tmp = value.cb == null ? null : (value.cb ? 1 : 0);
         if (_tmp == null) {
-          stmt.bindNull(4);
+          stmt.bindNull(7);
         } else {
-          stmt.bindLong(4, _tmp);
+          stmt.bindLong(7, _tmp);
         }
         if (value.lastUpdated == null) {
-          stmt.bindNull(5);
+          stmt.bindNull(8);
         } else {
-          stmt.bindLong(5, value.lastUpdated);
+          stmt.bindLong(8, value.lastUpdated);
         }
       }
     };
     this.__deletionAdapterOfPost = new EntityDeletionOrUpdateAdapter<Post>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `Post` WHERE `id` = ?";
+        return "DELETE FROM `Post` WHERE `name` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Post value) {
-        if (value.id == null) {
+        if (value.name == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.id);
+          stmt.bindString(1, value.name);
         }
       }
     };
@@ -116,8 +131,11 @@ public final class PostDao_Impl implements PostDao {
       public List<Post> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
-          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+          final int _cursorIndexOfSellerName = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerName");
+          final int _cursorIndexOfSellerNumber = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerNumber");
+          final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
           final int _cursorIndexOfAvatarUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "avatarUrl");
           final int _cursorIndexOfCb = CursorUtil.getColumnIndexOrThrow(_cursor, "cb");
           final int _cursorIndexOfLastUpdated = CursorUtil.getColumnIndexOrThrow(_cursor, "lastUpdated");
@@ -125,15 +143,30 @@ public final class PostDao_Impl implements PostDao {
           while(_cursor.moveToNext()) {
             final Post _item;
             _item = new Post();
-            if (_cursor.isNull(_cursorIndexOfId)) {
-              _item.id = null;
-            } else {
-              _item.id = _cursor.getString(_cursorIndexOfId);
-            }
             if (_cursor.isNull(_cursorIndexOfName)) {
               _item.name = null;
             } else {
               _item.name = _cursor.getString(_cursorIndexOfName);
+            }
+            if (_cursor.isNull(_cursorIndexOfPrice)) {
+              _item.price = null;
+            } else {
+              _item.price = _cursor.getString(_cursorIndexOfPrice);
+            }
+            if (_cursor.isNull(_cursorIndexOfSellerName)) {
+              _item.sellerName = null;
+            } else {
+              _item.sellerName = _cursor.getString(_cursorIndexOfSellerName);
+            }
+            if (_cursor.isNull(_cursorIndexOfSellerNumber)) {
+              _item.sellerNumber = null;
+            } else {
+              _item.sellerNumber = _cursor.getString(_cursorIndexOfSellerNumber);
+            }
+            if (_cursor.isNull(_cursorIndexOfDescription)) {
+              _item.description = null;
+            } else {
+              _item.description = _cursor.getString(_cursorIndexOfDescription);
             }
             if (_cursor.isNull(_cursorIndexOfAvatarUrl)) {
               _item.avatarUrl = null;
@@ -169,7 +202,7 @@ public final class PostDao_Impl implements PostDao {
 
   @Override
   public Post getPostById(final String postId) {
-    final String _sql = "select * from Post where id = ?";
+    final String _sql = "select * from Post where name = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (postId == null) {
@@ -180,23 +213,41 @@ public final class PostDao_Impl implements PostDao {
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
-      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
+      final int _cursorIndexOfSellerName = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerName");
+      final int _cursorIndexOfSellerNumber = CursorUtil.getColumnIndexOrThrow(_cursor, "sellerNumber");
+      final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
       final int _cursorIndexOfAvatarUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "avatarUrl");
       final int _cursorIndexOfCb = CursorUtil.getColumnIndexOrThrow(_cursor, "cb");
       final int _cursorIndexOfLastUpdated = CursorUtil.getColumnIndexOrThrow(_cursor, "lastUpdated");
       final Post _result;
       if(_cursor.moveToFirst()) {
         _result = new Post();
-        if (_cursor.isNull(_cursorIndexOfId)) {
-          _result.id = null;
-        } else {
-          _result.id = _cursor.getString(_cursorIndexOfId);
-        }
         if (_cursor.isNull(_cursorIndexOfName)) {
           _result.name = null;
         } else {
           _result.name = _cursor.getString(_cursorIndexOfName);
+        }
+        if (_cursor.isNull(_cursorIndexOfPrice)) {
+          _result.price = null;
+        } else {
+          _result.price = _cursor.getString(_cursorIndexOfPrice);
+        }
+        if (_cursor.isNull(_cursorIndexOfSellerName)) {
+          _result.sellerName = null;
+        } else {
+          _result.sellerName = _cursor.getString(_cursorIndexOfSellerName);
+        }
+        if (_cursor.isNull(_cursorIndexOfSellerNumber)) {
+          _result.sellerNumber = null;
+        } else {
+          _result.sellerNumber = _cursor.getString(_cursorIndexOfSellerNumber);
+        }
+        if (_cursor.isNull(_cursorIndexOfDescription)) {
+          _result.description = null;
+        } else {
+          _result.description = _cursor.getString(_cursorIndexOfDescription);
         }
         if (_cursor.isNull(_cursorIndexOfAvatarUrl)) {
           _result.avatarUrl = null;

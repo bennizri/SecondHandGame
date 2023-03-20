@@ -6,82 +6,98 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LiveData;
+import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.SecondHandGame.databinding.FragmentMyProfileBinding;
 import com.example.SecondHandGame.model.Model;
+import com.example.SecondHandGame.model.Movie;
+import com.example.SecondHandGame.model.MovieModel;
 import com.example.SecondHandGame.model.Post;
-import com.squareup.picasso.Picasso;
 
-// user page
-public class ProfileFragment extends RecipesListFragment {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class ProfileFragment extends PostsListFragment {
     FragmentMyProfileBinding binding;
-    String email;
+    String name;
+
+//        FragmentPostsListBinding binding;
+//    PostRecyclerAdapter adapter;
+//    PostsListFragmentViewModel viewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        // Inflate the layout for this fragment
         binding = FragmentMyProfileBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
-        // ********************get the details of user from firebase **********************
-        Model.instance().getCurrentUser(currentUser-> {
-            email = currentUser.getEmail();
-            binding.email.setText(currentUser.email);
-            binding.firstName.setText(currentUser.firstName);
-            binding.lastName.setText(currentUser.lastName);
-            if(currentUser.avatarUrl !="")
-                Picasso.get().load(currentUser.avatarUrl).error(R.drawable.game_avatar).into(binding.avatarImg3);
-        });
-
-        //*******************************list ********************:
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        //set to inflater and data live list
-       // adapter = new PostRecyclerAdapter(getLayoutInflater(),viewModel.getData());
+        adapter = new PostRecyclerAdapter(getLayoutInflater(),viewModel.getData().getValue());
         binding.recyclerView.setAdapter(adapter);
 
-        //click on recipe (get pos)
         adapter.setOnItemClickListener(new PostRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int pos) {
                 Log.d("TAG", "Row was clicked " + pos);
-                //Post re = viewModel.getData().get(pos);   //save the recipe in line "pos"(int) ;
-
-                // send the arguments to userRecipeFragment
-               // ProfileFragmentDirections.ActionProfileToFragmentUserRecipePage action = ProfileFragmentDirections.actionProfileToFragmentUserRecipePage(re.getName(),re.getIngredients(),re.getInstructions(),re.getAvatarUrl());
-               // Navigation.findNavController(view).navigate(action);
+                Post st = Objects.requireNonNull(viewModel.getData().getValue()).get(pos);
+//                PostsListFragmentDirections. action = PostsListFragmentDirections.actionPostsListFragmentToBlueFragment(st.name);
+                Navigation.findNavController(view).navigate(PostsListFragmentDirections.actionPostsListFragmentToBlueFragment(st.name));
             }
         });
 
+        View addButton = view.findViewById(R.id.btnAdd);
+        NavDirections action = PostsListFragmentDirections.actionGlobalAddPostFragment();
+        addButton.setOnClickListener(Navigation.createNavigateOnClickListener(action));
+
+        View profileButton = view.findViewById(R.id.ProfileFragment);
+        NavDirections action1 = PostsListFragmentDirections.actionGlobalProfile();
+        profileButton.setOnClickListener(Navigation.createNavigateOnClickListener(action1));
+
+
+        // binding.progressBar.setVisibility(View.GONE);
+
+        viewModel.getData().observe(getViewLifecycleOwner(),list->{
+            adapter.setData(list);
+        });
+
+        Model.instance().EventPostsListLoadingState.observe(getViewLifecycleOwner(),status->{
+            binding.swipeRefresh.setRefreshing(status == Model.LoadingState.LOADING);
+        });
+
+        binding.swipeRefresh.setOnRefreshListener(this::reloadData);
+
+        LiveData<List<Movie>> data = MovieModel.instance.searchMoviesByTitle("avatar");
+        data.observe(getViewLifecycleOwner(),list->{
+            list.forEach(item->{
+                Log.d("TAG","got movie: " + item.getTitle() + " " + item.getPoster());
+            });
+        });
 
         return view;
     }
 
-
     @Override
-    void reloadData(){
-//
-//        binding.progressBar3.setVisibility(View.VISIBLE); //show loading
-//
-//        //not live data !!!
-//        Model.instance().getAllPosts((reList)->{
-//            //relist = all the recipes in app
-//            //clear the data list
-//            viewModel.getData().removeAll(viewModel.getData());
-//
-//            //get all likes of the user connect from firebase
-//            for(Post re : reList){
-//                if(re.getName().equals(email))  //filter list by email of user
-//                    viewModel.getData().add(re);
-//            }
-//            //viewModel.data = list of user recipes
-//            //send to adapter
-//            adapter.setData(viewModel.getData());
-//            binding.progressBar3.setVisibility(View.GONE); //remove loading
-//        });
+    void reloadData() {
+        List<Post> myList = new ArrayList<>();
+        binding.progressBar3.setVisibility(View.VISIBLE);
+        Model.instance().getAllPosts((postList)-> {
+            binding.progressBar3.setVisibility(View.GONE);
+            viewModel.getData().removeObservers((LifecycleOwner) viewModel.getData());
+            for(Post post : postList) {
+               if(post.sellerName.equals(name))
+                  myList.add(post);
+                  // viewModel.getData().add(post);
+            }
+            adapter.setData(myList);
+        });
+
     }
+
 }

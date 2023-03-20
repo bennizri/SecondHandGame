@@ -14,16 +14,6 @@ public class NavGraphDirections {
   }
 
   @NonNull
-  public static NavDirections actionGlobalAddStudentFragment() {
-    return new ActionOnlyNavDirections(R.id.action_global_addStudentFragment);
-  }
-
-  @NonNull
-  public static NavDirections actionGlobalLikesFragment() {
-    return new ActionOnlyNavDirections(R.id.action_global_LikesFragment);
-  }
-
-  @NonNull
   public static NavDirections actionGlobalProfile() {
     return new ActionOnlyNavDirections(R.id.action_global_Profile);
   }

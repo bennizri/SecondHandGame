@@ -23,6 +23,21 @@ public final class FragmentAddPostBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextInputEditText DescriptionEt;
+
+  @NonNull
+  public final TextInputEditText NameEt;
+
+  @NonNull
+  public final TextInputEditText PriceEt;
+
+  @NonNull
+  public final TextInputEditText SellerNameEt;
+
+  @NonNull
+  public final TextInputEditText SellerNumberEt;
+
+  @NonNull
   public final ImageView avatarImg;
 
   @NonNull
@@ -35,25 +50,24 @@ public final class FragmentAddPostBinding implements ViewBinding {
   public final ImageButton galleryButton;
 
   @NonNull
-  public final TextInputEditText idEt;
-
-  @NonNull
-  public final TextInputEditText nameEt;
-
-  @NonNull
   public final Button saveBtn;
 
-  private FragmentAddPostBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView avatarImg,
+  private FragmentAddPostBinding(@NonNull ConstraintLayout rootView,
+      @NonNull TextInputEditText DescriptionEt, @NonNull TextInputEditText NameEt,
+      @NonNull TextInputEditText PriceEt, @NonNull TextInputEditText SellerNameEt,
+      @NonNull TextInputEditText SellerNumberEt, @NonNull ImageView avatarImg,
       @NonNull ImageButton cameraButton, @NonNull Button cancellBtn,
-      @NonNull ImageButton galleryButton, @NonNull TextInputEditText idEt,
-      @NonNull TextInputEditText nameEt, @NonNull Button saveBtn) {
+      @NonNull ImageButton galleryButton, @NonNull Button saveBtn) {
     this.rootView = rootView;
+    this.DescriptionEt = DescriptionEt;
+    this.NameEt = NameEt;
+    this.PriceEt = PriceEt;
+    this.SellerNameEt = SellerNameEt;
+    this.SellerNumberEt = SellerNumberEt;
     this.avatarImg = avatarImg;
     this.cameraButton = cameraButton;
     this.cancellBtn = cancellBtn;
     this.galleryButton = galleryButton;
-    this.idEt = idEt;
-    this.nameEt = nameEt;
     this.saveBtn = saveBtn;
   }
 
@@ -84,6 +98,36 @@ public final class FragmentAddPostBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.DescriptionEt;
+      TextInputEditText DescriptionEt = ViewBindings.findChildViewById(rootView, id);
+      if (DescriptionEt == null) {
+        break missingId;
+      }
+
+      id = R.id.NameEt;
+      TextInputEditText NameEt = ViewBindings.findChildViewById(rootView, id);
+      if (NameEt == null) {
+        break missingId;
+      }
+
+      id = R.id.PriceEt;
+      TextInputEditText PriceEt = ViewBindings.findChildViewById(rootView, id);
+      if (PriceEt == null) {
+        break missingId;
+      }
+
+      id = R.id.SellerNameEt;
+      TextInputEditText SellerNameEt = ViewBindings.findChildViewById(rootView, id);
+      if (SellerNameEt == null) {
+        break missingId;
+      }
+
+      id = R.id.SellerNumberEt;
+      TextInputEditText SellerNumberEt = ViewBindings.findChildViewById(rootView, id);
+      if (SellerNumberEt == null) {
+        break missingId;
+      }
+
       id = R.id.avatarImg;
       ImageView avatarImg = ViewBindings.findChildViewById(rootView, id);
       if (avatarImg == null) {
@@ -108,26 +152,15 @@ public final class FragmentAddPostBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.idEt;
-      TextInputEditText idEt = ViewBindings.findChildViewById(rootView, id);
-      if (idEt == null) {
-        break missingId;
-      }
-
-      id = R.id.nameEt;
-      TextInputEditText nameEt = ViewBindings.findChildViewById(rootView, id);
-      if (nameEt == null) {
-        break missingId;
-      }
-
       id = R.id.saveBtn;
       Button saveBtn = ViewBindings.findChildViewById(rootView, id);
       if (saveBtn == null) {
         break missingId;
       }
 
-      return new FragmentAddPostBinding((ConstraintLayout) rootView, avatarImg, cameraButton,
-          cancellBtn, galleryButton, idEt, nameEt, saveBtn);
+      return new FragmentAddPostBinding((ConstraintLayout) rootView, DescriptionEt, NameEt, PriceEt,
+          SellerNameEt, SellerNumberEt, avatarImg, cameraButton, cancellBtn, galleryButton,
+          saveBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

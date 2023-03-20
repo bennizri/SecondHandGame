@@ -49,7 +49,7 @@ class PostViewHolder extends RecyclerView.ViewHolder{
 
     public void bind(Post st, int pos) {
         nameTv.setText(st.name);
-        idTv.setText(st.id);
+        idTv.setText(st.price);
         cb.setChecked(st.cb);
         cb.setTag(pos);
         if (st.getAvatarUrl()  != null && st.getAvatarUrl().length() > 5) {
@@ -102,4 +102,3 @@ public class PostRecyclerAdapter extends RecyclerView.Adapter<PostViewHolder>{
     }
 
 }
-

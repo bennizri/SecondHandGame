@@ -28,16 +28,6 @@ public class SettingsFragmentDirections {
   }
 
   @NonNull
-  public static NavDirections actionGlobalAddStudentFragment() {
-    return NavGraphDirections.actionGlobalAddStudentFragment();
-  }
-
-  @NonNull
-  public static NavDirections actionGlobalLikesFragment() {
-    return NavGraphDirections.actionGlobalLikesFragment();
-  }
-
-  @NonNull
   public static NavDirections actionGlobalProfile() {
     return NavGraphDirections.actionGlobalProfile();
   }

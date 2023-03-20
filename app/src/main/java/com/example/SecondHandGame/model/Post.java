@@ -18,23 +18,33 @@ import java.util.Map;
 public class Post {
     @PrimaryKey
     @NonNull
-    public String id="";
     public String name="";
+    public String price="";
+    public String sellerName="";
+    public String sellerNumber="";
+
+    public String description="";
     public String avatarUrl="";
     public Boolean cb=false;
     public Long lastUpdated;
 
     public Post(){
     }
-    public Post(String id, String name, String avatarUrl, Boolean cb) {
+    public Post(String price, String name,String description,String sellerName, String sellerNumber, String avatarUrl, Boolean cb) {
         this.name = name;
-        this.id = id;
+        this.description = description;
+        this.sellerName = sellerName;
+        this.sellerNumber = sellerNumber;
+        this.price = price;
         this.avatarUrl = avatarUrl;
         this.cb = cb;
     }
 
     static final String NAME = "name";
-    static final String ID = "id";
+    static final String DESCRIPTION = "description";
+    static final String SELLERNAME = "sellerName";
+    static final String SELLERNUMBER = "sellerNumber";
+    static final String PRICE = "price";
     static final String AVATAR = "avatar";
     static final String CB = "cb";
     static final String COLLECTION = "posts";
@@ -42,11 +52,14 @@ public class Post {
     static final String LOCAL_LAST_UPDATED = "posts_local_last_update";
 
     public static Post fromJson(Map<String,Object> json){
-        String id = (String)json.get(ID);
+        String price = (String)json.get(PRICE);
         String name = (String)json.get(NAME);
+        String description = (String)json.get(DESCRIPTION);
+        String sellerName = (String)json.get(SELLERNAME);
+        String sellerNumber = (String)json.get(SELLERNUMBER);
         String avatar = (String)json.get(AVATAR);
         Boolean cb = (Boolean) json.get(CB);
-        Post st = new Post(id,name,avatar,cb);
+        Post st = new Post(price,name,description,sellerName,sellerNumber,avatar,cb);
         try{
             Timestamp time = (Timestamp) json.get(LAST_UPDATED);
             st.setLastUpdated(time.getSeconds());
@@ -70,7 +83,8 @@ public class Post {
 
     public Map<String,Object> toJson(){
         Map<String, Object> json = new HashMap<>();
-        json.put(ID, getId());
+        json.put(PRICE, getPrice());
+        json.put(DESCRIPTION, getDescription());
         json.put(NAME, getName());
         json.put(AVATAR, getAvatarUrl());
         json.put(CB, getCb());
@@ -78,8 +92,8 @@ public class Post {
         return json;
     }
 
-    public void setId(@NonNull String id) {
-        this.id = id;
+    public void setPrice( String price) {
+        this.price = price;
     }
 
     public void setName(String name) {
@@ -94,13 +108,23 @@ public class Post {
         this.cb = cb;
     }
 
-    @NonNull
-    public String getId() {
-        return id;
+
+    public String getPrice() {
+        return price;
+    }
+    public String getDescription() {
+        return description;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getSellerName() {
+        return sellerName;
+    }
+    public String getSellerNumber() {
+        return sellerNumber;
     }
 
     public String getAvatarUrl() {

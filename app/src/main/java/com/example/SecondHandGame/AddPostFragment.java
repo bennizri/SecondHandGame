@@ -77,15 +77,18 @@ public class AddPostFragment extends Fragment {
         View view = binding.getRoot();
 
         binding.saveBtn.setOnClickListener(view1 -> {
-            String name = binding.nameEt.getText().toString();
-            String stId = binding.idEt.getText().toString();
-            Post st = new Post(stId,name,"",false);
+            String price = binding.PriceEt.getText().toString();
+            String description = binding.DescriptionEt.getText().toString();
+            String name = binding.NameEt.getText().toString();
+            String sellerName = binding.SellerNameEt.getText().toString();
+            String sellerNumber = binding.SellerNumberEt.getText().toString();
+            Post st = new Post(price,description,name,sellerName,sellerNumber, "",false);
 
             if (isAvatarSelected){
                 binding.avatarImg.setDrawingCacheEnabled(true);
                 binding.avatarImg.buildDrawingCache();
                 Bitmap bitmap = ((BitmapDrawable) binding.avatarImg.getDrawable()).getBitmap();
-                Model.instance().uploadImage(stId, bitmap, url->{
+                Model.instance().uploadImage(name, bitmap, url->{
                     if (url != null){
                         st.setAvatarUrl(url);
                     }
