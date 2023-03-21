@@ -4,7 +4,7 @@
             "outputFile": "com.example.SecondHandGame.app-mergeDebugResources-48:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\97252\\.gradle\\caches\\transforms-3\\6b841bd02a102203090d1059746236fe\\transformed\\appcompat-1.5.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\galle\\.gradle\\caches\\transforms-3\\6b841bd02a102203090d1059746236fe\\transformed\\appcompat-1.5.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
