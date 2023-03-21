@@ -30,7 +30,7 @@ public class Post {
 
     public Post(){
     }
-    public Post(String price, String name,String description,String sellerName, String sellerNumber, String avatarUrl, Boolean cb) {
+    public Post(String price, String name,String description,String sellerName, String sellerNumber, String avatarUrl, Boolean cb,String email) {
         this.name = name;
         this.description = description;
         this.sellerName = sellerName;
@@ -62,7 +62,7 @@ public class Post {
         String avatar = (String)json.get(AVATAR);
         Boolean cb = (Boolean) json.get(CB);
         String email = (String)json.get(EMAIL);
-        Post st = new Post(price,name,description,sellerName,sellerNumber,avatar,cb);
+        Post st = new Post(price,name,description,sellerName,sellerNumber,avatar,cb,email);
         try{
             Timestamp time = (Timestamp) json.get(LAST_UPDATED);
             st.setLastUpdated(time.getSeconds());

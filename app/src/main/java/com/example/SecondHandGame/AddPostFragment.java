@@ -27,12 +27,11 @@ import com.example.SecondHandGame.databinding.FragmentAddPostBinding;
 import com.example.SecondHandGame.model.Model;
 import com.example.SecondHandGame.model.Post;
 
-import java.util.concurrent.atomic.AtomicReference;
-
 public class AddPostFragment extends Fragment {
     FragmentAddPostBinding binding;
     ActivityResultLauncher<Void> cameraLauncher;
     ActivityResultLauncher<String> galleryLauncher;
+    String email;
 
     Boolean isAvatarSelected = false;
     @Override
@@ -77,20 +76,17 @@ public class AddPostFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentAddPostBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
-
+        Model.instance().getCurrentUser(user -> {
+            email = user.getEmail();
+        });
         binding.saveBtn.setOnClickListener(view1 -> {
             String price = binding.PriceEt.getText().toString();
             String description = binding.DescriptionEt.getText().toString();
             String name = binding.NameEt.getText().toString();
             String sellerName = binding.SellerNameEt.getText().toString();
             String sellerNumber = binding.SellerNumberEt.getText().toString();
-            //AtomicReference<String> email = new AtomicReference<>("");
-//            Model.instance().getCurrentUser(currentUser-> {
-//                         email.set(currentUser.getEmail());
-//                    });
-//------------------------------------------------------------------------------------------------------------------
-            Post st = new Post(price,name,description,sellerName,sellerNumber, "",false);
-//------------------------------------------------------------------------------------------------------------
+            Post st = new Post(price,name,description,sellerName,sellerNumber, "",false,email);
+
             if (isAvatarSelected){
                 binding.avatarImg.setDrawingCacheEnabled(true);
                 binding.avatarImg.buildDrawingCache();

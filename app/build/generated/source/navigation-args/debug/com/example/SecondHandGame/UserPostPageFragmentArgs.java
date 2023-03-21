@@ -1,4 +1,4 @@
-package com.example.SecondHandGame.model;
+package com.example.SecondHandGame;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;

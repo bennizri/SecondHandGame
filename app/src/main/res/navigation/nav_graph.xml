@@ -70,7 +70,7 @@
         app:destination="@id/ProfileFragment" />
     <fragment
         android:id="@+id/fragment_user_post_page"
-        android:name="com.example.SecondHandGame.model.UserPostPageFragment"
+        android:name="com.example.SecondHandGame.UserPostPageFragment"
         android:label="Post Page "
         >
         <!--        tools:layout="@layout/fragment_user_post_page"-->

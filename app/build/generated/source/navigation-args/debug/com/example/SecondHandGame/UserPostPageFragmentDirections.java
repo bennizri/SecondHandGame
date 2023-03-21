@@ -1,11 +1,9 @@
-package com.example.SecondHandGame.model;
+package com.example.SecondHandGame;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.navigation.NavDirections;
-import com.example.SecondHandGame.NavGraphDirections;
-import com.example.SecondHandGame.R;
 import java.lang.IllegalArgumentException;
 import java.lang.Object;
 import java.lang.Override;

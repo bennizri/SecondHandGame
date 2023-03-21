@@ -14,6 +14,7 @@ import com.example.SecondHandGame.model.Model;
 import com.example.SecondHandGame.model.Post;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public class UserPostPageFragment extends PostsListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        adapter = new PostRecyclerAdapter(getLayoutInflater(), new ArrayList<>());
         binding = FragmentMyProfileBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
@@ -51,7 +52,7 @@ public class UserPostPageFragment extends PostsListFragment {
         adapter.setOnItemClickListener(new PostRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int pos) {
-                Log.d("TAG", "Row was clicked " + pos);
+                Log.d("TAG", "Row was clicked111 " + pos);
                 //Post re = viewModel.getData().get(pos);   //save the recipe in line "pos"(int) ;
 
                 // send the arguments to userRecipeFragment

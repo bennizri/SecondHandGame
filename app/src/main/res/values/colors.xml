@@ -15,5 +15,6 @@
     <color name="Brown">#A52A2A</color>
     <color name="Grey">#808080</color>
     <color name="Blue">#0000FF</color>
+    <color name="weather_bg_color">#FF018786</color>
 
 </resources>

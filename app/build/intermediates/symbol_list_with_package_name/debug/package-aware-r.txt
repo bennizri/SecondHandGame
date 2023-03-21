@@ -1918,6 +1918,7 @@ color teal_200
 color teal_700
 color tooltip_background_dark
 color tooltip_background_light
+color weather_bg_color
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -2750,6 +2751,9 @@ drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable user
+drawable weather_button_background
+drawable weather_cold_background
+drawable weather_image_background
 drawable wether
 id ALT
 id BOTTOM_END

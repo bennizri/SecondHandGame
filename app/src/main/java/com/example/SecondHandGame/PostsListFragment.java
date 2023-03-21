@@ -44,7 +44,7 @@ public class PostsListFragment extends Fragment {
         adapter.setOnItemClickListener(new PostRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int pos) {
-                Log.d("TAG", "Row was clicked " + pos);
+                Log.d("TAG", "Row was clicked2222 " + pos);
                 Post st = viewModel.getLiveData().getValue().get(pos);
                 PostsListFragmentDirections.ActionPostsListFragmentToPostFragment action = PostsListFragmentDirections.actionPostsListFragmentToPostFragment(st.name,st.description,st.price,st.avatarUrl,st.sellerName,st.sellerNumber);
                 Navigation.findNavController(view).navigate(action);
