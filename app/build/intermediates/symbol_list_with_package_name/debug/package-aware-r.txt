@@ -2761,7 +2761,6 @@ id BOTTOM_START
 id CTRL
 id DescriptionEt
 id FUNCTION
-id Ingredients_tv
 id META
 id NO_DEBUG
 id NameEt
@@ -2817,6 +2816,7 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
+id action_ProfileFragment_to_editUserPostPageFragment
 id action_Profile_to_fragment_user_post_page
 id action_Profile_to_settingsFragment
 id action_SettingsFragment_to_postsListFragment
@@ -2945,6 +2945,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id descriptionTv
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3321,7 +3322,6 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id translateBtn2
 id triangle
 id tv
 id unchecked

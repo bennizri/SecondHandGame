@@ -17,9 +17,9 @@ public class UserPostPageFragmentDirections {
 
   @NonNull
   public static ActionFragmentUserPostPageToEditUserPostPageFragment2 actionFragmentUserPostPageToEditUserPostPageFragment2(
-      @NonNull String Name, @NonNull String Ingredients, @NonNull String Instructions,
-      @Nullable String avatarUrl) {
-    return new ActionFragmentUserPostPageToEditUserPostPageFragment2(Name, Ingredients, Instructions, avatarUrl);
+      @NonNull String Name, @Nullable String avatarUrl, @NonNull String Description,
+      @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber) {
+    return new ActionFragmentUserPostPageToEditUserPostPageFragment2(Name, avatarUrl, Description, Price, SellerName, SellerNumber);
   }
 
   @NonNull
@@ -47,20 +47,29 @@ public class UserPostPageFragmentDirections {
 
     @SuppressWarnings("unchecked")
     private ActionFragmentUserPostPageToEditUserPostPageFragment2(@NonNull String Name,
-        @NonNull String Ingredients, @NonNull String Instructions, @Nullable String avatarUrl) {
+        @Nullable String avatarUrl, @NonNull String Description, @NonNull String Price,
+        @NonNull String SellerName, @NonNull String SellerNumber) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
       this.arguments.put("Name", Name);
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Ingredients", Ingredients);
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Instructions", Instructions);
       this.arguments.put("avatarUrl", avatarUrl);
+      if (Description == null) {
+        throw new IllegalArgumentException("Argument \"Description\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Description", Description);
+      if (Price == null) {
+        throw new IllegalArgumentException("Argument \"Price\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Price", Price);
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
     }
 
     @NonNull
@@ -75,31 +84,52 @@ public class UserPostPageFragmentDirections {
 
     @NonNull
     @SuppressWarnings("unchecked")
-    public ActionFragmentUserPostPageToEditUserPostPageFragment2 setIngredients(
-        @NonNull String Ingredients) {
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Ingredients", Ingredients);
-      return this;
-    }
-
-    @NonNull
-    @SuppressWarnings("unchecked")
-    public ActionFragmentUserPostPageToEditUserPostPageFragment2 setInstructions(
-        @NonNull String Instructions) {
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Instructions", Instructions);
-      return this;
-    }
-
-    @NonNull
-    @SuppressWarnings("unchecked")
     public ActionFragmentUserPostPageToEditUserPostPageFragment2 setAvatarUrl(
         @Nullable String avatarUrl) {
       this.arguments.put("avatarUrl", avatarUrl);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionFragmentUserPostPageToEditUserPostPageFragment2 setDescription(
+        @NonNull String Description) {
+      if (Description == null) {
+        throw new IllegalArgumentException("Argument \"Description\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Description", Description);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionFragmentUserPostPageToEditUserPostPageFragment2 setPrice(@NonNull String Price) {
+      if (Price == null) {
+        throw new IllegalArgumentException("Argument \"Price\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Price", Price);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionFragmentUserPostPageToEditUserPostPageFragment2 setSellerName(
+        @NonNull String SellerName) {
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionFragmentUserPostPageToEditUserPostPageFragment2 setSellerNumber(
+        @NonNull String SellerNumber) {
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
       return this;
     }
 
@@ -112,17 +142,25 @@ public class UserPostPageFragmentDirections {
         String Name = (String) arguments.get("Name");
         __result.putString("Name", Name);
       }
-      if (arguments.containsKey("Ingredients")) {
-        String Ingredients = (String) arguments.get("Ingredients");
-        __result.putString("Ingredients", Ingredients);
-      }
-      if (arguments.containsKey("Instructions")) {
-        String Instructions = (String) arguments.get("Instructions");
-        __result.putString("Instructions", Instructions);
-      }
       if (arguments.containsKey("avatarUrl")) {
         String avatarUrl = (String) arguments.get("avatarUrl");
         __result.putString("avatarUrl", avatarUrl);
+      }
+      if (arguments.containsKey("Description")) {
+        String Description = (String) arguments.get("Description");
+        __result.putString("Description", Description);
+      }
+      if (arguments.containsKey("Price")) {
+        String Price = (String) arguments.get("Price");
+        __result.putString("Price", Price);
+      }
+      if (arguments.containsKey("SellerName")) {
+        String SellerName = (String) arguments.get("SellerName");
+        __result.putString("SellerName", SellerName);
+      }
+      if (arguments.containsKey("SellerNumber")) {
+        String SellerNumber = (String) arguments.get("SellerNumber");
+        __result.putString("SellerNumber", SellerNumber);
       }
       return __result;
     }
@@ -139,21 +177,33 @@ public class UserPostPageFragmentDirections {
     }
 
     @SuppressWarnings("unchecked")
-    @NonNull
-    public String getIngredients() {
-      return (String) arguments.get("Ingredients");
-    }
-
-    @SuppressWarnings("unchecked")
-    @NonNull
-    public String getInstructions() {
-      return (String) arguments.get("Instructions");
-    }
-
-    @SuppressWarnings("unchecked")
     @Nullable
     public String getAvatarUrl() {
       return (String) arguments.get("avatarUrl");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getDescription() {
+      return (String) arguments.get("Description");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getPrice() {
+      return (String) arguments.get("Price");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getSellerName() {
+      return (String) arguments.get("SellerName");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getSellerNumber() {
+      return (String) arguments.get("SellerNumber");
     }
 
     @Override
@@ -171,22 +221,34 @@ public class UserPostPageFragmentDirections {
       if (getName() != null ? !getName().equals(that.getName()) : that.getName() != null) {
         return false;
       }
-      if (arguments.containsKey("Ingredients") != that.arguments.containsKey("Ingredients")) {
-        return false;
-      }
-      if (getIngredients() != null ? !getIngredients().equals(that.getIngredients()) : that.getIngredients() != null) {
-        return false;
-      }
-      if (arguments.containsKey("Instructions") != that.arguments.containsKey("Instructions")) {
-        return false;
-      }
-      if (getInstructions() != null ? !getInstructions().equals(that.getInstructions()) : that.getInstructions() != null) {
-        return false;
-      }
       if (arguments.containsKey("avatarUrl") != that.arguments.containsKey("avatarUrl")) {
         return false;
       }
       if (getAvatarUrl() != null ? !getAvatarUrl().equals(that.getAvatarUrl()) : that.getAvatarUrl() != null) {
+        return false;
+      }
+      if (arguments.containsKey("Description") != that.arguments.containsKey("Description")) {
+        return false;
+      }
+      if (getDescription() != null ? !getDescription().equals(that.getDescription()) : that.getDescription() != null) {
+        return false;
+      }
+      if (arguments.containsKey("Price") != that.arguments.containsKey("Price")) {
+        return false;
+      }
+      if (getPrice() != null ? !getPrice().equals(that.getPrice()) : that.getPrice() != null) {
+        return false;
+      }
+      if (arguments.containsKey("SellerName") != that.arguments.containsKey("SellerName")) {
+        return false;
+      }
+      if (getSellerName() != null ? !getSellerName().equals(that.getSellerName()) : that.getSellerName() != null) {
+        return false;
+      }
+      if (arguments.containsKey("SellerNumber") != that.arguments.containsKey("SellerNumber")) {
+        return false;
+      }
+      if (getSellerNumber() != null ? !getSellerNumber().equals(that.getSellerNumber()) : that.getSellerNumber() != null) {
         return false;
       }
       if (getActionId() != that.getActionId()) {
@@ -199,9 +261,11 @@ public class UserPostPageFragmentDirections {
     public int hashCode() {
       int result = 1;
       result = 31 * result + (getName() != null ? getName().hashCode() : 0);
-      result = 31 * result + (getIngredients() != null ? getIngredients().hashCode() : 0);
-      result = 31 * result + (getInstructions() != null ? getInstructions().hashCode() : 0);
       result = 31 * result + (getAvatarUrl() != null ? getAvatarUrl().hashCode() : 0);
+      result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
+      result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
+      result = 31 * result + (getSellerName() != null ? getSellerName().hashCode() : 0);
+      result = 31 * result + (getSellerNumber() != null ? getSellerNumber().hashCode() : 0);
       result = 31 * result + getActionId();
       return result;
     }
@@ -210,9 +274,11 @@ public class UserPostPageFragmentDirections {
     public String toString() {
       return "ActionFragmentUserPostPageToEditUserPostPageFragment2(actionId=" + getActionId() + "){"
           + "Name=" + getName()
-          + ", Ingredients=" + getIngredients()
-          + ", Instructions=" + getInstructions()
           + ", avatarUrl=" + getAvatarUrl()
+          + ", Description=" + getDescription()
+          + ", Price=" + getPrice()
+          + ", SellerName=" + getSellerName()
+          + ", SellerNumber=" + getSellerNumber()
           + "}";
     }
   }

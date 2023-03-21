@@ -5,6 +5,7 @@ package com.example.SecondHandGame;
 
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,6 @@ public class PostFragment extends Fragment {
     String sellerName;
     String sellerNumber;
     String avatarImg;
-   // String email;
     FragmentPostPageBinding binding;
 
 
@@ -46,10 +46,10 @@ public class PostFragment extends Fragment {
 
         // **********set the details post into ui ***********
         if (name != null){
-            binding.nameTv.setText(name);
+            binding.postPostNameTv.setText(name);
         }
         if (description != null){
-            binding.IngredientsTv.setText(description);
+            binding.descriptionTv.setText(description);
         }
         if (price != null){
             binding.priceTv.setText(price);
@@ -75,24 +75,16 @@ public class PostFragment extends Fragment {
             Navigation.findNavController(view1).popBackStack();
         });
 
-
-        // *************** rest api ***************
-//        binding.translateBtn.setOnClickListener(view1->{
-//
-//            //send the name of post to api and get the translate
-////            Model.instance().restApi(binding.postTitleTv.getText().toString(), trans->{
-////                binding.postTitleTv.setText(trans.toString());
-////
-////            });
-//        });
         return view;
 
     }
 
     public void getElement() {
+
         name = PostFragmentArgs.fromBundle(getArguments()).getName();
         //email = PostFragmentArgs.fromBundle(getArguments()).getEmail();
-        description = PostFragmentArgs.fromBundle(getArguments()).getDescription();
+       description = PostFragmentArgs.fromBundle(getArguments()).getDescription();
+
         price = PostFragmentArgs.fromBundle(getArguments()).getPrice();
         sellerName=PostFragmentArgs.fromBundle(getArguments()).getSellerName();
         sellerNumber=PostFragmentArgs.fromBundle(getArguments()).getSellerNumber();

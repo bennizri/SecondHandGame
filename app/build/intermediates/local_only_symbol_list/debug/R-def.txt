@@ -35,7 +35,6 @@ drawable weather_cold_background
 drawable weather_image_background
 drawable wether
 id DescriptionEt
-id Ingredients_tv
 id NameEt
 id PriceEt
 id ProfileFragment
@@ -45,6 +44,7 @@ id SellerNumberEt
 id SellerNumberTv
 id SettingsFragment
 id aboutFragment
+id action_ProfileFragment_to_editUserPostPageFragment
 id action_Profile_to_fragment_user_post_page
 id action_Profile_to_settingsFragment
 id action_SettingsFragment_to_postsListFragment
@@ -71,6 +71,7 @@ id date_edit_btn
 id date_input_et
 id date_input_layout
 id date_tv
+id descriptionTv
 id editProfile
 id editUserFragment
 id editUserPostPageFragment
@@ -130,7 +131,6 @@ id textView7
 id textView8
 id textView9
 id titelSavePost
-id translateBtn2
 id tv
 id weatherFragment
 id weather_fragment_container

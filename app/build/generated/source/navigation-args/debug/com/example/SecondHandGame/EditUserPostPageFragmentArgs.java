@@ -38,32 +38,52 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"Name\" is missing and does not have an android:defaultValue");
     }
-    if (bundle.containsKey("Ingredients")) {
-      String Ingredients;
-      Ingredients = bundle.getString("Ingredients");
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
-      }
-      __result.arguments.put("Ingredients", Ingredients);
-    } else {
-      throw new IllegalArgumentException("Required argument \"Ingredients\" is missing and does not have an android:defaultValue");
-    }
-    if (bundle.containsKey("Instructions")) {
-      String Instructions;
-      Instructions = bundle.getString("Instructions");
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
-      }
-      __result.arguments.put("Instructions", Instructions);
-    } else {
-      throw new IllegalArgumentException("Required argument \"Instructions\" is missing and does not have an android:defaultValue");
-    }
     if (bundle.containsKey("avatarUrl")) {
       String avatarUrl;
       avatarUrl = bundle.getString("avatarUrl");
       __result.arguments.put("avatarUrl", avatarUrl);
     } else {
       throw new IllegalArgumentException("Required argument \"avatarUrl\" is missing and does not have an android:defaultValue");
+    }
+    if (bundle.containsKey("Description")) {
+      String Description;
+      Description = bundle.getString("Description");
+      if (Description == null) {
+        throw new IllegalArgumentException("Argument \"Description\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("Description", Description);
+    } else {
+      throw new IllegalArgumentException("Required argument \"Description\" is missing and does not have an android:defaultValue");
+    }
+    if (bundle.containsKey("Price")) {
+      String Price;
+      Price = bundle.getString("Price");
+      if (Price == null) {
+        throw new IllegalArgumentException("Argument \"Price\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("Price", Price);
+    } else {
+      throw new IllegalArgumentException("Required argument \"Price\" is missing and does not have an android:defaultValue");
+    }
+    if (bundle.containsKey("SellerName")) {
+      String SellerName;
+      SellerName = bundle.getString("SellerName");
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerName", SellerName);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerName\" is missing and does not have an android:defaultValue");
+    }
+    if (bundle.containsKey("SellerNumber")) {
+      String SellerNumber;
+      SellerNumber = bundle.getString("SellerNumber");
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerNumber", SellerNumber);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerNumber\" is missing and does not have an android:defaultValue");
     }
     return __result;
   }
@@ -83,32 +103,52 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"Name\" is missing and does not have an android:defaultValue");
     }
-    if (savedStateHandle.contains("Ingredients")) {
-      String Ingredients;
-      Ingredients = savedStateHandle.get("Ingredients");
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
-      }
-      __result.arguments.put("Ingredients", Ingredients);
-    } else {
-      throw new IllegalArgumentException("Required argument \"Ingredients\" is missing and does not have an android:defaultValue");
-    }
-    if (savedStateHandle.contains("Instructions")) {
-      String Instructions;
-      Instructions = savedStateHandle.get("Instructions");
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
-      }
-      __result.arguments.put("Instructions", Instructions);
-    } else {
-      throw new IllegalArgumentException("Required argument \"Instructions\" is missing and does not have an android:defaultValue");
-    }
     if (savedStateHandle.contains("avatarUrl")) {
       String avatarUrl;
       avatarUrl = savedStateHandle.get("avatarUrl");
       __result.arguments.put("avatarUrl", avatarUrl);
     } else {
       throw new IllegalArgumentException("Required argument \"avatarUrl\" is missing and does not have an android:defaultValue");
+    }
+    if (savedStateHandle.contains("Description")) {
+      String Description;
+      Description = savedStateHandle.get("Description");
+      if (Description == null) {
+        throw new IllegalArgumentException("Argument \"Description\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("Description", Description);
+    } else {
+      throw new IllegalArgumentException("Required argument \"Description\" is missing and does not have an android:defaultValue");
+    }
+    if (savedStateHandle.contains("Price")) {
+      String Price;
+      Price = savedStateHandle.get("Price");
+      if (Price == null) {
+        throw new IllegalArgumentException("Argument \"Price\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("Price", Price);
+    } else {
+      throw new IllegalArgumentException("Required argument \"Price\" is missing and does not have an android:defaultValue");
+    }
+    if (savedStateHandle.contains("SellerName")) {
+      String SellerName;
+      SellerName = savedStateHandle.get("SellerName");
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerName", SellerName);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerName\" is missing and does not have an android:defaultValue");
+    }
+    if (savedStateHandle.contains("SellerNumber")) {
+      String SellerNumber;
+      SellerNumber = savedStateHandle.get("SellerNumber");
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("SellerNumber", SellerNumber);
+    } else {
+      throw new IllegalArgumentException("Required argument \"SellerNumber\" is missing and does not have an android:defaultValue");
     }
     return __result;
   }
@@ -120,21 +160,33 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
   }
 
   @SuppressWarnings("unchecked")
-  @NonNull
-  public String getIngredients() {
-    return (String) arguments.get("Ingredients");
-  }
-
-  @SuppressWarnings("unchecked")
-  @NonNull
-  public String getInstructions() {
-    return (String) arguments.get("Instructions");
-  }
-
-  @SuppressWarnings("unchecked")
   @Nullable
   public String getAvatarUrl() {
     return (String) arguments.get("avatarUrl");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
+  public String getDescription() {
+    return (String) arguments.get("Description");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
+  public String getPrice() {
+    return (String) arguments.get("Price");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
+  public String getSellerName() {
+    return (String) arguments.get("SellerName");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
+  public String getSellerNumber() {
+    return (String) arguments.get("SellerNumber");
   }
 
   @SuppressWarnings("unchecked")
@@ -145,17 +197,25 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
       String Name = (String) arguments.get("Name");
       __result.putString("Name", Name);
     }
-    if (arguments.containsKey("Ingredients")) {
-      String Ingredients = (String) arguments.get("Ingredients");
-      __result.putString("Ingredients", Ingredients);
-    }
-    if (arguments.containsKey("Instructions")) {
-      String Instructions = (String) arguments.get("Instructions");
-      __result.putString("Instructions", Instructions);
-    }
     if (arguments.containsKey("avatarUrl")) {
       String avatarUrl = (String) arguments.get("avatarUrl");
       __result.putString("avatarUrl", avatarUrl);
+    }
+    if (arguments.containsKey("Description")) {
+      String Description = (String) arguments.get("Description");
+      __result.putString("Description", Description);
+    }
+    if (arguments.containsKey("Price")) {
+      String Price = (String) arguments.get("Price");
+      __result.putString("Price", Price);
+    }
+    if (arguments.containsKey("SellerName")) {
+      String SellerName = (String) arguments.get("SellerName");
+      __result.putString("SellerName", SellerName);
+    }
+    if (arguments.containsKey("SellerNumber")) {
+      String SellerNumber = (String) arguments.get("SellerNumber");
+      __result.putString("SellerNumber", SellerNumber);
     }
     return __result;
   }
@@ -168,17 +228,25 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
       String Name = (String) arguments.get("Name");
       __result.set("Name", Name);
     }
-    if (arguments.containsKey("Ingredients")) {
-      String Ingredients = (String) arguments.get("Ingredients");
-      __result.set("Ingredients", Ingredients);
-    }
-    if (arguments.containsKey("Instructions")) {
-      String Instructions = (String) arguments.get("Instructions");
-      __result.set("Instructions", Instructions);
-    }
     if (arguments.containsKey("avatarUrl")) {
       String avatarUrl = (String) arguments.get("avatarUrl");
       __result.set("avatarUrl", avatarUrl);
+    }
+    if (arguments.containsKey("Description")) {
+      String Description = (String) arguments.get("Description");
+      __result.set("Description", Description);
+    }
+    if (arguments.containsKey("Price")) {
+      String Price = (String) arguments.get("Price");
+      __result.set("Price", Price);
+    }
+    if (arguments.containsKey("SellerName")) {
+      String SellerName = (String) arguments.get("SellerName");
+      __result.set("SellerName", SellerName);
+    }
+    if (arguments.containsKey("SellerNumber")) {
+      String SellerNumber = (String) arguments.get("SellerNumber");
+      __result.set("SellerNumber", SellerNumber);
     }
     return __result;
   }
@@ -198,22 +266,34 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     if (getName() != null ? !getName().equals(that.getName()) : that.getName() != null) {
       return false;
     }
-    if (arguments.containsKey("Ingredients") != that.arguments.containsKey("Ingredients")) {
-      return false;
-    }
-    if (getIngredients() != null ? !getIngredients().equals(that.getIngredients()) : that.getIngredients() != null) {
-      return false;
-    }
-    if (arguments.containsKey("Instructions") != that.arguments.containsKey("Instructions")) {
-      return false;
-    }
-    if (getInstructions() != null ? !getInstructions().equals(that.getInstructions()) : that.getInstructions() != null) {
-      return false;
-    }
     if (arguments.containsKey("avatarUrl") != that.arguments.containsKey("avatarUrl")) {
       return false;
     }
     if (getAvatarUrl() != null ? !getAvatarUrl().equals(that.getAvatarUrl()) : that.getAvatarUrl() != null) {
+      return false;
+    }
+    if (arguments.containsKey("Description") != that.arguments.containsKey("Description")) {
+      return false;
+    }
+    if (getDescription() != null ? !getDescription().equals(that.getDescription()) : that.getDescription() != null) {
+      return false;
+    }
+    if (arguments.containsKey("Price") != that.arguments.containsKey("Price")) {
+      return false;
+    }
+    if (getPrice() != null ? !getPrice().equals(that.getPrice()) : that.getPrice() != null) {
+      return false;
+    }
+    if (arguments.containsKey("SellerName") != that.arguments.containsKey("SellerName")) {
+      return false;
+    }
+    if (getSellerName() != null ? !getSellerName().equals(that.getSellerName()) : that.getSellerName() != null) {
+      return false;
+    }
+    if (arguments.containsKey("SellerNumber") != that.arguments.containsKey("SellerNumber")) {
+      return false;
+    }
+    if (getSellerNumber() != null ? !getSellerNumber().equals(that.getSellerNumber()) : that.getSellerNumber() != null) {
       return false;
     }
     return true;
@@ -223,9 +303,11 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
   public int hashCode() {
     int result = 1;
     result = 31 * result + (getName() != null ? getName().hashCode() : 0);
-    result = 31 * result + (getIngredients() != null ? getIngredients().hashCode() : 0);
-    result = 31 * result + (getInstructions() != null ? getInstructions().hashCode() : 0);
     result = 31 * result + (getAvatarUrl() != null ? getAvatarUrl().hashCode() : 0);
+    result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
+    result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
+    result = 31 * result + (getSellerName() != null ? getSellerName().hashCode() : 0);
+    result = 31 * result + (getSellerNumber() != null ? getSellerNumber().hashCode() : 0);
     return result;
   }
 
@@ -233,9 +315,11 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
   public String toString() {
     return "EditUserPostPageFragmentArgs{"
         + "Name=" + getName()
-        + ", Ingredients=" + getIngredients()
-        + ", Instructions=" + getInstructions()
         + ", avatarUrl=" + getAvatarUrl()
+        + ", Description=" + getDescription()
+        + ", Price=" + getPrice()
+        + ", SellerName=" + getSellerName()
+        + ", SellerNumber=" + getSellerNumber()
         + "}";
   }
 
@@ -248,21 +332,29 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     }
 
     @SuppressWarnings("unchecked")
-    public Builder(@NonNull String Name, @NonNull String Ingredients, @NonNull String Instructions,
-        @Nullable String avatarUrl) {
+    public Builder(@NonNull String Name, @Nullable String avatarUrl, @NonNull String Description,
+        @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
       this.arguments.put("Name", Name);
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Ingredients", Ingredients);
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Instructions", Instructions);
       this.arguments.put("avatarUrl", avatarUrl);
+      if (Description == null) {
+        throw new IllegalArgumentException("Argument \"Description\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Description", Description);
+      if (Price == null) {
+        throw new IllegalArgumentException("Argument \"Price\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Price", Price);
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
     }
 
     @NonNull
@@ -283,28 +375,48 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
 
     @NonNull
     @SuppressWarnings("unchecked")
-    public Builder setIngredients(@NonNull String Ingredients) {
-      if (Ingredients == null) {
-        throw new IllegalArgumentException("Argument \"Ingredients\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Ingredients", Ingredients);
-      return this;
-    }
-
-    @NonNull
-    @SuppressWarnings("unchecked")
-    public Builder setInstructions(@NonNull String Instructions) {
-      if (Instructions == null) {
-        throw new IllegalArgumentException("Argument \"Instructions\" is marked as non-null but was passed a null value.");
-      }
-      this.arguments.put("Instructions", Instructions);
-      return this;
-    }
-
-    @NonNull
-    @SuppressWarnings("unchecked")
     public Builder setAvatarUrl(@Nullable String avatarUrl) {
       this.arguments.put("avatarUrl", avatarUrl);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setDescription(@NonNull String Description) {
+      if (Description == null) {
+        throw new IllegalArgumentException("Argument \"Description\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Description", Description);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setPrice(@NonNull String Price) {
+      if (Price == null) {
+        throw new IllegalArgumentException("Argument \"Price\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("Price", Price);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setSellerName(@NonNull String SellerName) {
+      if (SellerName == null) {
+        throw new IllegalArgumentException("Argument \"SellerName\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerName", SellerName);
+      return this;
+    }
+
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setSellerNumber(@NonNull String SellerNumber) {
+      if (SellerNumber == null) {
+        throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("SellerNumber", SellerNumber);
       return this;
     }
 
@@ -315,21 +427,33 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     }
 
     @SuppressWarnings({"unchecked","GetterOnBuilder"})
-    @NonNull
-    public String getIngredients() {
-      return (String) arguments.get("Ingredients");
-    }
-
-    @SuppressWarnings({"unchecked","GetterOnBuilder"})
-    @NonNull
-    public String getInstructions() {
-      return (String) arguments.get("Instructions");
-    }
-
-    @SuppressWarnings({"unchecked","GetterOnBuilder"})
     @Nullable
     public String getAvatarUrl() {
       return (String) arguments.get("avatarUrl");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getDescription() {
+      return (String) arguments.get("Description");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getPrice() {
+      return (String) arguments.get("Price");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getSellerName() {
+      return (String) arguments.get("SellerName");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getSellerNumber() {
+      return (String) arguments.get("SellerNumber");
     }
   }
 }

@@ -64,6 +64,9 @@
         <action
             android:id="@+id/action_Profile_to_settingsFragment"
             app:destination="@id/SettingsFragment" />
+        <action
+            android:id="@+id/action_ProfileFragment_to_editUserPostPageFragment"
+            app:destination="@id/editUserPostPageFragment" />
     </fragment>
     <action
         android:id="@+id/action_global_Profile"
@@ -101,15 +104,18 @@
             android:name="Name"
             app:argType="string" />
         <argument
-            android:name="Ingredients"
-            app:argType="string" />
-        <argument
-            android:name="Instructions"
-            app:argType="string" />
-        <argument
             android:name="avatarUrl"
             app:argType="string"
             app:nullable="true" />
+        <argument android:name="Description"
+            app:argType="string" />
+        <argument android:name="Price"
+            app:argType="string" />
+        <argument
+            android:name="SellerName"
+            app:argType="string" />
+        <argument android:name="SellerNumber"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"

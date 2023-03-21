@@ -146,7 +146,10 @@ public class ProfileFragment extends PostsListFragment {
                 Post post = viewModel.getData().get(pos);   // save the post in line "pos"(int) ;
 
                 // send the arguments to userPostFragment
-                ProfileFragmentDirections.ActionProfileToFragmentUserPostPage action = ProfileFragmentDirections.actionProfileToFragmentUserPostPage(post.getName(),post.getPrice(),post.getDescription(),post.getAvatarUrl());
+//                ProfileFragmentDirections.ActionProfileFragmentToEditUserPostPageFragment action = ProfileFragmentDirections.actionProfileFragmentToEditUserPostPageFragment(post.getName(),post.getPrice(),post.getDescription(),post.getAvatarUrl());
+//                Navigation.findNavController(view).navigate(action);
+
+                ProfileFragmentDirections.ActionProfileToFragmentUserPostPage action = ProfileFragmentDirections.actionProfileToFragmentUserPostPage(post.getName(),post.getDescription(),post.getPrice(),post.getAvatarUrl());
                 Navigation.findNavController(view).navigate(action);
             }
         });
