@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Weather"
+        android:fontFamily="@font/monotserrat"
         android:layout_marginTop="20dp"
         android:textSize="30sp" />
 
