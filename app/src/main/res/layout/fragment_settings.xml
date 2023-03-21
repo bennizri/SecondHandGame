@@ -9,6 +9,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/image17"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -33,12 +34,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="60sp"
                     android:background="#edebe4"
-
+                    android:fontFamily="@font/monotserrat"
                     android:text="Edit Profile"
                     android:textAllCaps="false"
                     android:textSize="20sp"
                     app:iconTint="#B8B0B0" />
-<!--                android:backgroundTint="@color/button"-->
+                <!--                android:backgroundTint="@color/button"-->
 
                 <Button
                     android:id="@+id/logout"
@@ -46,12 +47,13 @@
                     android:layout_height="60sp"
                     android:layout_marginTop="8sp"
                     android:background="#edebe4"
+                    android:fontFamily="@font/monotserrat"
 
                     android:text="Log Out"
                     android:textAllCaps="false"
                     android:textSize="20sp"
                     app:iconTint="#C3C1C1" />
-<!--                android:backgroundTint="@color/button"-->
+                <!--                android:backgroundTint="@color/button"-->
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
 

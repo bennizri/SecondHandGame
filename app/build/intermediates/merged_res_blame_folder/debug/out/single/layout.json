@@ -56,11 +56,11 @@
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_edit_user.xml"
     },
     {
-        "merged": "com.example.SecondHandGame.app-mergeDebugResources-49:/layout/fragment_weather.xml",
-        "source": "com.example.SecondHandGame.app-main-52:/layout/fragment_weather.xml"
-    },
-    {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-mergeDebugResources-49:\\layout\\fragment_edit_user_post_page.xml",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_edit_user_post_page.xml"
+    },
+    {
+        "merged": "com.example.SecondHandGame.app-mergeDebugResources-49:/layout/fragment_add_post.xml",
+        "source": "com.example.SecondHandGame.app-main-52:/layout/fragment_add_post.xml"
     }
 ]

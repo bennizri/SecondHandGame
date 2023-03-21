@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-    <android.widget.LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:padding="20dp"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    tools:context=".WeatherFragment"
-    android:id="@+id/weather_fragment_container"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:id="@+id/weather_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image2"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".WeatherFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Weather"
-        android:fontFamily="@font/monotserrat"
         android:layout_marginTop="20dp"
-        android:textSize="30sp" />
+        android:fontFamily="@font/monotserrat"
+        android:text="Weather"
+        android:textSize="50dp" />
 
     <EditText
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:id="@+id/et"
-        android:hint="Enter your City name"
-        android:layout_marginTop="50dp"
-        android:ems="15"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/profile_image_view_layout"
-        />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:ems="15"
+        android:fontFamily="@font/monotserrat"
+        android:hint="Enter your City name" />
 
     <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
         android:id="@+id/btn"
-        android:text="Get Weather"
-        android:onClick="getweather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/weather_bg_color"
-        android:layout_gravity="center_horizontal"/>
+        android:fontFamily="@font/monotserrat"
+        android:onClick="getweather"
+        android:text="Get Weather" />
 
     <TextView
         android:id="@+id/tv"
@@ -47,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:hint="Temperature will we displayed here"
+        android:fontFamily="@font/monotserrat"
+        android:hint="Temperatures"
         android:textSize="30sp" />
 
     <ImageView

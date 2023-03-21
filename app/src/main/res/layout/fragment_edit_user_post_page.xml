@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/image17"
     tools:context="com.example.SecondHandGame.EditUserPostPageFragment">
 
     <ScrollView
@@ -85,9 +86,8 @@
                         android:layout_height="198dp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                       >
-<!--                        app:startIconDrawable="@drawable/ic_baseline_mode_edit_24"-->
+                        android:layout_marginEnd="10dp">
+                        <!--                        app:startIconDrawable="@drawable/ic_baseline_mode_edit_24"-->
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/ingredientsEt"
@@ -109,17 +109,15 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:isScrollContainer="false"
-                        android:scaleType="fitCenter"
-                    />
-<!--                    android:src="@drawable/profile"-->
+                        android:scaleType="fitCenter" />
+                    <!--                    android:src="@drawable/profile"-->
 
                     <ImageButton
                         android:id="@+id/gallerybutton"
                         android:layout_width="69dp"
                         android:layout_height="56dp"
-                        android:layout_gravity="bottom|left"
-                         />
-<!--                    android:src="@drawable/ic_baseline_add_box_24"-->
+                        android:layout_gravity="bottom|left" />
+                    <!--                    android:src="@drawable/ic_baseline_add_box_24"-->
 
                     <ImageButton
                         android:id="@+id/camerabutton"
@@ -127,9 +125,8 @@
                         android:layout_height="59dp"
                         android:layout_gravity="bottom|right"
                         android:layout_weight="1"
-                        android:scaleType="center"
-                         />
-<!--                    android:src="@drawable/ic_baseline_add_a_photo_"-->
+                        android:scaleType="center" />
+                    <!--                    android:src="@drawable/ic_baseline_add_a_photo_"-->
                 </FrameLayout>
 
             </LinearLayout>
@@ -153,9 +150,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    >
-<!--                    app:startIconDrawable="@drawable/ic_baseline_mode_edit_24"-->
+                    android:layout_marginEnd="10dp">
+                    <!--                    app:startIconDrawable="@drawable/ic_baseline_mode_edit_24"-->
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/instructionsEt"
@@ -181,7 +177,7 @@
                     android:layout_weight="1"
 
                     android:text="Save" />
-<!--                android:backgroundTint="@color/button"-->
+                <!--                android:backgroundTint="@color/button"-->
 
                 <Button
                     android:id="@+id/cancellBtn"
@@ -191,7 +187,7 @@
                     android:layout_weight="1"
 
                     android:text="@android:string/cancel" />
-<!--                android:backgroundTint="@color/button"-->
+                <!--                android:backgroundTint="@color/button"-->
             </LinearLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
