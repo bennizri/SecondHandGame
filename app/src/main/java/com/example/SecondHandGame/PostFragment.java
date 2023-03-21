@@ -81,14 +81,19 @@ public class PostFragment extends Fragment {
 
     public void getElement() {
 
-        name = PostFragmentArgs.fromBundle(getArguments()).getName();
+        //Bundle jsonData = getArguments();
+        name = (String)getArguments().get("Name");
+        description = (String)getArguments().get("description");
+        price = (String)getArguments().get("price");
+        avatarImg = (String)getArguments().get("avatarUrl");
+        //name = PostFragmentArgs.fromBundle(getArguments()).getName();
         //email = PostFragmentArgs.fromBundle(getArguments()).getEmail();
-       description = PostFragmentArgs.fromBundle(getArguments()).getDescription();
+       //description = PostFragmentArgs.fromBundle(getArguments()).getDescription();
 
-        price = PostFragmentArgs.fromBundle(getArguments()).getPrice();
-        sellerName=PostFragmentArgs.fromBundle(getArguments()).getSellerName();
-        sellerNumber=PostFragmentArgs.fromBundle(getArguments()).getSellerNumber();
-        avatarImg = (PostFragmentArgs.fromBundle(getArguments()).getAvatarUrl());
+        //price = PostFragmentArgs.fromBundle(getArguments()).getPrice();
+        //sellerName=PostFragmentArgs.fromBundle(getArguments()).getSellerName();
+        //sellerNumber=PostFragmentArgs.fromBundle(getArguments()).getSellerNumber();
+        //avatarImg = (PostFragmentArgs.fromBundle(getArguments()).getAvatarUrl());
 
     }
 }

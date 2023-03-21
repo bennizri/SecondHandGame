@@ -154,8 +154,8 @@ public class UserPostPageFragment extends PostFragment {
         View view = binding.getRoot();
         this.getElement();
 
-        avatarImg = (PostFragmentArgs.fromBundle(getArguments()).getAvatarUrl());
-
+       // avatarImg = (PostFragmentArgs.fromBundle(getArguments()).getAvatarUrl());
+        avatarImg = (String)getArguments().get("avatarUrl");
         if (name != null){
             binding.postPostNameTv.setText(name);
         }
@@ -164,12 +164,6 @@ public class UserPostPageFragment extends PostFragment {
         }
         if (price != null){
             binding.priceTv.setText(price);
-        }
-        if (sellerName != null){
-            binding.SellerNameTv.setText(sellerName);
-        }
-        if (sellerNumber != null){
-            binding.SellerNumberTv.setText(sellerNumber);
         }
         if ( avatarImg.isEmpty() ||avatarImg == ""){
             binding.avatarImg.setImageResource(R.drawable.photorecipe);
