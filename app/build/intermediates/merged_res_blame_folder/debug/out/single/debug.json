@@ -60,12 +60,12 @@
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable\\ic_baseline_games_24.xml"
     },
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "com.example.SecondHandGame.app-merged_res-50:/layout_fragment_weather.xml.flat",
+        "source": "com.example.SecondHandGame.app-main-52:/layout/fragment_weather.xml"
     },
     {
-        "merged": "com.example.SecondHandGame.app-merged_res-50:/layout_fragment_post_page.xml.flat",
-        "source": "com.example.SecondHandGame.app-main-52:/layout/fragment_post_page.xml"
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",

@@ -3178,6 +3178,7 @@ id postlistrow_name_tv
 id postsListFragment
 id pressed
 id price_tv
+id profile_image_view_layout
 id progressBar
 id progressBar2
 id progressBar3

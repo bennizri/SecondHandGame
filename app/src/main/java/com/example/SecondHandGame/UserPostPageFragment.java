@@ -166,7 +166,7 @@ public class UserPostPageFragment extends PostFragment {
             binding.priceTv.setText(price);
         }
         if ( avatarImg.isEmpty() ||avatarImg == ""){
-            binding.avatarImg.setImageResource(R.drawable.photorecipe);
+            binding.avatarImg.setImageResource(R.drawable.game_avatar);
         }else{
             Picasso.get().load(avatarImg).error(R.drawable.game_avatar).into(binding.avatarImg);
         }
