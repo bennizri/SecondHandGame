@@ -32,12 +32,6 @@ public final class FragmentAddPostBinding implements ViewBinding {
   public final TextInputEditText PriceEt;
 
   @NonNull
-  public final TextInputEditText SellerNameEt;
-
-  @NonNull
-  public final TextInputEditText SellerNumberEt;
-
-  @NonNull
   public final ImageView avatarImg;
 
   @NonNull
@@ -54,16 +48,13 @@ public final class FragmentAddPostBinding implements ViewBinding {
 
   private FragmentAddPostBinding(@NonNull ConstraintLayout rootView,
       @NonNull TextInputEditText DescriptionEt, @NonNull TextInputEditText NameEt,
-      @NonNull TextInputEditText PriceEt, @NonNull TextInputEditText SellerNameEt,
-      @NonNull TextInputEditText SellerNumberEt, @NonNull ImageView avatarImg,
+      @NonNull TextInputEditText PriceEt, @NonNull ImageView avatarImg,
       @NonNull ImageButton cameraButton, @NonNull Button cancellBtn,
       @NonNull ImageButton galleryButton, @NonNull Button saveBtn) {
     this.rootView = rootView;
     this.DescriptionEt = DescriptionEt;
     this.NameEt = NameEt;
     this.PriceEt = PriceEt;
-    this.SellerNameEt = SellerNameEt;
-    this.SellerNumberEt = SellerNumberEt;
     this.avatarImg = avatarImg;
     this.cameraButton = cameraButton;
     this.cancellBtn = cancellBtn;
@@ -116,18 +107,6 @@ public final class FragmentAddPostBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.SellerNameEt;
-      TextInputEditText SellerNameEt = ViewBindings.findChildViewById(rootView, id);
-      if (SellerNameEt == null) {
-        break missingId;
-      }
-
-      id = R.id.SellerNumberEt;
-      TextInputEditText SellerNumberEt = ViewBindings.findChildViewById(rootView, id);
-      if (SellerNumberEt == null) {
-        break missingId;
-      }
-
       id = R.id.avatarImg;
       ImageView avatarImg = ViewBindings.findChildViewById(rootView, id);
       if (avatarImg == null) {
@@ -159,8 +138,7 @@ public final class FragmentAddPostBinding implements ViewBinding {
       }
 
       return new FragmentAddPostBinding((ConstraintLayout) rootView, DescriptionEt, NameEt, PriceEt,
-          SellerNameEt, SellerNumberEt, avatarImg, cameraButton, cancellBtn, galleryButton,
-          saveBtn);
+          avatarImg, cameraButton, cancellBtn, galleryButton, saveBtn);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

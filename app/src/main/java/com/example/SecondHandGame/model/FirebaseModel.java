@@ -22,6 +22,7 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
@@ -102,7 +103,26 @@ public class FirebaseModel {
 
     public void addPost(Post re, Model.Listener<Void> listener) { // add post to firebase
 
-        db.collection("posts").document(re.getPrice()).set(re.toJson()).addOnCompleteListener(new OnCompleteListener<Void>() {
+        db.collection("posts").document(re.getName()).set(re.toJson()).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                listener.onComplete(null);
+            }
+        });
+
+
+    }
+
+    public void editPost(Post re, Model.Listener<Void> listener) { // add post to firebase
+
+        DocumentReference postRef = db.collection("posts").document(re.getName());
+
+        postRef.update(
+                "name", re.getName(),
+                "price", re.getPrice(),
+                "description", re.getDescription(),
+                "avatarUrl", re.getAvatarUrl()
+        ).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 listener.onComplete(null);

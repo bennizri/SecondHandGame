@@ -34,12 +34,12 @@ public final class AppLocalDbRepository_Impl extends AppLocalDbRepository {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(95) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(101) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Post` (`name` TEXT NOT NULL, `price` TEXT, `sellerName` TEXT, `sellerNumber` TEXT, `email` TEXT, `description` TEXT, `avatarUrl` TEXT, `cb` INTEGER, `lastUpdated` INTEGER, PRIMARY KEY(`name`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Post` (`name` TEXT NOT NULL, `price` TEXT, `email` TEXT, `description` TEXT, `avatarUrl` TEXT, `cb` INTEGER, `lastUpdated` INTEGER, PRIMARY KEY(`name`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8f2926bf0932e99249277612cd4c0ce9')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b133a57ee33c950a0f637c7fc530aa94')");
       }
 
       @Override
@@ -83,11 +83,9 @@ public final class AppLocalDbRepository_Impl extends AppLocalDbRepository {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsPost = new HashMap<String, TableInfo.Column>(9);
+        final HashMap<String, TableInfo.Column> _columnsPost = new HashMap<String, TableInfo.Column>(7);
         _columnsPost.put("name", new TableInfo.Column("name", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsPost.put("price", new TableInfo.Column("price", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsPost.put("sellerName", new TableInfo.Column("sellerName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsPost.put("sellerNumber", new TableInfo.Column("sellerNumber", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsPost.put("email", new TableInfo.Column("email", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsPost.put("description", new TableInfo.Column("description", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsPost.put("avatarUrl", new TableInfo.Column("avatarUrl", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -104,7 +102,7 @@ public final class AppLocalDbRepository_Impl extends AppLocalDbRepository {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "8f2926bf0932e99249277612cd4c0ce9", "bdb87a6478548a6e54b6171a5bf68f05");
+    }, "b133a57ee33c950a0f637c7fc530aa94", "3b96607723c7980c15c4fcbbed983015");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

@@ -120,6 +120,13 @@ public class Model {
         });
     }
 
+    public void editPost(Post st, Listener<Void> listener){
+        firebaseModel.editPost(st,(Void)->{
+            refreshAllPosts();
+            listener.onComplete(null);
+        });
+    }
+
     public void uploadImage(String name, Bitmap bitmap,Listener<String> listener) {
         firebaseModel.uploadImage(name,bitmap,listener);
     }

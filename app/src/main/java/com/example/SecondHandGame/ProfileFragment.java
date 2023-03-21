@@ -166,7 +166,7 @@ public class ProfileFragment extends PostsListFragment {
             viewModel.getData().removeAll(viewModel.getData());
             for(Post post : postList) {
                 //Log.d("test1",email);
-                if(post.sellerName.equals(email)) {
+                if(post.name.equals(email)) {
                     //Log.d("test2",post.sellerName);
                     viewModel.getData().add(post);
                 }

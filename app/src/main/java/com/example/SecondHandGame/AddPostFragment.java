@@ -83,9 +83,7 @@ public class AddPostFragment extends Fragment {
             String price = binding.PriceEt.getText().toString();
             String description = binding.DescriptionEt.getText().toString();
             String name = binding.NameEt.getText().toString();
-            String sellerName = binding.SellerNameEt.getText().toString();
-            String sellerNumber = binding.SellerNumberEt.getText().toString();
-            Post st = new Post(price,name,description,sellerName,sellerNumber, "",false,email);
+            Post st = new Post(price,name,description, "",false,email);
 
             if (isAvatarSelected){
                 binding.avatarImg.setDrawingCacheEnabled(true);

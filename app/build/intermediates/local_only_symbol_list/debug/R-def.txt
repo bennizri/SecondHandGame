@@ -38,10 +38,6 @@ id DescriptionEt
 id NameEt
 id PriceEt
 id ProfileFragment
-id SellerNameEt
-id SellerNameTv
-id SellerNumberEt
-id SellerNumberTv
 id SettingsFragment
 id aboutFragment
 id action_ProfileFragment_to_editUserPostPageFragment
@@ -128,8 +124,6 @@ id textView
 id textView2
 id textView4
 id textView7
-id textView8
-id textView9
 id titelSavePost
 id tv
 id weatherFragment

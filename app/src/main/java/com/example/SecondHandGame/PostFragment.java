@@ -55,13 +55,6 @@ public class PostFragment extends Fragment {
             binding.priceTv.setText(price);
         }
 
-        if (sellerName != null){
-            binding.SellerNameTv.setText(sellerName);
-        }
-
-        if (sellerNumber != null){
-            binding.SellerNumberTv.setText(sellerNumber);
-        }
         if (avatarImg.isEmpty()){
             binding.avatarImg.setImageResource(R.drawable.game_avatar);
 
@@ -83,9 +76,15 @@ public class PostFragment extends Fragment {
 
         //Bundle jsonData = getArguments();
         name = (String)getArguments().get("Name");
-        description = (String)getArguments().get("description");
-        price = (String)getArguments().get("price");
+        description = (String)getArguments().get("Description");
+        if(description == null)
+            description = (String)getArguments().get("description");
+        price = (String)getArguments().get("Price");
+        if(price == null)
+            price = (String)getArguments().get("price");
         avatarImg = (String)getArguments().get("avatarUrl");
+        sellerName = "Ben";
+        sellerNumber = "123";
         //name = PostFragmentArgs.fromBundle(getArguments()).getName();
         //email = PostFragmentArgs.fromBundle(getArguments()).getEmail();
        //description = PostFragmentArgs.fromBundle(getArguments()).getDescription();

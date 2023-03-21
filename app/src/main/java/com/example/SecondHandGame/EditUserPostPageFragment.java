@@ -67,8 +67,6 @@ public class EditUserPostPageFragment extends AddPostFragment {
         description = PostFragmentArgs.fromBundle(getArguments()).getDescription();
         price = PostFragmentArgs.fromBundle(getArguments()).getPrice();
         imageString = (PostFragmentArgs.fromBundle(getArguments()).getAvatarUrl());
-        sellerName = PostFragmentArgs.fromBundle(getArguments()).getSellerName();
-        sellerNumber = (PostFragmentArgs.fromBundle(getArguments()).getSellerNumber());
 
         // set data user in the ui
         if (name != null){
@@ -104,7 +102,8 @@ public class EditUserPostPageFragment extends AddPostFragment {
         String id = name;
 
         // create new recipe object
-        Post re = new Post(price,price,description,id,name,price,false,price);
+        Post re = new Post(price,name,description, /*avatarUrl*/"", false,/*email*/"");
+        //Post re = new Post(price,description,id,name,false,price);
 
         //********** save image recipe****************
         if (isAvatarSelected || imageString != "") {
@@ -119,14 +118,14 @@ public class EditUserPostPageFragment extends AddPostFragment {
                     }
 
                     //save recipe                  //null
-                    Model.instance().addPost(re, (unused) -> {
+                    Model.instance().editPost(re, (unused) -> {
                         Navigation.findNavController(view1).popBackStack();
                     });
                 });
 
             } else {
 
-                Model.instance().addPost(re, (unused) -> {
+                Model.instance().editPost(re, (unused) -> {
                     Navigation.findNavController(view1).popBackStack();
                 });
             }

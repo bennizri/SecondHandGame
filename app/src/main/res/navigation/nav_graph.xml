@@ -45,11 +45,9 @@
         <argument
             android:name="avatarUrl"
             app:argType="string"
-            app:nullable="true" />
-        <argument android:name="SellerName"
-            app:argType="string" />
-        <argument android:name="SellerNumber"
-            app:argType="string" />/>
+            app:nullable="true" /><![CDATA[
+        />
+    ]]>
     </fragment>
     <!--    tools:layout="@layout/fragment_add_post"-->
     <fragment

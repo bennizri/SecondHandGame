@@ -24,12 +24,6 @@ public final class FragmentPostPageBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView SellerNameTv;
-
-  @NonNull
-  public final TextView SellerNumberTv;
-
-  @NonNull
   public final ImageView avatarImg;
 
   @NonNull
@@ -59,21 +53,11 @@ public final class FragmentPostPageBinding implements ViewBinding {
   @NonNull
   public final TextView textView7;
 
-  @NonNull
-  public final TextView textView8;
-
-  @NonNull
-  public final TextView textView9;
-
-  private FragmentPostPageBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView SellerNameTv, @NonNull TextView SellerNumberTv,
-      @NonNull ImageView avatarImg, @NonNull Button backBtn, @NonNull TextView descriptionTv,
-      @NonNull CheckBox like, @NonNull TextView nameTv, @NonNull TextView postPostNameTv,
-      @NonNull TextView priceTv, @NonNull ScrollView scrollView2, @NonNull TextView textView2,
-      @NonNull TextView textView7, @NonNull TextView textView8, @NonNull TextView textView9) {
+  private FragmentPostPageBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView avatarImg,
+      @NonNull Button backBtn, @NonNull TextView descriptionTv, @NonNull CheckBox like,
+      @NonNull TextView nameTv, @NonNull TextView postPostNameTv, @NonNull TextView priceTv,
+      @NonNull ScrollView scrollView2, @NonNull TextView textView2, @NonNull TextView textView7) {
     this.rootView = rootView;
-    this.SellerNameTv = SellerNameTv;
-    this.SellerNumberTv = SellerNumberTv;
     this.avatarImg = avatarImg;
     this.backBtn = backBtn;
     this.descriptionTv = descriptionTv;
@@ -84,8 +68,6 @@ public final class FragmentPostPageBinding implements ViewBinding {
     this.scrollView2 = scrollView2;
     this.textView2 = textView2;
     this.textView7 = textView7;
-    this.textView8 = textView8;
-    this.textView9 = textView9;
   }
 
   @Override
@@ -115,18 +97,6 @@ public final class FragmentPostPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.SellerNameTv;
-      TextView SellerNameTv = ViewBindings.findChildViewById(rootView, id);
-      if (SellerNameTv == null) {
-        break missingId;
-      }
-
-      id = R.id.SellerNumberTv;
-      TextView SellerNumberTv = ViewBindings.findChildViewById(rootView, id);
-      if (SellerNumberTv == null) {
-        break missingId;
-      }
-
       id = R.id.avatarImg;
       ImageView avatarImg = ViewBindings.findChildViewById(rootView, id);
       if (avatarImg == null) {
@@ -187,21 +157,8 @@ public final class FragmentPostPageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView8;
-      TextView textView8 = ViewBindings.findChildViewById(rootView, id);
-      if (textView8 == null) {
-        break missingId;
-      }
-
-      id = R.id.textView9;
-      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
-      if (textView9 == null) {
-        break missingId;
-      }
-
-      return new FragmentPostPageBinding((ConstraintLayout) rootView, SellerNameTv, SellerNumberTv,
-          avatarImg, backBtn, descriptionTv, like, nameTv, postPostNameTv, priceTv, scrollView2,
-          textView2, textView7, textView8, textView9);
+      return new FragmentPostPageBinding((ConstraintLayout) rootView, avatarImg, backBtn,
+          descriptionTv, like, nameTv, postPostNameTv, priceTv, scrollView2, textView2, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

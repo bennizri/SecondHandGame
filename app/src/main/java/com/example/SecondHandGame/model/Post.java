@@ -20,8 +20,6 @@ public class Post {
     @NonNull
     public String name="";
     public String price="";
-    public String sellerName="";
-    public String sellerNumber="";
     public String email="";
     public String description="";
     public String avatarUrl="";
@@ -30,11 +28,9 @@ public class Post {
 
     public Post(){
     }
-    public Post(String price, String name,String description,String sellerName, String sellerNumber, String avatarUrl, Boolean cb,String email) {
+    public Post(String price, String name,String description, String avatarUrl, Boolean cb,String email) {
         this.name = name;
         this.description = description;
-        this.sellerName = sellerName;
-        this.sellerNumber = sellerNumber;
         this.price = price;
         this.avatarUrl = avatarUrl;
         this.cb = cb;
@@ -43,8 +39,6 @@ public class Post {
 
     static final String NAME = "name";
     static final String DESCRIPTION = "description";
-    static final String SELLERNAME = "sellerName";
-    static final String SELLERNUMBER = "sellerNumber";
     static final String PRICE = "price";
     static final String EMAIL = "email";
     static final String AVATAR = "avatar";
@@ -57,12 +51,10 @@ public class Post {
         String price = (String)json.get(PRICE);
         String name = (String)json.get(NAME);
         String description = (String)json.get(DESCRIPTION);
-        String sellerName = (String)json.get(SELLERNAME);
-        String sellerNumber = (String)json.get(SELLERNUMBER);
         String avatar = (String)json.get(AVATAR);
         Boolean cb = (Boolean) json.get(CB);
         String email = (String)json.get(EMAIL);
-        Post st = new Post(price,name,description,sellerName,sellerNumber,avatar,cb,email);
+        Post st = new Post(price,name,description,avatar,cb,email);
         try{
             Timestamp time = (Timestamp) json.get(LAST_UPDATED);
             st.setLastUpdated(time.getSeconds());
@@ -91,8 +83,6 @@ public class Post {
         json.put(PRICE, getPrice());
         json.put(DESCRIPTION, getDescription());
         json.put(NAME, getName());
-        json.put(SELLERNAME, getSellerName());
-        json.put(SELLERNUMBER, getSellerNumber());
         json.put(AVATAR, getAvatarUrl());
         json.put(CB, getCb());
         json.put(EMAIL, getEmail());
@@ -135,12 +125,6 @@ public class Post {
         return name;
     }
 
-    public String getSellerName() {
-        return sellerName;
-    }
-    public String getSellerNumber() {
-        return sellerNumber;
-    }
 
     public String getAvatarUrl() {
         return avatarUrl;

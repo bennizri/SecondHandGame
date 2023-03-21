@@ -2771,10 +2771,6 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
-id SellerNameEt
-id SellerNameTv
-id SellerNumberEt
-id SellerNumberTv
 id SettingsFragment
 id TOP_END
 id TOP_START
@@ -3295,8 +3291,6 @@ id textView
 id textView2
 id textView4
 id textView7
-id textView8
-id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
