@@ -170,7 +170,7 @@
     <fragment
         android:id="@+id/weatherFragment"
         android:name="com.example.SecondHandGame.WeatherFragment"
-        android:label="fragment_weather"
+        android:label="Weather"
         tools:layout="@layout/fragment_weather" />
     <action android:id="@+id/action_global_weatherFragment" app:destination="@id/weatherFragment" />
 

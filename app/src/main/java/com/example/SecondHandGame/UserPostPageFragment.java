@@ -49,7 +49,7 @@ public class UserPostPageFragment extends PostFragment {
         }
 
         binding.postEditBtn.setOnClickListener((view2)->{
-            UserPostPageFragmentDirections.ActionFragmentUserPostPageToEditUserPostPageFragment2 action = UserPostPageFragmentDirections.actionFragmentUserPostPageToEditUserPostPageFragment2(name,avatarImg,description,price,sellerName,sellerNumber,key);
+            UserPostPageFragmentDirections.ActionFragmentUserPostPageToEditUserPostPageFragment2 action = UserPostPageFragmentDirections.actionFragmentUserPostPageToEditUserPostPageFragment2(name,avatarImg,price,description,sellerName,sellerNumber,key);
             Navigation.findNavController(view).navigate(action);
         });
 

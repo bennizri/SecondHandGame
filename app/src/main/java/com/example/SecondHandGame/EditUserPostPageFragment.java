@@ -24,14 +24,13 @@ public class EditUserPostPageFragment extends AddPostFragment {
     String description;
     String price;
     String imageString;
-    String sellerName;
-    String sellerNumber;
     String key;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         binding = FragmentAddPostBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
@@ -87,9 +86,7 @@ public class EditUserPostPageFragment extends AddPostFragment {
             Picasso.get().load(imageString).error(R.drawable.game_avatar).into(binding.avatarImg);
         }
 
-        //set Enabled name of recipe
         binding.NameEt.setEnabled(false);
-    //    binding.styleNameEt.setStartIconDrawable(null);
     }
 
 //    @Override
@@ -97,19 +94,15 @@ public class EditUserPostPageFragment extends AddPostFragment {
 
         String name = binding.NameEt.getText().toString();
         String description = binding.DescriptionEt.getText().toString();
-       // String instructions = binding.PriceEt.getText().toString();
         String price = binding.PriceEt.getText().toString();
-       // String instructions = binding.DescriptionEt.getText().toString();
-       // String ingredients = binding.PriceEt.getText().toString();
         String id = email;
 
-        // create new recipe object
-        Post re = new Post(price,name,description, /*avatarUrl*/"", false,/*email*/"",key);
-        //Post re = new Post(price,description,id,name,false,price);
+        // create new post object
+        Post post = new Post(price,name,description, /*avatarUrl*/"", false,/*email*/"",key);
 
-        //********** save image recipe****************
+        //********** save post image****************
         if (isAvatarSelected || imageString != "") {
-            Log.d("tag",re.getKey()+"enter if!!!!!!!!!!!!!!!!");
+            Log.d("tag",post.getKey()+"enter if!!!!!!!!!!!!!!!!");
                 binding.avatarImg.setDrawingCacheEnabled(true);
                 binding.avatarImg.buildDrawingCache();
                 Bitmap bitmap = ((BitmapDrawable) binding.avatarImg.getDrawable()).getBitmap();
@@ -117,17 +110,17 @@ public class EditUserPostPageFragment extends AddPostFragment {
                 //save the photo in firebase and return the url
                 Model.instance().uploadImage(id, bitmap, url -> {
                     if (url != null) {
-                        re.setAvatarUrl(url);
+                        post.setAvatarUrl(url);
                     }
 
-                    //save recipe                  //null
-                    Model.instance().editPost(re, (unused) -> {
+                    Model.instance().editPost(post, (unused) -> {
                         Navigation.findNavController(view1).popBackStack();
                     });
                 });
 
             } else {
-            Log.d("tag",re.getKey()+"enter else!!!!!!!!!!!!!!!!");                Model.instance().editPost(re, (unused) -> {
+                    Log.d("tag",post.getKey()+"enter else!!!!!!!!!!!!!!!!");
+                    Model.instance().editPost(post, (unused) -> {
                     Navigation.findNavController(view1).popBackStack();
                 });
             }

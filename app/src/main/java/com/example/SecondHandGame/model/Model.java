@@ -120,8 +120,8 @@ public class Model {
         });
     }
 
-    public void editPost(Post st, Listener<Void> listener){
-        firebaseModel.editPost(st,(Void)->{
+    public void editPost(Post post, Listener<Void> listener){
+        firebaseModel.editPost(post,(Void)->{
             refreshAllPosts();
             listener.onComplete(null);
         });

@@ -25,6 +25,12 @@ public final class FragmentEditUserPostPageBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final TextInputEditText DescriptionEt;
+
+  @NonNull
+  public final TextInputEditText PriceEt;
+
+  @NonNull
   public final ImageView avatarImg;
 
   @NonNull
@@ -35,12 +41,6 @@ public final class FragmentEditUserPostPageBinding implements ViewBinding {
 
   @NonNull
   public final ImageButton gallerybutton;
-
-  @NonNull
-  public final TextInputEditText ingredientsEt;
-
-  @NonNull
-  public final TextInputEditText instructionsEt;
 
   @NonNull
   public final Button login;
@@ -61,18 +61,18 @@ public final class FragmentEditUserPostPageBinding implements ViewBinding {
   public final TextView textView7;
 
   private FragmentEditUserPostPageBinding(@NonNull FrameLayout rootView,
+      @NonNull TextInputEditText DescriptionEt, @NonNull TextInputEditText PriceEt,
       @NonNull ImageView avatarImg, @NonNull ImageButton camerabutton, @NonNull Button cancellBtn,
-      @NonNull ImageButton gallerybutton, @NonNull TextInputEditText ingredientsEt,
-      @NonNull TextInputEditText instructionsEt, @NonNull Button login,
-      @NonNull TextInputEditText nameEt, @NonNull TextView nameTv, @NonNull ScrollView scrollView2,
-      @NonNull TextView textView2, @NonNull TextView textView7) {
+      @NonNull ImageButton gallerybutton, @NonNull Button login, @NonNull TextInputEditText nameEt,
+      @NonNull TextView nameTv, @NonNull ScrollView scrollView2, @NonNull TextView textView2,
+      @NonNull TextView textView7) {
     this.rootView = rootView;
+    this.DescriptionEt = DescriptionEt;
+    this.PriceEt = PriceEt;
     this.avatarImg = avatarImg;
     this.camerabutton = camerabutton;
     this.cancellBtn = cancellBtn;
     this.gallerybutton = gallerybutton;
-    this.ingredientsEt = ingredientsEt;
-    this.instructionsEt = instructionsEt;
     this.login = login;
     this.nameEt = nameEt;
     this.nameTv = nameTv;
@@ -108,6 +108,18 @@ public final class FragmentEditUserPostPageBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.DescriptionEt;
+      TextInputEditText DescriptionEt = ViewBindings.findChildViewById(rootView, id);
+      if (DescriptionEt == null) {
+        break missingId;
+      }
+
+      id = R.id.PriceEt;
+      TextInputEditText PriceEt = ViewBindings.findChildViewById(rootView, id);
+      if (PriceEt == null) {
+        break missingId;
+      }
+
       id = R.id.avatarImg;
       ImageView avatarImg = ViewBindings.findChildViewById(rootView, id);
       if (avatarImg == null) {
@@ -129,18 +141,6 @@ public final class FragmentEditUserPostPageBinding implements ViewBinding {
       id = R.id.gallerybutton;
       ImageButton gallerybutton = ViewBindings.findChildViewById(rootView, id);
       if (gallerybutton == null) {
-        break missingId;
-      }
-
-      id = R.id.ingredientsEt;
-      TextInputEditText ingredientsEt = ViewBindings.findChildViewById(rootView, id);
-      if (ingredientsEt == null) {
-        break missingId;
-      }
-
-      id = R.id.instructionsEt;
-      TextInputEditText instructionsEt = ViewBindings.findChildViewById(rootView, id);
-      if (instructionsEt == null) {
         break missingId;
       }
 
@@ -180,9 +180,9 @@ public final class FragmentEditUserPostPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentEditUserPostPageBinding((FrameLayout) rootView, avatarImg, camerabutton,
-          cancellBtn, gallerybutton, ingredientsEt, instructionsEt, login, nameEt, nameTv,
-          scrollView2, textView2, textView7);
+      return new FragmentEditUserPostPageBinding((FrameLayout) rootView, DescriptionEt, PriceEt,
+          avatarImg, camerabutton, cancellBtn, gallerybutton, login, nameEt, nameTv, scrollView2,
+          textView2, textView7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
