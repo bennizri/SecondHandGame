@@ -51,6 +51,7 @@ class PostViewHolder extends RecyclerView.ViewHolder{
         nameTv.setText(st.name);
         idTv.setText(st.price);
         cb.setChecked(st.cb);
+        cb.setVisibility(View.INVISIBLE);
         cb.setTag(pos);
         if (st.getAvatarUrl()  != null && st.getAvatarUrl().length() > 5) {
             Picasso.get().load(st.getAvatarUrl()).placeholder(R.drawable.gamer_avatar).into(avatarImage);

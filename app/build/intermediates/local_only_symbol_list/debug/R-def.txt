@@ -46,7 +46,10 @@ drawable image7
 drawable image8
 drawable image9
 drawable images6
+drawable our_home
 drawable photorecipe
+drawable round_shape
+drawable round_shape2
 drawable user
 drawable weather_button_background
 drawable weather_cold_background
