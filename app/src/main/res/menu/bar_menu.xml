@@ -7,8 +7,8 @@
         android:title="Weather" />
     <item
         android:id="@+id/postsListFragment"
-        android:icon="@android:drawable/btn_star"
-        android:title="List" />
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="home" />
     <item
         android:id="@+id/addPostFragment"
         android:icon="@android:drawable/ic_input_add"

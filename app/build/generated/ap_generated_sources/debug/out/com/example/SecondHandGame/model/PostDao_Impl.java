@@ -202,7 +202,7 @@ public final class PostDao_Impl implements PostDao {
 
   @Override
   public Post getPostById(final String postId) {
-    final String _sql = "select * from Post where name = ?";
+    final String _sql = "select * from Post where `key` = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     if (postId == null) {

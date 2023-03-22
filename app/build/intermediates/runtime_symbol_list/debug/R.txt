@@ -277,6 +277,10 @@ int attr circularflow_defaultAngle 0x7f0300c8
 int attr circularflow_defaultRadius 0x7f0300c9
 int attr circularflow_radiusInDP 0x7f0300ca
 int attr circularflow_viewCenter 0x7f0300cb
+int attr civ_border_color 0x7f0304b9
+int attr civ_border_overlay 0x7f0304ba
+int attr civ_border_width 0x7f0304bb
+int attr civ_circle_background_color 0x7f0304bc
 int attr clearTop 0x7f0300cc
 int attr clearsTag 0x7f0300cd
 int attr clickAction 0x7f0300ce
@@ -2662,6 +2666,7 @@ int drawable googleg_standard_color_18 0x7f070098
 int drawable iamge16 0x7f070099
 int drawable ic_baseline_edit_calendar_24 0x7f07009a
 int drawable ic_baseline_games_24 0x7f07009b
+int drawable ic_baseline_home_24 0x7f07010a
 int drawable ic_baseline_image_search_24 0x7f07009c
 int drawable ic_baseline_info_24 0x7f07009d
 int drawable ic_baseline_logout_24 0x7f07009e
@@ -5233,6 +5238,11 @@ int styleable ChipGroup_chipSpacingVertical 3
 int styleable ChipGroup_selectionRequired 4
 int styleable ChipGroup_singleLine 5
 int styleable ChipGroup_singleSelection 6
+int[] styleable CircleImageView { 0x7f0304b9, 0x7f0304ba, 0x7f0304bb, 0x7f0304bc }
+int styleable CircleImageView_civ_border_color 0
+int styleable CircleImageView_civ_border_overlay 1
+int styleable CircleImageView_civ_border_width 2
+int styleable CircleImageView_civ_circle_background_color 3
 int[] styleable CircularProgressIndicator { 0x7f030217, 0x7f030219, 0x7f03021a }
 int styleable CircularProgressIndicator_indicatorDirectionCircular 0
 int styleable CircularProgressIndicator_indicatorInset 1

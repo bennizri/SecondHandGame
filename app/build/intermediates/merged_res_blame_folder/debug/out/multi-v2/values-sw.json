@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.SecondHandGame.app-mergeDebugResources-48:/values-sw/values-sw.xml",
+            "outputFile": "com.example.SecondHandGame.app-mergeDebugResources-49:/values-sw/values-sw.xml",
             "map": [
                 {
                     "source": "C:\\Users\\97252\\.gradle\\caches\\transforms-3\\6b841bd02a102203090d1059746236fe\\transformed\\appcompat-1.5.1\\res\\values-sw\\values-sw.xml",

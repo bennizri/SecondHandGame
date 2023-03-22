@@ -96,9 +96,10 @@ public class EditUserPostPageFragment extends AddPostFragment {
         String description = binding.DescriptionEt.getText().toString();
         String price = binding.PriceEt.getText().toString();
         String id = email;
+       //String blabla = String.valueOf(((BitmapDrawable) binding.avatarImg.getDrawable()).getBitmap());
 
         // create new post object
-        Post post = new Post(price,name,description, /*avatarUrl*/"", false,/*email*/"",key);
+        Post post = new Post(price,name,description, imageString, false,/*email*/"",key);
 
         //********** save post image****************
         if (isAvatarSelected || imageString != "") {

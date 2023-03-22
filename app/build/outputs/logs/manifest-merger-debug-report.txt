@@ -5,6 +5,7 @@ INJECTED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManife
 INJECTED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManifest.xml:2:1-38:12
 INJECTED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManifest.xml:2:1-38:12
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\97252\.gradle\caches\transforms-3\dd45ba8dc152bbcc1fb9f0f21bba41b7\transformed\viewbinding-7.3.1\AndroidManifest.xml:2:1-9:12
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\97252\.gradle\caches\transforms-3\b5ec08de5b45f23b9d39506c70d1d5f8\transformed\circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\97252\.gradle\caches\transforms-3\a129dec6e2ea64ba1ce86e52c73cdd4a\transformed\navigation-ui-2.5.3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\97252\.gradle\caches\transforms-3\579520208fdb5da5791e490fc64b9414\transformed\material-1.7.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\97252\.gradle\caches\transforms-3\eec2d69b724114c92e371598096d241e\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -136,6 +137,8 @@ ADDED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManifest.
 		ADDED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManifest.xml:6:22-77
 application
 ADDED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManifest.xml:8:5-36:19
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\97252\.gradle\caches\transforms-3\b5ec08de5b45f23b9d39506c70d1d5f8\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\97252\.gradle\caches\transforms-3\b5ec08de5b45f23b9d39506c70d1d5f8\transformed\circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\97252\.gradle\caches\transforms-3\579520208fdb5da5791e490fc64b9414\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\97252\.gradle\caches\transforms-3\579520208fdb5da5791e490fc64b9414\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\97252\.gradle\caches\transforms-3\eec2d69b724114c92e371598096d241e\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -252,6 +255,8 @@ INJECTED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManife
 INJECTED from C:\Users\97252\Downloads\SecondHandGame\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\97252\.gradle\caches\transforms-3\dd45ba8dc152bbcc1fb9f0f21bba41b7\transformed\viewbinding-7.3.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\97252\.gradle\caches\transforms-3\dd45ba8dc152bbcc1fb9f0f21bba41b7\transformed\viewbinding-7.3.1\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\97252\.gradle\caches\transforms-3\b5ec08de5b45f23b9d39506c70d1d5f8\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\97252\.gradle\caches\transforms-3\b5ec08de5b45f23b9d39506c70d1d5f8\transformed\circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\97252\.gradle\caches\transforms-3\a129dec6e2ea64ba1ce86e52c73cdd4a\transformed\navigation-ui-2.5.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\97252\.gradle\caches\transforms-3\a129dec6e2ea64ba1ce86e52c73cdd4a\transformed\navigation-ui-2.5.3\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.7.0] C:\Users\97252\.gradle\caches\transforms-3\579520208fdb5da5791e490fc64b9414\transformed\material-1.7.0\AndroidManifest.xml:20:5-22:41
