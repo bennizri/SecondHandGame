@@ -4,20 +4,20 @@
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable-v24\\photorecipe.png"
     },
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable_image4.jpg.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable\\image4.jpg"
-    },
-    {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_welcome_page.xml.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_welcome_page.xml"
     },
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_weather.xml.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_weather.xml"
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable_image4.jpg.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable\\image4.jpg"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_weather.xml.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\layout\\fragment_weather.xml"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\layout_fragment_blue.xml.flat",
@@ -28,24 +28,24 @@
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable\\ic_baseline_info_24.xml"
     },
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\font_style.xml.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\font\\style.xml"
-    },
-    {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable-v24_weather_image_background.jpg.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\drawable-v24\\weather_image_background.jpg"
+    },
+    {
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\font_style.xml.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\font\\style.xml"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-debug-51:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\navigation\\nav_graph.xml"
-    },
-    {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-main-52:\\navigation\\nav_graph.xml"
     },
     {
         "merged": "C:\\Users\\97252\\.gradle\\daemon\\7.4\\com.example.SecondHandGame.app-merged_res-50:\\drawable_iamge16.jpg.flat",

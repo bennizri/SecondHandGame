@@ -33,6 +33,7 @@ public class SettingsFragment extends Fragment {
 
         binding.editProfile.setOnClickListener(view1->{
             //send the details of the user to editUserFragment
+            //----com.example.SecondHandGame.model.User.firstName' on a null object reference in method
             Navigation.findNavController(view).navigate(SettingsFragmentDirections.actionSettingsFragmentToEditUserFragment(us.firstName,us.lastName,us.email,us.avatarUrl));
         });
 

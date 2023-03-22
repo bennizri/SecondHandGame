@@ -122,7 +122,7 @@ public class ProfileFragment extends PostsListFragment {
 
         // get the details of user from firebase
         Model.instance().getCurrentUser(currentUser-> {
-            email = currentUser.getFirstName();
+            email = currentUser.getEmail();
             binding.email.setText(currentUser.email);
             binding.firstName.setText(currentUser.firstName);
             binding.lastName.setText(currentUser.lastName);
@@ -166,8 +166,9 @@ public class ProfileFragment extends PostsListFragment {
             viewModel.getData().removeAll(viewModel.getData());
             for(Post post : postList) {
                 //Log.d("test1",email);
-                if(post.name.equals(email)) {
-                    //Log.d("test2",post.sellerName);
+                if(post.email.equals(email)) {
+                    Log.d("test1",post.email);
+                    Log.d("test2",email);
                     viewModel.getData().add(post);
                 }
             }
