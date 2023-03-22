@@ -103,7 +103,7 @@ public class FirebaseModel {
 
     public void addPost(Post re, Model.Listener<Void> listener) { // add post to firebase
 
-        db.collection("posts").document(re.getName()).set(re.toJson()).addOnCompleteListener(new OnCompleteListener<Void>() {
+        db.collection("posts").document(re.getKey()).set(re.toJson()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 listener.onComplete(null);
@@ -114,8 +114,8 @@ public class FirebaseModel {
     }
 
     public void editPost(Post re, Model.Listener<Void> listener) { // add post to firebase
-
-        DocumentReference postRef = db.collection("posts").document(re.getName());
+        Log.d("tag",re.getKey()+"*******************************************");
+        DocumentReference postRef = db.collection("posts").document(re.getKey());
 
         postRef.update(
                 "name", re.getName(),

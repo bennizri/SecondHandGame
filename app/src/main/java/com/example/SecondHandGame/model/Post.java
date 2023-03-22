@@ -18,8 +18,10 @@ import java.util.Map;
 public class Post {
     @PrimaryKey
     @NonNull
+    public String key = "";
     public String name="";
     public String price="";
+
     public String email="";
     public String description="";
     public String avatarUrl="";
@@ -28,16 +30,18 @@ public class Post {
 
     public Post(){
     }
-    public Post(String price, String name,String description, String avatarUrl, Boolean cb,String email) {
+    public Post(String price, String name,String description, String avatarUrl, Boolean cb,String email,String key) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.avatarUrl = avatarUrl;
         this.cb = cb;
         this.email = email;
+        this.key=key;
     }
 
     static final String NAME = "name";
+    static final String KEY ="key";
     static final String DESCRIPTION = "description";
     static final String PRICE = "price";
     static final String EMAIL = "email";
@@ -54,7 +58,8 @@ public class Post {
         String avatar = (String)json.get(AVATAR);
         Boolean cb = (Boolean) json.get(CB);
         String email = (String)json.get(EMAIL);
-        Post st = new Post(price,name,description,avatar,cb,email);
+        String key = (String)json.get(KEY);
+        Post st = new Post(price,name,description,avatar,cb,email,key);
         try{
             Timestamp time = (Timestamp) json.get(LAST_UPDATED);
             st.setLastUpdated(time.getSeconds());
@@ -86,8 +91,19 @@ public class Post {
         json.put(AVATAR, getAvatarUrl());
         json.put(CB, getCb());
         json.put(EMAIL, getEmail());
+        json.put(KEY, getKey());
         json.put(LAST_UPDATED, FieldValue.serverTimestamp());
         return json;
+    }
+
+
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey( String key) {
+        this.key = key;
     }
 
     public String getEmail() {

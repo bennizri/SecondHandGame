@@ -18,8 +18,9 @@ public class UserPostPageFragmentDirections {
   @NonNull
   public static ActionFragmentUserPostPageToEditUserPostPageFragment2 actionFragmentUserPostPageToEditUserPostPageFragment2(
       @NonNull String Name, @Nullable String avatarUrl, @NonNull String Description,
-      @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber) {
-    return new ActionFragmentUserPostPageToEditUserPostPageFragment2(Name, avatarUrl, Description, Price, SellerName, SellerNumber);
+      @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber,
+      @NonNull String key) {
+    return new ActionFragmentUserPostPageToEditUserPostPageFragment2(Name, avatarUrl, Description, Price, SellerName, SellerNumber, key);
   }
 
   @NonNull
@@ -48,7 +49,7 @@ public class UserPostPageFragmentDirections {
     @SuppressWarnings("unchecked")
     private ActionFragmentUserPostPageToEditUserPostPageFragment2(@NonNull String Name,
         @Nullable String avatarUrl, @NonNull String Description, @NonNull String Price,
-        @NonNull String SellerName, @NonNull String SellerNumber) {
+        @NonNull String SellerName, @NonNull String SellerNumber, @NonNull String key) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
@@ -70,6 +71,10 @@ public class UserPostPageFragmentDirections {
         throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
       }
       this.arguments.put("SellerNumber", SellerNumber);
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
     }
 
     @NonNull
@@ -133,6 +138,16 @@ public class UserPostPageFragmentDirections {
       return this;
     }
 
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionFragmentUserPostPageToEditUserPostPageFragment2 setKey(@NonNull String key) {
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     @NonNull
@@ -161,6 +176,10 @@ public class UserPostPageFragmentDirections {
       if (arguments.containsKey("SellerNumber")) {
         String SellerNumber = (String) arguments.get("SellerNumber");
         __result.putString("SellerNumber", SellerNumber);
+      }
+      if (arguments.containsKey("key")) {
+        String key = (String) arguments.get("key");
+        __result.putString("key", key);
       }
       return __result;
     }
@@ -204,6 +223,12 @@ public class UserPostPageFragmentDirections {
     @NonNull
     public String getSellerNumber() {
       return (String) arguments.get("SellerNumber");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getKey() {
+      return (String) arguments.get("key");
     }
 
     @Override
@@ -251,6 +276,12 @@ public class UserPostPageFragmentDirections {
       if (getSellerNumber() != null ? !getSellerNumber().equals(that.getSellerNumber()) : that.getSellerNumber() != null) {
         return false;
       }
+      if (arguments.containsKey("key") != that.arguments.containsKey("key")) {
+        return false;
+      }
+      if (getKey() != null ? !getKey().equals(that.getKey()) : that.getKey() != null) {
+        return false;
+      }
       if (getActionId() != that.getActionId()) {
         return false;
       }
@@ -266,6 +297,7 @@ public class UserPostPageFragmentDirections {
       result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
       result = 31 * result + (getSellerName() != null ? getSellerName().hashCode() : 0);
       result = 31 * result + (getSellerNumber() != null ? getSellerNumber().hashCode() : 0);
+      result = 31 * result + (getKey() != null ? getKey().hashCode() : 0);
       result = 31 * result + getActionId();
       return result;
     }
@@ -279,6 +311,7 @@ public class UserPostPageFragmentDirections {
           + ", Price=" + getPrice()
           + ", SellerName=" + getSellerName()
           + ", SellerNumber=" + getSellerNumber()
+          + ", key=" + getKey()
           + "}";
     }
   }

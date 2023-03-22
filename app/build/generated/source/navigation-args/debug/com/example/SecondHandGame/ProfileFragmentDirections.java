@@ -19,8 +19,8 @@ public class ProfileFragmentDirections {
   @NonNull
   public static ActionProfileToFragmentUserPostPage actionProfileToFragmentUserPostPage(
       @NonNull String Name, @NonNull String price, @NonNull String description,
-      @Nullable String avatarUrl) {
-    return new ActionProfileToFragmentUserPostPage(Name, price, description, avatarUrl);
+      @Nullable String avatarUrl, @NonNull String key) {
+    return new ActionProfileToFragmentUserPostPage(Name, price, description, avatarUrl, key);
   }
 
   @NonNull
@@ -31,8 +31,9 @@ public class ProfileFragmentDirections {
   @NonNull
   public static ActionProfileFragmentToEditUserPostPageFragment actionProfileFragmentToEditUserPostPageFragment(
       @NonNull String Name, @Nullable String avatarUrl, @NonNull String Description,
-      @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber) {
-    return new ActionProfileFragmentToEditUserPostPageFragment(Name, avatarUrl, Description, Price, SellerName, SellerNumber);
+      @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber,
+      @NonNull String key) {
+    return new ActionProfileFragmentToEditUserPostPageFragment(Name, avatarUrl, Description, Price, SellerName, SellerNumber, key);
   }
 
   @NonNull
@@ -60,7 +61,7 @@ public class ProfileFragmentDirections {
 
     @SuppressWarnings("unchecked")
     private ActionProfileToFragmentUserPostPage(@NonNull String Name, @NonNull String price,
-        @NonNull String description, @Nullable String avatarUrl) {
+        @NonNull String description, @Nullable String avatarUrl, @NonNull String key) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
@@ -74,6 +75,10 @@ public class ProfileFragmentDirections {
       }
       this.arguments.put("description", description);
       this.arguments.put("avatarUrl", avatarUrl);
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
     }
 
     @NonNull
@@ -113,6 +118,16 @@ public class ProfileFragmentDirections {
       return this;
     }
 
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionProfileToFragmentUserPostPage setKey(@NonNull String key) {
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     @NonNull
@@ -133,6 +148,10 @@ public class ProfileFragmentDirections {
       if (arguments.containsKey("avatarUrl")) {
         String avatarUrl = (String) arguments.get("avatarUrl");
         __result.putString("avatarUrl", avatarUrl);
+      }
+      if (arguments.containsKey("key")) {
+        String key = (String) arguments.get("key");
+        __result.putString("key", key);
       }
       return __result;
     }
@@ -164,6 +183,12 @@ public class ProfileFragmentDirections {
     @Nullable
     public String getAvatarUrl() {
       return (String) arguments.get("avatarUrl");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getKey() {
+      return (String) arguments.get("key");
     }
 
     @Override
@@ -199,6 +224,12 @@ public class ProfileFragmentDirections {
       if (getAvatarUrl() != null ? !getAvatarUrl().equals(that.getAvatarUrl()) : that.getAvatarUrl() != null) {
         return false;
       }
+      if (arguments.containsKey("key") != that.arguments.containsKey("key")) {
+        return false;
+      }
+      if (getKey() != null ? !getKey().equals(that.getKey()) : that.getKey() != null) {
+        return false;
+      }
       if (getActionId() != that.getActionId()) {
         return false;
       }
@@ -212,6 +243,7 @@ public class ProfileFragmentDirections {
       result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
       result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
       result = 31 * result + (getAvatarUrl() != null ? getAvatarUrl().hashCode() : 0);
+      result = 31 * result + (getKey() != null ? getKey().hashCode() : 0);
       result = 31 * result + getActionId();
       return result;
     }
@@ -223,6 +255,7 @@ public class ProfileFragmentDirections {
           + ", price=" + getPrice()
           + ", description=" + getDescription()
           + ", avatarUrl=" + getAvatarUrl()
+          + ", key=" + getKey()
           + "}";
     }
   }
@@ -233,7 +266,7 @@ public class ProfileFragmentDirections {
     @SuppressWarnings("unchecked")
     private ActionProfileFragmentToEditUserPostPageFragment(@NonNull String Name,
         @Nullable String avatarUrl, @NonNull String Description, @NonNull String Price,
-        @NonNull String SellerName, @NonNull String SellerNumber) {
+        @NonNull String SellerName, @NonNull String SellerNumber, @NonNull String key) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
@@ -255,6 +288,10 @@ public class ProfileFragmentDirections {
         throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
       }
       this.arguments.put("SellerNumber", SellerNumber);
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
     }
 
     @NonNull
@@ -318,6 +355,16 @@ public class ProfileFragmentDirections {
       return this;
     }
 
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public ActionProfileFragmentToEditUserPostPageFragment setKey(@NonNull String key) {
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     @NonNull
@@ -346,6 +393,10 @@ public class ProfileFragmentDirections {
       if (arguments.containsKey("SellerNumber")) {
         String SellerNumber = (String) arguments.get("SellerNumber");
         __result.putString("SellerNumber", SellerNumber);
+      }
+      if (arguments.containsKey("key")) {
+        String key = (String) arguments.get("key");
+        __result.putString("key", key);
       }
       return __result;
     }
@@ -389,6 +440,12 @@ public class ProfileFragmentDirections {
     @NonNull
     public String getSellerNumber() {
       return (String) arguments.get("SellerNumber");
+    }
+
+    @SuppressWarnings("unchecked")
+    @NonNull
+    public String getKey() {
+      return (String) arguments.get("key");
     }
 
     @Override
@@ -436,6 +493,12 @@ public class ProfileFragmentDirections {
       if (getSellerNumber() != null ? !getSellerNumber().equals(that.getSellerNumber()) : that.getSellerNumber() != null) {
         return false;
       }
+      if (arguments.containsKey("key") != that.arguments.containsKey("key")) {
+        return false;
+      }
+      if (getKey() != null ? !getKey().equals(that.getKey()) : that.getKey() != null) {
+        return false;
+      }
       if (getActionId() != that.getActionId()) {
         return false;
       }
@@ -451,6 +514,7 @@ public class ProfileFragmentDirections {
       result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
       result = 31 * result + (getSellerName() != null ? getSellerName().hashCode() : 0);
       result = 31 * result + (getSellerNumber() != null ? getSellerNumber().hashCode() : 0);
+      result = 31 * result + (getKey() != null ? getKey().hashCode() : 0);
       result = 31 * result + getActionId();
       return result;
     }
@@ -464,6 +528,7 @@ public class ProfileFragmentDirections {
           + ", Price=" + getPrice()
           + ", SellerName=" + getSellerName()
           + ", SellerNumber=" + getSellerNumber()
+          + ", key=" + getKey()
           + "}";
     }
   }

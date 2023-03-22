@@ -65,6 +65,16 @@ public class UserPostPageFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"avatarUrl\" is missing and does not have an android:defaultValue");
     }
+    if (bundle.containsKey("key")) {
+      String key;
+      key = bundle.getString("key");
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("key", key);
+    } else {
+      throw new IllegalArgumentException("Required argument \"key\" is missing and does not have an android:defaultValue");
+    }
     return __result;
   }
 
@@ -110,6 +120,16 @@ public class UserPostPageFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"avatarUrl\" is missing and does not have an android:defaultValue");
     }
+    if (savedStateHandle.contains("key")) {
+      String key;
+      key = savedStateHandle.get("key");
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("key", key);
+    } else {
+      throw new IllegalArgumentException("Required argument \"key\" is missing and does not have an android:defaultValue");
+    }
     return __result;
   }
 
@@ -139,6 +159,12 @@ public class UserPostPageFragmentArgs implements NavArgs {
 
   @SuppressWarnings("unchecked")
   @NonNull
+  public String getKey() {
+    return (String) arguments.get("key");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
   public Bundle toBundle() {
     Bundle __result = new Bundle();
     if (arguments.containsKey("Name")) {
@@ -156,6 +182,10 @@ public class UserPostPageFragmentArgs implements NavArgs {
     if (arguments.containsKey("avatarUrl")) {
       String avatarUrl = (String) arguments.get("avatarUrl");
       __result.putString("avatarUrl", avatarUrl);
+    }
+    if (arguments.containsKey("key")) {
+      String key = (String) arguments.get("key");
+      __result.putString("key", key);
     }
     return __result;
   }
@@ -179,6 +209,10 @@ public class UserPostPageFragmentArgs implements NavArgs {
     if (arguments.containsKey("avatarUrl")) {
       String avatarUrl = (String) arguments.get("avatarUrl");
       __result.set("avatarUrl", avatarUrl);
+    }
+    if (arguments.containsKey("key")) {
+      String key = (String) arguments.get("key");
+      __result.set("key", key);
     }
     return __result;
   }
@@ -216,6 +250,12 @@ public class UserPostPageFragmentArgs implements NavArgs {
     if (getAvatarUrl() != null ? !getAvatarUrl().equals(that.getAvatarUrl()) : that.getAvatarUrl() != null) {
       return false;
     }
+    if (arguments.containsKey("key") != that.arguments.containsKey("key")) {
+      return false;
+    }
+    if (getKey() != null ? !getKey().equals(that.getKey()) : that.getKey() != null) {
+      return false;
+    }
     return true;
   }
 
@@ -226,6 +266,7 @@ public class UserPostPageFragmentArgs implements NavArgs {
     result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
     result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
     result = 31 * result + (getAvatarUrl() != null ? getAvatarUrl().hashCode() : 0);
+    result = 31 * result + (getKey() != null ? getKey().hashCode() : 0);
     return result;
   }
 
@@ -236,6 +277,7 @@ public class UserPostPageFragmentArgs implements NavArgs {
         + ", price=" + getPrice()
         + ", description=" + getDescription()
         + ", avatarUrl=" + getAvatarUrl()
+        + ", key=" + getKey()
         + "}";
   }
 
@@ -249,7 +291,7 @@ public class UserPostPageFragmentArgs implements NavArgs {
 
     @SuppressWarnings("unchecked")
     public Builder(@NonNull String Name, @NonNull String price, @NonNull String description,
-        @Nullable String avatarUrl) {
+        @Nullable String avatarUrl, @NonNull String key) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
@@ -263,6 +305,10 @@ public class UserPostPageFragmentArgs implements NavArgs {
       }
       this.arguments.put("description", description);
       this.arguments.put("avatarUrl", avatarUrl);
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
     }
 
     @NonNull
@@ -308,6 +354,16 @@ public class UserPostPageFragmentArgs implements NavArgs {
       return this;
     }
 
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setKey(@NonNull String key) {
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
+      return this;
+    }
+
     @SuppressWarnings({"unchecked","GetterOnBuilder"})
     @NonNull
     public String getName() {
@@ -330,6 +386,12 @@ public class UserPostPageFragmentArgs implements NavArgs {
     @Nullable
     public String getAvatarUrl() {
       return (String) arguments.get("avatarUrl");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getKey() {
+      return (String) arguments.get("key");
     }
   }
 }

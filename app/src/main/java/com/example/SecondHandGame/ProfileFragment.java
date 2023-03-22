@@ -149,7 +149,7 @@ public class ProfileFragment extends PostsListFragment {
 //                ProfileFragmentDirections.ActionProfileFragmentToEditUserPostPageFragment action = ProfileFragmentDirections.actionProfileFragmentToEditUserPostPageFragment(post.getName(),post.getPrice(),post.getDescription(),post.getAvatarUrl());
 //                Navigation.findNavController(view).navigate(action);
 
-                ProfileFragmentDirections.ActionProfileToFragmentUserPostPage action = ProfileFragmentDirections.actionProfileToFragmentUserPostPage(post.getName(),post.getDescription(),post.getPrice(),post.getAvatarUrl());
+                ProfileFragmentDirections.ActionProfileToFragmentUserPostPage action = ProfileFragmentDirections.actionProfileToFragmentUserPostPage(post.getName(),post.getDescription(),post.getPrice(),post.getAvatarUrl(),post.getKey());
                 Navigation.findNavController(view).navigate(action);
             }
         });

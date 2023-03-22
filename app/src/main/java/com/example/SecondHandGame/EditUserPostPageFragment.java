@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class EditUserPostPageFragment extends AddPostFragment {
     String imageString;
     String sellerName;
     String sellerNumber;
+    String key;
 
 
     @Override
@@ -33,7 +35,7 @@ public class EditUserPostPageFragment extends AddPostFragment {
         // Inflate the layout for this fragment
         binding = FragmentAddPostBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
-
+        key=(String)getArguments().get("key");
         getElement();
         Model.instance().getCurrentUser(user -> {
             email = user.getEmail();
@@ -98,15 +100,16 @@ public class EditUserPostPageFragment extends AddPostFragment {
        // String instructions = binding.PriceEt.getText().toString();
         String price = binding.PriceEt.getText().toString();
        // String instructions = binding.DescriptionEt.getText().toString();
-        String ingredients = binding.PriceEt.getText().toString();
-        String id = name;
+       // String ingredients = binding.PriceEt.getText().toString();
+        String id = email;
 
         // create new recipe object
-        Post re = new Post(price,name,description, /*avatarUrl*/"", false,/*email*/"");
+        Post re = new Post(price,name,description, /*avatarUrl*/"", false,/*email*/"",key);
         //Post re = new Post(price,description,id,name,false,price);
 
         //********** save image recipe****************
         if (isAvatarSelected || imageString != "") {
+            Log.d("tag",re.getKey()+"enter if!!!!!!!!!!!!!!!!");
                 binding.avatarImg.setDrawingCacheEnabled(true);
                 binding.avatarImg.buildDrawingCache();
                 Bitmap bitmap = ((BitmapDrawable) binding.avatarImg.getDrawable()).getBitmap();
@@ -124,8 +127,7 @@ public class EditUserPostPageFragment extends AddPostFragment {
                 });
 
             } else {
-
-                Model.instance().editPost(re, (unused) -> {
+            Log.d("tag",re.getKey()+"enter else!!!!!!!!!!!!!!!!");                Model.instance().editPost(re, (unused) -> {
                     Navigation.findNavController(view1).popBackStack();
                 });
             }

@@ -33,61 +33,66 @@ public final class PostDao_Impl implements PostDao {
     this.__insertionAdapterOfPost = new EntityInsertionAdapter<Post>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `Post` (`name`,`price`,`email`,`description`,`avatarUrl`,`cb`,`lastUpdated`) VALUES (?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Post` (`key`,`name`,`price`,`email`,`description`,`avatarUrl`,`cb`,`lastUpdated`) VALUES (?,?,?,?,?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Post value) {
-        if (value.name == null) {
+        if (value.key == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.name);
+          stmt.bindString(1, value.key);
         }
-        if (value.price == null) {
+        if (value.name == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.price);
+          stmt.bindString(2, value.name);
         }
-        if (value.email == null) {
+        if (value.price == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.email);
+          stmt.bindString(3, value.price);
         }
-        if (value.description == null) {
+        if (value.email == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.description);
+          stmt.bindString(4, value.email);
         }
-        if (value.avatarUrl == null) {
+        if (value.description == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.avatarUrl);
+          stmt.bindString(5, value.description);
+        }
+        if (value.avatarUrl == null) {
+          stmt.bindNull(6);
+        } else {
+          stmt.bindString(6, value.avatarUrl);
         }
         final Integer _tmp = value.cb == null ? null : (value.cb ? 1 : 0);
         if (_tmp == null) {
-          stmt.bindNull(6);
-        } else {
-          stmt.bindLong(6, _tmp);
-        }
-        if (value.lastUpdated == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindLong(7, value.lastUpdated);
+          stmt.bindLong(7, _tmp);
+        }
+        if (value.lastUpdated == null) {
+          stmt.bindNull(8);
+        } else {
+          stmt.bindLong(8, value.lastUpdated);
         }
       }
     };
     this.__deletionAdapterOfPost = new EntityDeletionOrUpdateAdapter<Post>(__db) {
       @Override
       public String createQuery() {
-        return "DELETE FROM `Post` WHERE `name` = ?";
+        return "DELETE FROM `Post` WHERE `key` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Post value) {
-        if (value.name == null) {
+        if (value.key == null) {
           stmt.bindNull(1);
         } else {
-          stmt.bindString(1, value.name);
+          stmt.bindString(1, value.key);
         }
       }
     };
@@ -126,6 +131,7 @@ public final class PostDao_Impl implements PostDao {
       public List<Post> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
+          final int _cursorIndexOfKey = CursorUtil.getColumnIndexOrThrow(_cursor, "key");
           final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
           final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
           final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
@@ -137,6 +143,11 @@ public final class PostDao_Impl implements PostDao {
           while(_cursor.moveToNext()) {
             final Post _item;
             _item = new Post();
+            if (_cursor.isNull(_cursorIndexOfKey)) {
+              _item.key = null;
+            } else {
+              _item.key = _cursor.getString(_cursorIndexOfKey);
+            }
             if (_cursor.isNull(_cursorIndexOfName)) {
               _item.name = null;
             } else {
@@ -202,6 +213,7 @@ public final class PostDao_Impl implements PostDao {
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
+      final int _cursorIndexOfKey = CursorUtil.getColumnIndexOrThrow(_cursor, "key");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
       final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
       final int _cursorIndexOfEmail = CursorUtil.getColumnIndexOrThrow(_cursor, "email");
@@ -212,6 +224,11 @@ public final class PostDao_Impl implements PostDao {
       final Post _result;
       if(_cursor.moveToFirst()) {
         _result = new Post();
+        if (_cursor.isNull(_cursorIndexOfKey)) {
+          _result.key = null;
+        } else {
+          _result.key = _cursor.getString(_cursorIndexOfKey);
+        }
         if (_cursor.isNull(_cursorIndexOfName)) {
           _result.name = null;
         } else {

@@ -46,7 +46,9 @@
             android:name="avatarUrl"
             app:argType="string"
             app:nullable="true" /><![CDATA[
+
         />
+
     ]]>
     </fragment>
     <!--    tools:layout="@layout/fragment_add_post"-->
@@ -91,6 +93,9 @@
         <action
             android:id="@+id/action_fragment_user_post_page_to_editUserPostPageFragment2"
             app:destination="@id/editUserPostPageFragment" />
+        <argument
+            android:name="key"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/editUserPostPageFragment"
@@ -113,6 +118,9 @@
             android:name="SellerName"
             app:argType="string" />
         <argument android:name="SellerNumber"
+            app:argType="string" />
+        <argument
+            android:name="key"
             app:argType="string" />
     </fragment>
     <fragment

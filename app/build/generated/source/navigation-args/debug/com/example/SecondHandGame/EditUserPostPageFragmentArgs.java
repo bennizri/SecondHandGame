@@ -85,6 +85,16 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"SellerNumber\" is missing and does not have an android:defaultValue");
     }
+    if (bundle.containsKey("key")) {
+      String key;
+      key = bundle.getString("key");
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("key", key);
+    } else {
+      throw new IllegalArgumentException("Required argument \"key\" is missing and does not have an android:defaultValue");
+    }
     return __result;
   }
 
@@ -150,6 +160,16 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     } else {
       throw new IllegalArgumentException("Required argument \"SellerNumber\" is missing and does not have an android:defaultValue");
     }
+    if (savedStateHandle.contains("key")) {
+      String key;
+      key = savedStateHandle.get("key");
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      __result.arguments.put("key", key);
+    } else {
+      throw new IllegalArgumentException("Required argument \"key\" is missing and does not have an android:defaultValue");
+    }
     return __result;
   }
 
@@ -191,6 +211,12 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
 
   @SuppressWarnings("unchecked")
   @NonNull
+  public String getKey() {
+    return (String) arguments.get("key");
+  }
+
+  @SuppressWarnings("unchecked")
+  @NonNull
   public Bundle toBundle() {
     Bundle __result = new Bundle();
     if (arguments.containsKey("Name")) {
@@ -216,6 +242,10 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     if (arguments.containsKey("SellerNumber")) {
       String SellerNumber = (String) arguments.get("SellerNumber");
       __result.putString("SellerNumber", SellerNumber);
+    }
+    if (arguments.containsKey("key")) {
+      String key = (String) arguments.get("key");
+      __result.putString("key", key);
     }
     return __result;
   }
@@ -247,6 +277,10 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     if (arguments.containsKey("SellerNumber")) {
       String SellerNumber = (String) arguments.get("SellerNumber");
       __result.set("SellerNumber", SellerNumber);
+    }
+    if (arguments.containsKey("key")) {
+      String key = (String) arguments.get("key");
+      __result.set("key", key);
     }
     return __result;
   }
@@ -296,6 +330,12 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     if (getSellerNumber() != null ? !getSellerNumber().equals(that.getSellerNumber()) : that.getSellerNumber() != null) {
       return false;
     }
+    if (arguments.containsKey("key") != that.arguments.containsKey("key")) {
+      return false;
+    }
+    if (getKey() != null ? !getKey().equals(that.getKey()) : that.getKey() != null) {
+      return false;
+    }
     return true;
   }
 
@@ -308,6 +348,7 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     result = 31 * result + (getPrice() != null ? getPrice().hashCode() : 0);
     result = 31 * result + (getSellerName() != null ? getSellerName().hashCode() : 0);
     result = 31 * result + (getSellerNumber() != null ? getSellerNumber().hashCode() : 0);
+    result = 31 * result + (getKey() != null ? getKey().hashCode() : 0);
     return result;
   }
 
@@ -320,6 +361,7 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
         + ", Price=" + getPrice()
         + ", SellerName=" + getSellerName()
         + ", SellerNumber=" + getSellerNumber()
+        + ", key=" + getKey()
         + "}";
   }
 
@@ -333,7 +375,8 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
 
     @SuppressWarnings("unchecked")
     public Builder(@NonNull String Name, @Nullable String avatarUrl, @NonNull String Description,
-        @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber) {
+        @NonNull String Price, @NonNull String SellerName, @NonNull String SellerNumber,
+        @NonNull String key) {
       if (Name == null) {
         throw new IllegalArgumentException("Argument \"Name\" is marked as non-null but was passed a null value.");
       }
@@ -355,6 +398,10 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
         throw new IllegalArgumentException("Argument \"SellerNumber\" is marked as non-null but was passed a null value.");
       }
       this.arguments.put("SellerNumber", SellerNumber);
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
     }
 
     @NonNull
@@ -420,6 +467,16 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
       return this;
     }
 
+    @NonNull
+    @SuppressWarnings("unchecked")
+    public Builder setKey(@NonNull String key) {
+      if (key == null) {
+        throw new IllegalArgumentException("Argument \"key\" is marked as non-null but was passed a null value.");
+      }
+      this.arguments.put("key", key);
+      return this;
+    }
+
     @SuppressWarnings({"unchecked","GetterOnBuilder"})
     @NonNull
     public String getName() {
@@ -454,6 +511,12 @@ public class EditUserPostPageFragmentArgs implements NavArgs {
     @NonNull
     public String getSellerNumber() {
       return (String) arguments.get("SellerNumber");
+    }
+
+    @SuppressWarnings({"unchecked","GetterOnBuilder"})
+    @NonNull
+    public String getKey() {
+      return (String) arguments.get("key");
     }
   }
 }

@@ -27,6 +27,7 @@ public class PostFragment extends Fragment {
     String sellerNumber;
     String avatarImg;
     FragmentPostPageBinding binding;
+    String key;
 
 
     @Override
@@ -76,6 +77,7 @@ public class PostFragment extends Fragment {
 
         //Bundle jsonData = getArguments();
         name = (String)getArguments().get("Name");
+        key= (String) getArguments().get("key");
         description = (String)getArguments().get("Description");
         if(description == null)
             description = (String)getArguments().get("description");
@@ -85,14 +87,6 @@ public class PostFragment extends Fragment {
         avatarImg = (String)getArguments().get("avatarUrl");
         sellerName = "Ben";
         sellerNumber = "123";
-        //name = PostFragmentArgs.fromBundle(getArguments()).getName();
-        //email = PostFragmentArgs.fromBundle(getArguments()).getEmail();
-       //description = PostFragmentArgs.fromBundle(getArguments()).getDescription();
-
-        //price = PostFragmentArgs.fromBundle(getArguments()).getPrice();
-        //sellerName=PostFragmentArgs.fromBundle(getArguments()).getSellerName();
-        //sellerNumber=PostFragmentArgs.fromBundle(getArguments()).getSellerNumber();
-        //avatarImg = (PostFragmentArgs.fromBundle(getArguments()).getAvatarUrl());
 
     }
 }
