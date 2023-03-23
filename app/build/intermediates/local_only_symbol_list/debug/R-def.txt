@@ -19,6 +19,7 @@ color white
 drawable download22222
 drawable game_avatar
 drawable gamer_avatar
+drawable gamer_icon
 drawable iamge16
 drawable ic_baseline_edit_calendar_24
 drawable ic_baseline_games_24
@@ -48,6 +49,7 @@ drawable image8
 drawable image9
 drawable images6
 drawable photorecipe
+drawable round_shape
 drawable user
 drawable weather_button_background
 drawable weather_cold_background

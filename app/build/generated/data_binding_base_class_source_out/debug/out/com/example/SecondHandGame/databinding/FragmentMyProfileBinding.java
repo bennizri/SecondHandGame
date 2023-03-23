@@ -4,7 +4,6 @@ package com.example.SecondHandGame.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -15,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.SecondHandGame.R;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class FragmentMyProfileBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView avatarImg3;
+  public final CircleImageView avatarImg3;
 
   @NonNull
   public final TextView email;
@@ -45,7 +45,7 @@ public final class FragmentMyProfileBinding implements ViewBinding {
   public final RecyclerView recyclerView;
 
   private FragmentMyProfileBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView avatarImg3, @NonNull TextView email, @NonNull TextView firstName,
+      @NonNull CircleImageView avatarImg3, @NonNull TextView email, @NonNull TextView firstName,
       @NonNull TextView lastName, @NonNull LinearLayout linearLayout,
       @NonNull ProgressBar progressBar3, @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
@@ -86,7 +86,7 @@ public final class FragmentMyProfileBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.avatarImg3;
-      ImageView avatarImg3 = ViewBindings.findChildViewById(rootView, id);
+      CircleImageView avatarImg3 = ViewBindings.findChildViewById(rootView, id);
       if (avatarImg3 == null) {
         break missingId;
       }

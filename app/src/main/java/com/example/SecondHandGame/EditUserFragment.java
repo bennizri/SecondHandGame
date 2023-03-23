@@ -135,11 +135,11 @@ public class EditUserFragment extends Fragment {
 
         });
 
-        binding.camerabutton.setOnClickListener(view1->{
+        binding.cameraButton.setOnClickListener(view1->{
             cameraLauncher.launch(null);
         });
 
-        binding.gallerybutton.setOnClickListener(view1->{
+        binding.galleryButton.setOnClickListener(view1->{
             galleryAppLauncher.launch("image/*");
         });
 

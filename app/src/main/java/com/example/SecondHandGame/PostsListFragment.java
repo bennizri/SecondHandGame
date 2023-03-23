@@ -18,8 +18,6 @@ import android.view.ViewGroup;
 
 import com.example.SecondHandGame.databinding.FragmentPostsListBinding;
 import com.example.SecondHandGame.model.Model;
-import com.example.SecondHandGame.model.Movie;
-import com.example.SecondHandGame.model.MovieModel;
 import com.example.SecondHandGame.model.Post;
 
 import java.util.List;
@@ -67,12 +65,6 @@ public class PostsListFragment extends Fragment {
 
         binding.swipeRefresh.setOnRefreshListener(this::reloadData);
 
-        LiveData<List<Movie>> data = MovieModel.instance.searchMoviesByTitle("avatar");
-        data.observe(getViewLifecycleOwner(),list->{
-            list.forEach(item->{
-                Log.d("TAG","got movie: " + item.getTitle() + " " + item.getPoster());
-            });
-        });
 
         return view;
     }
@@ -93,5 +85,7 @@ public class PostsListFragment extends Fragment {
     void reloadData(){
 //        binding.progressBar.setVisibility(View.VISIBLE);
         Model.instance().refreshAllPosts();
+        //show all the change data
+        adapter.setData(viewModel.getData());
     }
 }

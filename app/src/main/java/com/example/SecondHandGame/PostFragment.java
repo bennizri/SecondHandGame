@@ -57,11 +57,11 @@ public class PostFragment extends Fragment {
         }
 
         if (avatarImg.isEmpty()){
-            binding.avatarImg.setImageResource(R.drawable.game_avatar);
+            binding.avatarImg.setImageResource(R.drawable.gamer_icon);
 
         }
         else{
-            Picasso.get().load(avatarImg).error(R.drawable.game_avatar).into(binding.avatarImg);
+            Picasso.get().load(avatarImg).error(R.drawable.gamer_icon).into(binding.avatarImg);
 
         }
 

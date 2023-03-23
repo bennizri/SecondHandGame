@@ -54,8 +54,8 @@ public class LoginPage extends AppCompatActivity {
         ActivityResultLauncher<String> galleryAppLauncher;
 
         //binding :
-        ImageButton camerabutton = findViewById(R.id.camerabutton);
-        ImageButton gallerybutton = findViewById(R.id.gallerybutton);
+        ImageButton camerabutton = findViewById(R.id.cameraButton);
+        ImageButton gallerybutton = findViewById(R.id.galleryButton);
         ImageView avatarRegister = findViewById(R.id.avatarImg2);
         TextInputEditText firstName = findViewById(R.id.first_name); ;
         TextInputEditText lastName = findViewById(R.id.last_name);;

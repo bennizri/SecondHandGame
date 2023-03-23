@@ -31,7 +31,7 @@ public final class FragmentEditUserBinding implements ViewBinding {
   public final TextInputLayout blabla;
 
   @NonNull
-  public final ImageButton camerabutton;
+  public final ImageButton cameraButton;
 
   @NonNull
   public final TextInputEditText email;
@@ -40,7 +40,7 @@ public final class FragmentEditUserBinding implements ViewBinding {
   public final TextInputEditText firstName;
 
   @NonNull
-  public final ImageButton gallerybutton;
+  public final ImageButton galleryButton;
 
   @NonNull
   public final TextInputEditText lastName;
@@ -52,17 +52,17 @@ public final class FragmentEditUserBinding implements ViewBinding {
   public final ScrollView scrollView2;
 
   private FragmentEditUserBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView avatarImg2,
-      @NonNull TextInputLayout blabla, @NonNull ImageButton camerabutton,
+      @NonNull TextInputLayout blabla, @NonNull ImageButton cameraButton,
       @NonNull TextInputEditText email, @NonNull TextInputEditText firstName,
-      @NonNull ImageButton gallerybutton, @NonNull TextInputEditText lastName,
+      @NonNull ImageButton galleryButton, @NonNull TextInputEditText lastName,
       @NonNull Button saveBtnUser, @NonNull ScrollView scrollView2) {
     this.rootView = rootView;
     this.avatarImg2 = avatarImg2;
     this.blabla = blabla;
-    this.camerabutton = camerabutton;
+    this.cameraButton = cameraButton;
     this.email = email;
     this.firstName = firstName;
-    this.gallerybutton = gallerybutton;
+    this.galleryButton = galleryButton;
     this.lastName = lastName;
     this.saveBtnUser = saveBtnUser;
     this.scrollView2 = scrollView2;
@@ -107,9 +107,9 @@ public final class FragmentEditUserBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.camerabutton;
-      ImageButton camerabutton = ViewBindings.findChildViewById(rootView, id);
-      if (camerabutton == null) {
+      id = R.id.cameraButton;
+      ImageButton cameraButton = ViewBindings.findChildViewById(rootView, id);
+      if (cameraButton == null) {
         break missingId;
       }
 
@@ -125,9 +125,9 @@ public final class FragmentEditUserBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.gallerybutton;
-      ImageButton gallerybutton = ViewBindings.findChildViewById(rootView, id);
-      if (gallerybutton == null) {
+      id = R.id.galleryButton;
+      ImageButton galleryButton = ViewBindings.findChildViewById(rootView, id);
+      if (galleryButton == null) {
         break missingId;
       }
 
@@ -150,7 +150,7 @@ public final class FragmentEditUserBinding implements ViewBinding {
       }
 
       return new FragmentEditUserBinding((ConstraintLayout) rootView, avatarImg2, blabla,
-          camerabutton, email, firstName, gallerybutton, lastName, saveBtnUser, scrollView2);
+          cameraButton, email, firstName, galleryButton, lastName, saveBtnUser, scrollView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

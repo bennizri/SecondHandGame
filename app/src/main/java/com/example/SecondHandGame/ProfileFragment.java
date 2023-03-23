@@ -40,7 +40,7 @@
 //            binding.firstName.setText(currentUser.getFirstName());
 //            binding.lastName.setText(currentUser.getLastName());
 //            if(currentUser.avatarUrl !="")
-//                Picasso.get().load(currentUser.avatarUrl).error(R.drawable.game_avatar).into(binding.avatarImg3);
+//                Picasso.get().load(currentUser.avatarUrl).error(R.drawable.gamer_icon).into(binding.avatarImg3);
 //        });
 //
 //        binding.recyclerView.setHasFixedSize(true);
@@ -127,7 +127,7 @@ public class ProfileFragment extends PostsListFragment {
             binding.firstName.setText(currentUser.firstName);
             binding.lastName.setText(currentUser.lastName);
             if(!Objects.equals(currentUser.avatarUrl, ""))
-                Picasso.get().load(currentUser.avatarUrl).error(R.drawable.game_avatar).into(binding.avatarImg3);
+                Picasso.get().load(currentUser.avatarUrl).error(R.drawable.gamer_icon).into(binding.avatarImg3);
         });
 
         // list

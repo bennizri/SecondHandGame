@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.SecondHandGame.databinding.FragmentAddPostBinding;
 import com.example.SecondHandGame.databinding.FragmentEditUserPostPageBinding;
@@ -26,7 +27,6 @@ public class EditUserPostPageFragment extends AddPostFragment {
     String imageString;
     String key;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class EditUserPostPageFragment extends AddPostFragment {
         });
 
         binding.saveBtn.setOnClickListener(view1 -> {
-            saveRecipe(view1);
+            savePost(view1);
         });
 
 
@@ -50,6 +50,7 @@ public class EditUserPostPageFragment extends AddPostFragment {
             Navigation.findNavController(view1).popBackStack();
 
         });
+
 
         binding.cameraButton.setOnClickListener(view1->{
             cameraLauncher.launch(null);
@@ -80,27 +81,25 @@ public class EditUserPostPageFragment extends AddPostFragment {
             binding.PriceEt.setText(price);
         }
         if (imageString.isEmpty() || imageString ==""){
-            binding.avatarImg.setImageResource(R.drawable.gamer_avatar);
+            binding.avatarImg.setImageResource(R.drawable.gamer_icon);
 
         }else{
-            Picasso.get().load(imageString).error(R.drawable.game_avatar).into(binding.avatarImg);
+            Picasso.get().load(imageString).error(R.drawable.gamer_icon).into(binding.avatarImg);
         }
 
         binding.NameEt.setEnabled(false);
     }
 
 //    @Override
-    public void saveRecipe(View view1) {
+    public void savePost(View view1) {
 
         String name = binding.NameEt.getText().toString();
         String description = binding.DescriptionEt.getText().toString();
         String price = binding.PriceEt.getText().toString();
         String id = email;
-       //String blabla = String.valueOf(((BitmapDrawable) binding.avatarImg.getDrawable()).getBitmap());
-
+       //String blabla = String.valueOf(((BitmapDrawable) binding.galleryButton.getDrawable()).getBitmap());
         // create new post object
-        Post post = new Post(price,name,description, imageString, false,/*email*/"",key);
-
+        Post post = new Post(price,name,description, imageString, false,email,key);
         //********** save post image****************
         if (isAvatarSelected || imageString != "") {
             Log.d("tag",post.getKey()+"enter if!!!!!!!!!!!!!!!!");

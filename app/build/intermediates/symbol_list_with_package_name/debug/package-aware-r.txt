@@ -2662,6 +2662,7 @@ drawable design_snackbar_background
 drawable download22222
 drawable game_avatar
 drawable gamer_avatar
+drawable gamer_icon
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable iamge16
@@ -2770,6 +2771,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable photorecipe
+drawable round_shape
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light

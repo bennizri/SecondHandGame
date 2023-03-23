@@ -32,7 +32,7 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
   public final TextInputLayout blabla;
 
   @NonNull
-  public final ImageButton camerabutton;
+  public final ImageButton cameraButton;
 
   @NonNull
   public final TextView email;
@@ -47,7 +47,7 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
   public final TextInputEditText firstName;
 
   @NonNull
-  public final ImageButton gallerybutton;
+  public final ImageButton galleryButton;
 
   @NonNull
   public final ImageView imageView2;
@@ -90,9 +90,9 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
 
   private FragmentWelcomePageBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageView avatarImg2, @NonNull TextInputLayout blabla,
-      @NonNull ImageButton camerabutton, @NonNull TextView email, @NonNull TextInputEditText email1,
+      @NonNull ImageButton cameraButton, @NonNull TextView email, @NonNull TextInputEditText email1,
       @NonNull TextInputEditText emailEt, @NonNull TextInputEditText firstName,
-      @NonNull ImageButton gallerybutton, @NonNull ImageView imageView2,
+      @NonNull ImageButton galleryButton, @NonNull ImageView imageView2,
       @NonNull TextInputEditText lastName, @NonNull Button login, @NonNull TextView pass,
       @NonNull TextInputEditText passEt, @NonNull TextInputEditText password1,
       @NonNull TextView registerTv2, @NonNull Button saveBtnUser, @NonNull ScrollView scrollWelcome,
@@ -101,12 +101,12 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
     this.rootView = rootView;
     this.avatarImg2 = avatarImg2;
     this.blabla = blabla;
-    this.camerabutton = camerabutton;
+    this.cameraButton = cameraButton;
     this.email = email;
     this.email1 = email1;
     this.emailEt = emailEt;
     this.firstName = firstName;
-    this.gallerybutton = gallerybutton;
+    this.galleryButton = galleryButton;
     this.imageView2 = imageView2;
     this.lastName = lastName;
     this.login = login;
@@ -161,9 +161,9 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.camerabutton;
-      ImageButton camerabutton = ViewBindings.findChildViewById(rootView, id);
-      if (camerabutton == null) {
+      id = R.id.cameraButton;
+      ImageButton cameraButton = ViewBindings.findChildViewById(rootView, id);
+      if (cameraButton == null) {
         break missingId;
       }
 
@@ -191,9 +191,9 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.gallerybutton;
-      ImageButton gallerybutton = ViewBindings.findChildViewById(rootView, id);
-      if (gallerybutton == null) {
+      id = R.id.galleryButton;
+      ImageButton galleryButton = ViewBindings.findChildViewById(rootView, id);
+      if (galleryButton == null) {
         break missingId;
       }
 
@@ -276,7 +276,7 @@ public final class FragmentWelcomePageBinding implements ViewBinding {
       }
 
       return new FragmentWelcomePageBinding((ConstraintLayout) rootView, avatarImg2, blabla,
-          camerabutton, email, email1, emailEt, firstName, gallerybutton, imageView2, lastName,
+          cameraButton, email, email1, emailEt, firstName, galleryButton, imageView2, lastName,
           login, pass, passEt, password1, registerTv2, saveBtnUser, scrollWelcome, textView,
           textView4, welcome, wrong1);
     }

@@ -43,9 +43,9 @@ public class UserPostPageFragment extends PostFragment {
             binding.priceTv.setText(price);
         }
         if ( avatarImg.isEmpty() ||avatarImg == ""){
-            binding.avatarImg.setImageResource(R.drawable.game_avatar);
+            binding.avatarImg.setImageResource(R.drawable.gamer_icon);
         }else{
-            Picasso.get().load(avatarImg).error(R.drawable.game_avatar).into(binding.avatarImg);
+            Picasso.get().load(avatarImg).error(R.drawable.gamer_icon).into(binding.avatarImg);
         }
 
         binding.postEditBtn.setOnClickListener((view2)->{

@@ -66,28 +66,28 @@ public class WeatherFragment extends Fragment {
                         tv.setText(String.valueOf(temperature) + "C");
                         // replace the image according to the temperature of that city
                         if(Integer.valueOf(temperature)>25) {
-                            Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.game_avatar).into(img);
+                            Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.gamer_icon).into(img);
                             //Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.ic_clear_day).into(img);
                             img.setVisibility(View.VISIBLE);
                         } if(Integer.valueOf(temperature)<=25 && Integer.valueOf(temperature)>=20) {
-                            Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.game_avatar).into(img);
+                            Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.gamer_icon).into(img);
                             //Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.ic_few_clouds).into(img);
                             img.setVisibility(View.VISIBLE);
                         } if(Integer.valueOf(temperature)<20) {
-                            Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.game_avatar).into(img);
+                            Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.gamer_icon).into(img);
                          //   Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.ic_cloudy_weather).into(img);
                             img.setVisibility(View.VISIBLE);
                         }
                     } else { // empty value or invalid city
                         Toast.makeText(getContext(), "Invalid city name", Toast.LENGTH_LONG).show();
-                         Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.game_avatar).into(img);
+                         Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.gamer_icon).into(img);
                       //  Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.no_city).into(img);
                         img.setVisibility(View.VISIBLE);
                     }
                 } else { // mydata == null
                     tv.setText("city does not exist");
                     Toast.makeText(getContext(), "Error: " + response.code(), Toast.LENGTH_LONG).show();
-                    Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.game_avatar).into(img);
+                    Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.gamer_icon).into(img);
                   //  Picasso.get().load("android.resource://com.example.travelapp/" + R.drawable.no_city).into(img);
                     img.setVisibility(View.VISIBLE);
                 }

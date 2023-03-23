@@ -45,7 +45,7 @@ public class Post {
     static final String DESCRIPTION = "description";
     static final String PRICE = "price";
     static final String EMAIL = "email";
-    static final String AVATAR = "avatar";
+    static final String AVATAR = "avatarUrl";
     static final String CB = "cb";
     static final String COLLECTION = "posts";
     static final String LAST_UPDATED = "lastUpdated";
